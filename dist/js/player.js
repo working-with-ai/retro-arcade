@@ -1,6 +1,6 @@
-import { addPlayTime, addSaveSlot, formatClock, getSaveSlots, recordPlay } from './store.js';
-import { readSaveBytes, writeSaveBytes } from './saves.js';
-import { downloadCloudSave, getSyncCode, uploadCloudSave } from './cloud.js';
+import { addPlayTime, addSaveSlot, formatClock, getSaveSlots, recordPlay, removeSaveSlot, updateSaveSlot } from './store.js';
+import { deleteSaveBytes, readSaveBytes, writeSaveBytes } from './saves.js';
+import { deleteCloudSave, downloadCloudSave, getSyncCode, uploadCloudSave } from './cloud.js';
 import {
   actionValues,
   actionsFor,
@@ -36,7 +36,9 @@ export function createGamePlayer({
   onRunningChange,
   onPauseChange,
   onCheatsReady,
-  onResourcesUnavailable
+  onResourcesUnavailable,
+  onStatus,
+  onPlayersReady
 }) {
   const core = game.core;
   if (!core) throw new Error('这款游戏还没有可用的模拟器内核');
@@ -62,6 +64,8 @@ export function createGamePlayer({
   let destroyed = false;
   let inputPaused = false;
   let assets = null;
+  let supportedPlayers = playerCount;
+  let frameTick = 0;
   let bindings = loadBindings(game.platform);
   let values = actionValues(game.platform);
   let cheatEntries = [];
@@ -70,7 +74,11 @@ export function createGamePlayer({
   const touchActions = Array.from({ length: playerCount }, () => new Set());
 
   const status = text => {
-    if (!destroyed && statusElement) statusElement.textContent = text;
+    if (destroyed) return;
+    if (statusElement) statusElement.textContent = text;
+    if (onStatus) {
+      try { onStatus(text); } catch {}
+    }
   };
 
   function readSelectedCheats() {
@@ -162,6 +170,19 @@ export function createGamePlayer({
     canvas.width = emulib._emuGetVideoWidth();
     canvas.height = emulib._emuGetVideoHeight();
     image = context.createImageData(canvas.width, canvas.height);
+    frameTick = 0;
+    supportedPlayers = playerCount;
+    if (playerCount > 2) {
+      supportedPlayers = 2;
+      for (let player = 2; player < playerCount; player += 1) {
+        try {
+          emulib._emuSetButton(player, 0);
+          supportedPlayers = player + 1;
+        } catch {
+          break;
+        }
+      }
+    }
     running = true;
     starting = false;
     paused = false;
@@ -176,6 +197,7 @@ export function createGamePlayer({
     }, 1000);
     status(`游戏进行中 · ${game.platform}${assets?.resourcesUnavailable ? ' · 金手指资源暂不可用' : ''}`);
     if (onRunningChange) onRunningChange(true);
+    if (onPlayersReady) onPlayersReady(supportedPlayers);
     if (onPauseChange) onPauseChange(false);
     applyCheats();
     if (onCheatsReady) onCheatsReady(cheatEntries, selectedCheats);
@@ -190,11 +212,12 @@ export function createGamePlayer({
     if (paused) return;
     if (time - frameTime < 1000 / 65) return;
     frameTime = time;
+    frameTick += 1;
     const pads = assignGamepads(navigator.getGamepads ? navigator.getGamepads() : [], {
       platform: game.platform,
       playerCount
     });
-    for (let player = 0; player < playerCount; player += 1) {
+    for (let player = 0; player < supportedPlayers; player += 1) {
       const keys = maskForPlayer({
         platform: game.platform,
         bindings,
@@ -203,7 +226,8 @@ export function createGamePlayer({
         touchActions: touchActions[player],
         pad: pads[player] || null,
         padIndex: player,
-        values
+        values,
+        turboTick: frameTick
       });
       try { emulib._emuSetButton(player, keys); } catch (error) { console.warn('手柄输入失败', error); }
     }
@@ -269,6 +293,7 @@ export function createGamePlayer({
       }
       values = actionValues(game.platform, assets.padSetting);
       bindings = loadBindings(game.platform);
+      applyExtraDefaults();
       cheatEntries = assets.cheats || [];
       selectedCheats = readSelectedCheats();
       window.gameInfo = window.gameInfo || {};
@@ -335,6 +360,18 @@ export function createGamePlayer({
     return contents;
   }
 
+  function thumbnail() {
+    try {
+      const thumb = document.createElement('canvas');
+      thumb.width = 128;
+      thumb.height = 96;
+      thumb.getContext('2d').drawImage(canvas, 0, 0, 128, 96);
+      return thumb.toDataURL('image/jpeg', 0.6);
+    } catch {
+      return '';
+    }
+  }
+
   async function saveState() {
     const contents = captureState();
     const createdAt = Date.now();
@@ -343,7 +380,8 @@ export function createGamePlayer({
       gameId: game.id,
       label: `即时存档 · ${formatClock(createdAt)}`,
       createdAt,
-      seconds: sessionSeconds
+      seconds: sessionSeconds,
+      thumb: thumbnail()
     };
     await writeSaveBytes(game.id, slot.id, contents);
     addSaveSlot(slot);
@@ -378,6 +416,104 @@ export function createGamePlayer({
     await loadStateBytes(contents, '已读取上次保存的即时存档', statePath);
   }
 
+  async function loadSlot(slotId) {
+    const contents = await readSaveBytes(game.id, slotId);
+    if (destroyed) return;
+    if (!contents) throw new Error('所选存档不存在或已损坏');
+    await loadStateBytes(contents, '已读取所选存档');
+  }
+
+  async function loadCloudSlot(slotId) {
+    status('正在下载云端存档…');
+    const contents = await downloadCloudSave(game.id, slotId, getSyncCode(), controller.signal);
+    if (destroyed) return;
+    await loadStateBytes(contents, '已读取云端存档', `${rootPath}/cloud.state`);
+  }
+
+  async function loadStage(stageId) {
+    const stage = assets?.stages?.find(item => String(item.id) === String(stageId));
+    if (!stage) throw new Error('预置关卡不存在');
+    await loadStateBytes(stage.state, `已进入${stage.label}`, `${rootPath}/stage.state`);
+    return stage;
+  }
+
+  async function overwriteSlot(slotId) {
+    const contents = captureState();
+    const createdAt = Date.now();
+    await writeSaveBytes(game.id, slotId, contents);
+    const slot = updateSaveSlot(game.id, slotId, { createdAt, seconds: sessionSeconds, thumb: thumbnail() });
+    const current = {
+      id: slotId,
+      gameId: game.id,
+      label: slot?.label || '即时存档',
+      createdAt,
+      seconds: sessionSeconds,
+      thumb: slot?.thumb || ''
+    };
+    const code = getSyncCode();
+    if (code) {
+      try {
+        await uploadCloudSave(current, contents, code);
+        status('存档已覆盖并同步到云端');
+      } catch (error) {
+        console.warn('云同步失败', error);
+        status('存档已覆盖到本地（云同步失败）');
+      }
+    } else {
+      status('存档已覆盖');
+    }
+    return current;
+  }
+
+  async function deleteSlot(slotId) {
+    await deleteSaveBytes(game.id, slotId);
+    removeSaveSlot(game.id, slotId);
+    const code = getSyncCode();
+    if (code) {
+      try { await deleteCloudSave(game.id, slotId, code); } catch (error) { console.warn('云端删除失败', error); }
+    }
+    status('已删除存档');
+  }
+
+  async function overwriteCloudSlot(slotId, label = '云端存档') {
+    const contents = captureState();
+    const slot = {
+      id: slotId,
+      gameId: game.id,
+      label,
+      createdAt: Date.now(),
+      seconds: sessionSeconds,
+      thumb: thumbnail()
+    };
+    await uploadCloudSave(slot, contents, getSyncCode());
+    status('云端存档已覆盖');
+    return slot;
+  }
+
+  async function deleteCloudSlot(slotId) {
+    await deleteCloudSave(game.id, slotId, getSyncCode());
+    status('已删除云端存档');
+  }
+
+  function reload() {
+    if (!emulib) return false;
+    try {
+      emulib._emuReset();
+      emulib._emuUpdate();
+      status('已重新加载');
+      return true;
+    } catch {
+      return false;
+    }
+  }
+
+  function setTouchAction(action, pressed, player = 0) {
+    const target = touchActions[player];
+    if (!target) return;
+    if (pressed) target.add(action);
+    else target.delete(action);
+  }
+
   async function exportState() {
     const contents = captureState();
     const url = URL.createObjectURL(new Blob([contents]));
@@ -401,10 +537,17 @@ export function createGamePlayer({
   function isBoundKey(code) {
     for (const player of Object.values(bindings)) {
       for (const binding of Object.values(player)) {
-        if (binding?.key === code) return true;
+        if (binding && !Array.isArray(binding) && binding.key === code) return true;
+      }
+      for (const combo of player.combos || []) {
+        if (combo.key === code) return true;
       }
     }
     return false;
+  }
+
+  function isResetKey(code) {
+    return Object.values(bindings).some(player => player.reset?.key === code);
   }
 
   function bindControls() {
@@ -414,8 +557,18 @@ export function createGamePlayer({
         if (!running || inputPaused || /INPUT|SELECT|TEXTAREA/.test(event.target.tagName)) return;
         if (!isBoundKey(event.code) && !pressedKeys.has(event.code)) return;
         event.preventDefault();
-        if (type === 'keydown') pressedKeys.add(event.code);
-        else pressedKeys.delete(event.code);
+        if (type === 'keydown') {
+          pressedKeys.add(event.code);
+          if (isResetKey(event.code) && emulib) {
+            try {
+              emulib._emuReset();
+              emulib._emuUpdate();
+              status('已重置');
+            } catch {}
+          }
+        } else {
+          pressedKeys.delete(event.code);
+        }
       }, { signal });
     }
     window.addEventListener('blur', () => {
@@ -447,9 +600,36 @@ export function createGamePlayer({
     pressedKeys.clear();
   }
 
+  // 街机 pad_setting 中的特殊键（BIOS / SPn），标签按原名，只有一个 SP 时显示为“SP”
+  function extraActions() {
+    const buttons = assets?.padSetting?.BUTTONS;
+    if (!Array.isArray(buttons)) return [];
+    const extras = buttons
+      .map(button => ({ match: /^BUTTON_(BIOS|SP(\d))$/.exec(button.name), value: Number(button.vaule) }))
+      .filter(item => item.match && item.value > 0)
+      .map(({ match, value }) => match[1] === 'BIOS'
+        ? { id: 'bios', label: 'BIOS', value }
+        : { id: `sp${match[2]}`, label: `SP${match[2]}`, value });
+    const sps = extras.filter(extra => extra.id !== 'bios');
+    if (sps.length === 1) sps[0].label = 'SP';
+    return extras;
+  }
+
+  // 与参照站默认键位一致：BIOS 用 0，第一个 SP 用 P；只补未保存过的键
+  function applyExtraDefaults() {
+    const extras = extraActions();
+    const firstSp = extras.find(extra => extra.id !== 'bios');
+    const defaults = { bios: 'Digit0', ...(firstSp ? { [firstSp.id]: 'KeyP' } : {}) };
+    for (const extra of extras) {
+      if (!bindings.P1 || bindings.P1[extra.id] || !defaults[extra.id]) continue;
+      bindings.P1[extra.id] = { key: defaults[extra.id] };
+    }
+  }
+
   function reloadBindings() {
     bindings = loadBindings(game.platform);
     values = actionValues(game.platform, assets?.padSetting);
+    applyExtraDefaults();
     pressedKeys.clear();
   }
 
@@ -502,6 +682,14 @@ export function createGamePlayer({
     setVolume,
     saveState,
     loadState,
+    loadSlot,
+    loadCloudSlot,
+    loadStage,
+    overwriteSlot,
+    deleteSlot,
+    overwriteCloudSlot,
+    deleteCloudSlot,
+    reload,
     exportState,
     importState,
     getCheats: () => ({ entries: cheatEntries, selected: selectedCheats }),
@@ -509,9 +697,14 @@ export function createGamePlayer({
     resetCheats,
     reloadBindings,
     setInputPaused,
+    setTouchAction,
     getBindings: () => bindings,
     getActions: () => actionsFor(game.platform),
-    getPlayers: () => playerCount,
+    getPlayers: () => supportedPlayers,
+    getStages: () => assets?.stages || [],
+    getExtraActions: () => extraActions(),
+    getSpeed: () => speed,
+    getVolume: () => volume,
     isRunning: () => running,
     isPaused: () => paused
   };

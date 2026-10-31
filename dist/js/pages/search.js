@@ -1,4 +1,4 @@
-import { navigate, replace } from '../router.js';
+import { getListCount, navigate, replace, saveListCount } from '../router.js';
 import {
   addSearchTerm,
   clearSearchHistory,
@@ -13,6 +13,7 @@ import {
   escapeHtml,
   icon,
   listRow,
+  mountInfiniteList,
   toast
 } from '../ui.js';
 
@@ -42,20 +43,15 @@ function hotBlock(data) {
   </section>`;
 }
 
-function resultsBlock(games, term) {
-  if (!term) return '';
-  if (!games.length) {
-    return emptyState('没有找到相关游戏', '换个关键词试试，或看看热搜榜');
-  }
-  return `<div class="search-result-head"><h2>搜索结果</h2><span>${games.length} 款</span></div>
-    <div class="search-result-list">${games.map(game => listRow(game, { button: '启动', showTags: true, className: 'search-row' })).join('')}</div>`;
+function resultsHead(games) {
+  if (!games.length) return '';
+  return `<div class="search-result-head"><h2>搜索结果</h2><span>${games.length} 款</span></div>`;
 }
 
 export function render({ data, query }) {
   const initialTerm = (query.get('q') || '').trim();
   document.title = initialTerm ? `${initialTerm} · 搜索 · 一局童年` : '搜索 · 一局童年';
   const history = getSearchHistory();
-  const results = searchGames(data, initialTerm);
   const promo = {
     ...(data.banners[0] || {}),
     title: '经典游戏合集',
@@ -79,7 +75,8 @@ export function render({ data, query }) {
   </header>
   <main class="search-main">
     <section class="search-results ${initialTerm ? '' : 'is-hidden'}" id="search-results">
-      ${resultsBlock(results, initialTerm)}
+      <div id="search-result-head"></div>
+      <div class="search-result-list" id="search-result-list"></div>
     </section>
     <section class="search-idle ${initialTerm ? 'is-hidden' : ''}" id="search-idle">
       ${historyBlock(history)}
@@ -97,13 +94,35 @@ export function render({ data, query }) {
       const input = el.querySelector('#search-input');
       const idle = el.querySelector('#search-idle');
       const resultsEl = el.querySelector('#search-results');
+      const resultHead = el.querySelector('#search-result-head');
+      const resultList = el.querySelector('#search-result-list');
       const historyHost = el.querySelector('.search-history-block');
+      let infinite = null;
 
       const showResults = term => {
         const games = searchGames(data, term);
-        resultsEl.innerHTML = resultsBlock(games, term);
+        if (infinite) {
+          infinite.destroy();
+          infinite = null;
+        }
+        resultHead.innerHTML = resultsHead(games);
+        resultList.innerHTML = '';
         resultsEl.classList.toggle('is-hidden', !term);
         idle.classList.toggle('is-hidden', Boolean(term));
+        if (!term) return;
+        if (!games.length) {
+          resultList.innerHTML = emptyState('没有找到相关游戏', '换个关键词试试，或看看热搜榜');
+          return;
+        }
+        const key = `/search?${new URLSearchParams({ q: term })}`;
+        infinite = mountInfiniteList({
+          host: resultList,
+          items: games,
+          pageSize: 20,
+          restoreCount: getListCount(key),
+          onCount: count => saveListCount(key, count),
+          renderItem: game => listRow(game, { button: '启动', showTags: true, className: 'search-row' })
+        });
       };
 
       const commit = term => {
@@ -144,15 +163,13 @@ export function render({ data, query }) {
       input.addEventListener('input', onInput);
       form.addEventListener('submit', onSubmit);
       idle.addEventListener('click', onClick);
-      if (initialTerm) {
-        resultsEl.classList.remove('is-hidden');
-        idle.classList.add('is-hidden');
-      }
+      showResults(initialTerm);
 
       return () => {
         input.removeEventListener('input', onInput);
         form.removeEventListener('submit', onSubmit);
         idle.removeEventListener('click', onClick);
+        if (infinite) infinite.destroy();
       };
     }
   };

@@ -1,6 +1,7 @@
-import { bannerMarkup, icon, listRow } from '../ui.js';
+import { getListCount, routeKey, saveListCount } from '../router.js';
+import { bannerMarkup, icon, listRow, mountInfiniteList } from '../ui.js';
 
-export function render({ data }) {
+export function render({ data, route, query }) {
   document.title = '爽玩宝库 · 一局童年';
   const games = data.discover.map(id => data.gamesById.get(id)).filter(Boolean);
   const feature = data.banners.find(banner => banner.id === 'challenge') || data.banners[0];
@@ -13,10 +14,22 @@ export function render({ data }) {
     <a class="feature-banner" href="#/list?section=classic" aria-label="打开速通挑战专题">
       ${bannerMarkup(feature, { staticMode: true })}
     </a>
-    <div class="discover-list">
-      ${games.map(game => listRow(game, { button: '去玩', showHeat: true, showTags: false, className: 'discover-row' })).join('')}
-    </div>
+    <div class="discover-list" id="discover-list"></div>
     <p class="discover-foot">${icon('gamepad')}<span>更多经典游戏正在路上</span></p>
   </main>`;
-  return { el };
+  return {
+    el,
+    mount() {
+      const key = routeKey(route || { path: '/discover', query });
+      const infinite = mountInfiniteList({
+        host: el.querySelector('#discover-list'),
+        items: games,
+        pageSize: 10,
+        restoreCount: getListCount(key),
+        onCount: count => saveListCount(key, count),
+        renderItem: game => listRow(game, { button: '去玩', showHeat: true, showTags: false, className: 'discover-row' })
+      });
+      return () => infinite.destroy();
+    }
+  };
 }

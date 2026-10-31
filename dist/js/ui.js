@@ -26,7 +26,19 @@ const ICON_PATHS = {
   trash: '<path d="M5 7h14M9.5 7V5h5v2M7.5 7l.8 12.5h7.4L16.5 7M10.5 10v6.5M13.5 10v6.5"/>',
   check: '<path d="m5 12.5 4.5 4.5L19 7.5"/>',
   spark: '<path d="m12 3 2.2 5.8L20 11l-5.8 2.2L12 19l-2.2-5.8L4 11l5.8-2.2z"/><path d="M18.5 3.5v3M17 5h3"/>',
-  keyboard: '<rect x="3" y="6" width="18" height="12" rx="2.2"/><path d="M6.5 9.5h.1M9.5 9.5h.1M12.5 9.5h.1M15.5 9.5h.1M18 9.5h.1M6.5 13h.1M9.5 13h.1M12.5 13h.1M15.5 13h.1M18 13h.1M8 16.5h8"/>'
+  keyboard: '<rect x="3" y="6" width="18" height="12" rx="2.2"/><path d="M6.5 9.5h.1M9.5 9.5h.1M12.5 9.5h.1M15.5 9.5h.1M18 9.5h.1M6.5 13h.1M9.5 13h.1M12.5 13h.1M15.5 13h.1M18 13h.1M8 16.5h8"/>',
+  screen: '<rect x="3.5" y="4.5" width="17" height="12" rx="2"/><path d="M9 20h6M12 16.5V20"/>',
+  reload: '<path d="M19.5 12a7.5 7.5 0 1 1-2.2-5.3"/><path d="M19.5 4.5v5h-5"/>',
+  store: '<path d="M4 9.5 5.5 4h13L20 9.5"/><path d="M4 9.5h16v10H4z"/><path d="M9 19.5v-5h6v5"/>',
+  plus: '<path d="M12 5v14M5 12h14"/>',
+  edit: '<path d="m4 20 4.5-1 10-10-3.5-3.5-10 10z"/><path d="m13.8 7.2 3.5 3.5"/>',
+  speakerOff: '<path d="M4.5 9.5h3l4-3.5v12l-4-3.5h-3z"/><path d="m16 9 5 6M21 9l-5 6"/>',
+  finger: '<path d="M9.2 12.5V5.2a1.5 1.5 0 0 1 3 0v6.3l.2-1.6a1.4 1.4 0 0 1 2.8.3v1.3l.3-.9a1.4 1.4 0 0 1 2.7.6v1.2l.4-.6a1.3 1.3 0 0 1 2.4.9v2.7c0 3.2-2.2 5.6-5.4 5.6h-1.8c-1.6 0-3-.8-3.9-2.1l-3.2-4.6a1.4 1.4 0 0 1 2.2-1.7z" fill="currentColor" stroke="none"/>',
+  cloud: '<path d="M7.5 18.5h-.8a4 4 0 0 1-.4-8 5.6 5.6 0 0 1 10.9-1 3.8 3.8 0 0 1 .3 7.6"/><path d="M12 19.5v-6.8M9.4 15.2 12 12.6l2.6 2.6"/>',
+  menu: '<path d="M5 7h14M5 12h14M5 17h14"/>',
+  frame: '<path d="M4 8V4h4M16 4h4v4M20 16v4h-4M8 20H4v-4"/><rect x="8.5" y="8.5" width="7" height="7" rx="1"/>',
+  shrink: '<path d="M14 4v6h6M10 20v-6H4M14 10l6.5-6.5M10 14l-6.5 6.5"/>',
+  box: '<path d="M4 9.5 12 13l8-3.5v8.2L12 21l-8-3.3z"/><path d="M12 13v8M4 9.5 7 5l8 3.4M20 9.5 17 5l-8 3.4"/><path d="m9.3 3.6.9 1.8M14.7 3.6l-.9 1.8M12 2.6v2.2"/>'
 };
 
 export function icon(name, className = '') {
@@ -266,4 +278,60 @@ export function toast(message) {
   requestAnimationFrame(() => item.classList.add('is-visible'));
   setTimeout(() => item.classList.remove('is-visible'), 1900);
   setTimeout(() => item.remove(), 2300);
+}
+
+export function mountInfiniteList({
+  host,
+  items,
+  renderItem,
+  pageSize = 20,
+  restoreCount = 0,
+  loadingText = '加载中…',
+  endText = '已经到底了',
+  onCount
+}) {
+  if (!host) return { getCount: () => 0, destroy: () => {} };
+  const total = items.length;
+  const initial = Math.max(0, Math.min(total, Number(restoreCount) || 0));
+  let count = Math.min(total, Math.max(initial, Math.min(pageSize, total)));
+  let loading = false;
+  let destroyed = false;
+  const sentinel = document.createElement('div');
+  sentinel.className = 'infinite-sentinel';
+  const observer = new IntersectionObserver(entries => {
+    if (entries.some(entry => entry.isIntersecting)) loadMore();
+  }, { rootMargin: '240px 0px' });
+
+  const paint = () => {
+    if (destroyed) return;
+    host.innerHTML = items.slice(0, count).map((item, index) => renderItem(item, index)).join('');
+    host.appendChild(sentinel);
+    sentinel.innerHTML = count >= total
+      ? `<span class="infinite-end">${escapeHtml(endText)}</span>`
+      : `<span class="infinite-loading">${escapeHtml(loadingText)}</span>`;
+    if (onCount) onCount(count);
+  };
+
+  const loadMore = () => {
+    if (destroyed || loading || count >= total) return;
+    loading = true;
+    sentinel.innerHTML = `<span class="infinite-loading">${escapeHtml(loadingText)}</span>`;
+    requestAnimationFrame(() => {
+      if (destroyed) return;
+      count = Math.min(total, count + pageSize);
+      loading = false;
+      paint();
+    });
+  };
+
+  host.innerHTML = '';
+  paint();
+  observer.observe(sentinel);
+  return {
+    getCount: () => count,
+    destroy: () => {
+      destroyed = true;
+      observer.disconnect();
+    }
+  };
 }

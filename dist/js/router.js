@@ -1,5 +1,6 @@
 const listeners = new Set();
 const scrollPositions = new Map();
+const listCounts = new Map();
 const historyStack = [];
 let currentKey = '';
 
@@ -70,6 +71,17 @@ export function saveScroll(key = currentKey) {
 
 export function restoreScroll(key) {
   window.scrollTo(0, scrollPositions.get(key) || 0);
+}
+
+export function saveListCount(key, count) {
+  if (!key) return;
+  const value = Math.max(0, Number(count) || 0);
+  if (value) listCounts.set(key, value);
+  else listCounts.delete(key);
+}
+
+export function getListCount(key) {
+  return listCounts.get(key) || 0;
 }
 
 export function startRouter(listener) {

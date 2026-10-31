@@ -1,6 +1,7 @@
-import { escapeHtml, gameCard, icon } from '../ui.js';
+import { getListCount, routeKey, saveListCount } from '../router.js';
+import { escapeHtml, gameCard, icon, mountInfiniteList } from '../ui.js';
 
-export function render({ data, query }) {
+export function render({ data, query, route }) {
   const requested = query.get('section');
   const section = data.sections.find(item => item.id === requested) || data.sections[0];
   const games = section.gameIds.map(id => data.gamesById.get(id)).filter(Boolean);
@@ -19,7 +20,21 @@ export function render({ data, query }) {
       <p>${escapeHtml(section.subtitle || '精选好游戏，随时开一局')}</p>
       <span>共 ${games.length} 款</span>
     </div>
-    <div class="game-grid">${games.map(gameCard).join('')}</div>
+    <div class="game-grid" id="section-grid"></div>
   </main>`;
-  return { el };
+  return {
+    el,
+    mount() {
+      const key = routeKey(route || { path: '/list', query });
+      const infinite = mountInfiniteList({
+        host: el.querySelector('#section-grid'),
+        items: games,
+        pageSize: 20,
+        restoreCount: getListCount(key),
+        onCount: count => saveListCount(key, count),
+        renderItem: game => gameCard(game)
+      });
+      return () => infinite.destroy();
+    }
+  };
 }

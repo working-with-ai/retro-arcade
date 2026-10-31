@@ -1,5 +1,6 @@
+import { getListCount, routeKey, saveListCount } from '../router.js';
 import { formatDate, rankGames } from '../store.js';
-import { bannerMarkup, escapeHtml, gameCard, icon, listRow, miniCard, platformIcon, rankRow } from '../ui.js';
+import { bannerMarkup, escapeHtml, gameCard, icon, listRow, miniCard, mountInfiniteList, platformIcon, rankRow } from '../ui.js';
 
 const TAB_NAMES = ['推荐', '上新', '榜单'];
 const RANK_TABS = [
@@ -72,35 +73,22 @@ function recommendPage(data) {
   </main>`;
 }
 
-function newPage(data) {
-  const sorted = [...data.games].sort((a, b) => {
-    if (a.releaseDate === b.releaseDate) return b.players - a.players;
-    return String(b.releaseDate).localeCompare(String(a.releaseDate));
-  });
-  const groups = new Map();
-  for (const game of sorted) {
-    if (!groups.has(game.releaseDate)) groups.set(game.releaseDate, []);
-    groups.get(game.releaseDate).push(game);
-  }
+function newPage() {
   return `<main class="home-main new-main">
-    ${[...groups.entries()].map(([date, games]) => `<section class="date-group">
-      <h2 class="date-title">${formatDate(date)}</h2>
-      <div class="new-list">${games.map(game => listRow(game, { button: '', showTags: true, className: 'new-row' })).join('')}</div>
-    </section>`).join('')}
+    <div class="new-list" id="new-list"></div>
   </main>`;
 }
 
-function rankPage(data, tagsIdx) {
-  const games = rankGames(data, tagsIdx);
+function rankPage(tagsIdx) {
   return `<main class="home-main rank-main">
     <nav class="rank-tabs" aria-label="榜单分类">
       ${RANK_TABS.map(tab => `<a class="rank-tab ${tab.index === tagsIdx ? 'is-active' : ''}" href="#/?tabsIdx=2&tagsIdx=${tab.index}">${tab.name}</a>`).join('')}
     </nav>
-    <div class="rank-list">${games.map((game, index) => rankRow(game, index)).join('')}</div>
+    <div class="rank-list" id="rank-list"></div>
   </main>`;
 }
 
-export function render({ data, query }) {
+export function render({ data, query, route }) {
   const tabsIdx = Math.min(2, Math.max(0, Number(query.get('tabsIdx')) || 0));
   const tagsIdx = Math.min(3, Math.max(0, Number(query.get('tagsIdx')) || 0));
   document.title = tabsIdx === 0
@@ -109,12 +97,47 @@ export function render({ data, query }) {
 
   const el = document.createElement('div');
   el.className = 'page page-home';
-  el.innerHTML = `${homeNav(tabsIdx)}${tabsIdx === 0 ? recommendPage(data) : tabsIdx === 1 ? newPage(data) : rankPage(data, tagsIdx)}`;
+  el.innerHTML = `${homeNav(tabsIdx)}${tabsIdx === 0 ? recommendPage(data) : tabsIdx === 1 ? newPage() : rankPage(tagsIdx)}`;
 
   return {
     el,
     mount() {
-      if (tabsIdx !== 0) return undefined;
+      const key = routeKey(route || { path: '/', query });
+      if (tabsIdx === 1) {
+        const sorted = [...data.games].sort((a, b) => {
+          if (a.releaseDate === b.releaseDate) return b.players - a.players;
+          return String(b.releaseDate).localeCompare(String(a.releaseDate));
+        });
+        const host = el.querySelector('#new-list');
+        const infinite = mountInfiniteList({
+          host,
+          items: sorted,
+          pageSize: 20,
+          restoreCount: getListCount(key),
+          onCount: count => saveListCount(key, count),
+          renderItem: (game, index) => {
+            const previous = index > 0 ? sorted[index - 1] : null;
+            const date = !previous || previous.releaseDate !== game.releaseDate
+              ? `<h2 class="date-title">${formatDate(game.releaseDate)}</h2>`
+              : '';
+            return `${date}${listRow(game, { button: '', showTags: true, className: 'new-row' })}`;
+          }
+        });
+        return () => infinite.destroy();
+      }
+      if (tabsIdx === 2) {
+        const games = rankGames(data, tagsIdx);
+        const host = el.querySelector('#rank-list');
+        const infinite = mountInfiniteList({
+          host,
+          items: games,
+          pageSize: 20,
+          restoreCount: getListCount(key),
+          onCount: count => saveListCount(key, count),
+          renderItem: (game, index) => rankRow(game, index)
+        });
+        return () => infinite.destroy();
+      }
       const banner = el.querySelector('.banner');
       const track = el.querySelector('.banner-track');
       if (!banner || !track) return undefined;

@@ -117,6 +117,15 @@ export function removeSaveSlot(gameId, slotId) {
   writeJSON(SAVES_KEY, slots);
 }
 
+export function updateSaveSlot(gameId, slotId, patch = {}) {
+  const slots = getAllSaveSlots();
+  const slot = slots.find(item => item.gameId === gameId && item.id === slotId);
+  if (!slot) return null;
+  Object.assign(slot, patch);
+  writeJSON(SAVES_KEY, slots);
+  return slot;
+}
+
 export function addSaveSlot(slot) {
   const slots = readJSON(SAVES_KEY, []);
   const list = Array.isArray(slots) ? slots : [];
@@ -190,5 +199,5 @@ export function searchGames(data, term) {
 export function rankGames(data, tagIndex) {
   const platform = ['', '街机', 'FC', 'GBA'][Number(tagIndex)] || '';
   const list = data.games.filter(game => !platform || game.platform === platform);
-  return list.sort((a, b) => b.players - a.players).slice(0, 10);
+  return list.sort((a, b) => b.players - a.players);
 }
