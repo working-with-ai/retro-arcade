@@ -199,7 +199,12 @@ export function loadBindings(platform) {
       if (stored[player]?.combos) defaults[player].combos = normalizeCombos(stored[player].combos);
       for (const action of EXTRA_ACTIONS) {
         const value = stored[player]?.[action];
-        if (value && typeof value === 'object' && typeof value.key === 'string') defaults[player][action] = { key: value.key };
+        if (value && typeof value === 'object') {
+          const binding = { key: typeof value.key === 'string' ? value.key : '' };
+          if (Number.isInteger(value.pad)) binding.pad = value.pad;
+          if (typeof value.turbo === 'boolean') binding.turbo = value.turbo;
+          defaults[player][action] = binding;
+        }
       }
     }
     defaults.turboSpeed = Math.min(4, Math.max(1, Number(stored.turboSpeed) || 1));

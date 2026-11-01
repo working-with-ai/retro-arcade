@@ -4,6 +4,7 @@ const ACTION_SETS = {
     ['turbo-b', 'BB', 'h5-bb'], ['b', 'B', 'h5-b']
   ],
   GBA: [
+    ['l', 'L', 'h5-l'], ['r', 'R', 'h5-r'],
     ['turbo-a', 'AA', 'h5-aa'], ['a', 'A', 'h5-a'],
     ['turbo-b', 'BB', 'h5-bb'], ['b', 'B', 'h5-b']
   ],

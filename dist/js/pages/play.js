@@ -59,7 +59,7 @@ export function render({ data, query }) {
     <div class="play-status-sr" id="play-status" role="status">准备就绪 · 点击开始</div>
     ${h5Markup(platform)}
     <div class="play-drawer-backdrop" id="drawer-backdrop" hidden></div>
-    <aside class="play-drawer" id="play-drawer" aria-hidden="true"><div id="drawer-content"></div></aside>
+    <aside class="play-drawer" id="play-drawer" aria-hidden="true" inert><div id="drawer-content"></div></aside>
   </div>
   <div class="play-start-overlay is-loading" id="play-overlay">
     <i class="play-loader" aria-hidden="true"></i>
@@ -90,6 +90,7 @@ export function render({ data, query }) {
       let supportedPlayers = basePlayers;
       let drawerType = '';
       let drawerOpen = false;
+      let drawerTrigger = null;
       let cheatState = { entries: [], selected: {} };
       let keyPlayer = 1;
       let listening = null;
@@ -167,7 +168,6 @@ export function render({ data, query }) {
         player.setSpeed(value);
         h5?.updateSpeed(value);
         if (drawerType === 'menu') renderMenu();
-        toast(`已切换到 ${value}× 速度`);
       }
 
       function cycleSpeed() {
@@ -261,6 +261,7 @@ export function render({ data, query }) {
       function renderCheats() {
         const list = drawerContent.querySelector('#cheat-list');
         if (!list) return;
+        const expanded = new Set([...list.querySelectorAll('.cheat-group[open]')].map(group => Number(group.dataset.cheatGroup)));
         if (!cheatState.entries.length) {
           list.innerHTML = '<p class="drawer-empty">开始游戏后可在这里开启金手指。</p>';
           return;
@@ -270,10 +271,10 @@ export function render({ data, query }) {
           if (entry.options.length === 2 && entry.options.some(option => option.value === 0) && entry.options.some(option => option.value === 1)) {
             return `<label class="cheat-row"><span>${escapeHtml(entry.name)}</span><input type="checkbox" data-cheat-index="${index}" ${value ? 'checked' : ''}><i></i></label>`;
           }
-          if (entry.options.length <= 4) {
-            return `<div class="cheat-row cheat-row-seg"><span>${escapeHtml(entry.name)}</span><div class="cheat-seg">${entry.options.map(option => `<button type="button" data-cheat-option="${index}" data-cheat-value="${option.value}" class="${option.value === value ? 'is-active' : ''}">${escapeHtml(option.label)}</button>`).join('')}</div></div>`;
-          }
-          return `<label class="cheat-row cheat-row-select"><span>${escapeHtml(entry.name)}</span><select data-cheat-index="${index}">${entry.options.map(option => `<option value="${option.value}" ${option.value === value ? 'selected' : ''}>${escapeHtml(option.label)}</option>`).join('')}</select></label>`;
+          return `<details class="cheat-group" data-cheat-group="${index}" ${expanded.has(index) ? 'open' : ''}>
+            <summary class="cheat-row cheat-group-title"><span>${escapeHtml(entry.name)}</span>${icon('chevron')}</summary>
+            <div class="cheat-options">${entry.options.map(option => `<label class="cheat-option"><span>${escapeHtml(option.label)}</span><input type="radio" name="cheat-${index}" data-cheat-index="${index}" value="${option.value}" ${option.value === value ? 'checked' : ''}></label>`).join('')}</div>
+          </details>`;
         }).join('');
       }
 
@@ -373,7 +374,7 @@ export function render({ data, query }) {
         drawerOpen = true;
         stopListening();
         h5?.setEnabled(false);
-        player.setInputPaused(type === 'keys');
+        player.setInputPaused(true);
         if (type === 'menu') renderMenu();
         else if (type === 'keys') {
           drawerContent.innerHTML = keymapShell();
@@ -388,6 +389,7 @@ export function render({ data, query }) {
         // 每次打开都从顶部开始，不沿用上一个抽屉的滚动位置
         drawerContent.scrollTop = 0;
         drawer.dataset.type = type;
+        drawer.inert = false;
         drawer.classList.add('is-open');
         drawer.setAttribute('aria-hidden', 'false');
         floatButtons.forEach(button => button.classList.toggle('is-active', button.dataset.drawer === type));
@@ -400,11 +402,13 @@ export function render({ data, query }) {
         if (!drawerOpen) return;
         drawerOpen = false;
         drawerType = '';
-        if (drawerContent.contains(document.activeElement)) document.activeElement.blur();
+        if (drawerTrigger?.isConnected) drawerTrigger.focus({ preventScroll: true });
+        else if (drawerContent.contains(document.activeElement)) document.activeElement.blur();
         stopListening();
         player.setInputPaused(false);
         h5?.setEnabled(true);
         drawer.classList.remove('is-open');
+        drawer.inert = true;
         drawer.setAttribute('aria-hidden', 'true');
         floatButtons.forEach(button => button.classList.remove('is-active'));
         backdrop.classList.remove('is-visible');
@@ -416,7 +420,7 @@ export function render({ data, query }) {
         listening = null;
         if (gamepadTimer) clearInterval(gamepadTimer);
         gamepadTimer = 0;
-        player.setInputPaused(drawerType === 'keys');
+        player.setInputPaused(drawerOpen);
         if (drawerType === 'keys') renderKeymap();
       }
 
@@ -534,14 +538,6 @@ export function render({ data, query }) {
           stopListening();
           renderKeymap();
           toast('已恢复默认按键');
-          return;
-        }
-        if (target.dataset.cheatOption !== undefined) {
-          const index = Number(target.dataset.cheatOption);
-          const value = Number(target.dataset.cheatValue) || 0;
-          player.setCheat(index, value);
-          cheatState.selected[index] = value;
-          renderCheats();
           return;
         }
         if (target.dataset.cheatReset !== undefined) {
@@ -702,7 +698,10 @@ export function render({ data, query }) {
         const button = event.target.closest('[data-drawer]');
         if (!button) return;
         if (drawerOpen && button.dataset.drawer === drawerType) closeDrawer();
-        else openDrawer(button.dataset.drawer);
+        else {
+          drawerTrigger = button;
+          openDrawer(button.dataset.drawer);
+        }
       };
 
       startButton.addEventListener('click', onStart);
