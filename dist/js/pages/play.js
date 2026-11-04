@@ -704,6 +704,13 @@ export function render({ data, query }) {
         }
       };
 
+      const blockNativeSelection = event => {
+        event.preventDefault();
+      };
+      document.addEventListener('selectstart', blockNativeSelection, { capture: true, signal });
+      document.addEventListener('contextmenu', blockNativeSelection, { capture: true, signal });
+      document.addEventListener('dragstart', blockNativeSelection, { capture: true, signal });
+
       startButton.addEventListener('click', onStart);
       el.addEventListener('click', onFloat);
       drawerContent.addEventListener('click', onDrawerClick);

@@ -5001,3 +5001,14 @@ svg {
 .h5-gba .h5-b {
   background: #2f5fa8;
 }
+
+/* 游戏页禁止长按选择文本与系统菜单，与参照站一致 */
+.page-play.is-immersive,
+.page-play.is-immersive * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
