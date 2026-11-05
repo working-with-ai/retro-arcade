@@ -12,6 +12,7 @@ import { createGamePlayer } from '../player.js';
 import { navigate } from '../router.js';
 import { formatPlayTime, formatRelativeTime, getSaveSlots } from '../store.js';
 import { escapeHtml, icon, toast } from '../ui.js';
+import { canRecordVideo, saveGameVideo, startGameplayRecording } from '../videos.js';
 
 function notFound() {
   const el = document.createElement('div');
@@ -52,6 +53,7 @@ export function render({ data, query }) {
       </div>
     </section>
     <div class="play-float-icons">
+      <button type="button" class="float-record" data-record="1" aria-label="录制实机视频">${icon('video')}<span>录屏</span></button>
       <button type="button" class="float-cheats" data-drawer="cheats" aria-label="金手指">${icon('finger')}<span>金手指</span></button>
       <button type="button" data-drawer="saves" aria-label="存档">${icon('cloud')}<span>存档</span></button>
       <button type="button" data-drawer="menu" aria-label="菜单">${icon('menu')}<span>菜单</span></button>
@@ -704,6 +706,53 @@ export function render({ data, query }) {
         }
       };
 
+      // 录制 15 秒实机画面并存入 R2，详情页首屏即可播放
+      let recording = null;
+      const onRecord = async event => {
+        const button = event.target.closest('[data-record]');
+        if (!button) return;
+        if (recording) {
+          toast('正在录制中，请稍候');
+          return;
+        }
+        if (!player.isRunning()) {
+          toast('先开始游戏再录制');
+          return;
+        }
+        if (!canRecordVideo()) {
+          toast('当前浏览器不支持录屏');
+          return;
+        }
+        const label = button.querySelector('span');
+        const original = label ? label.textContent : '';
+        button.classList.add('is-recording');
+        try {
+          const session = startGameplayRecording(canvas, window.emuSound, {
+            seconds: 15,
+            onTick: left => {
+              if (!label) return;
+              label.textContent = left > 0 ? `${left}s` : '保存…';
+            }
+          });
+          recording = session;
+          const clip = await session.done;
+          if (label) label.textContent = '上传…';
+          await saveGameVideo(game.id, clip.blob, {
+            duration: clip.seconds,
+            width: canvas.width,
+            height: canvas.height
+          });
+          toast('实机录像已保存，详情页可以播放了');
+        } catch (error) {
+          console.warn('录制实机视频失败', error);
+          toast(`录制失败：${error.message}`);
+        } finally {
+          recording = null;
+          button.classList.remove('is-recording');
+          if (label) label.textContent = original;
+        }
+      };
+
       const blockNativeSelection = event => {
         event.preventDefault();
       };
@@ -713,6 +762,7 @@ export function render({ data, query }) {
 
       startButton.addEventListener('click', onStart);
       el.addEventListener('click', onFloat);
+      el.addEventListener('click', onRecord);
       drawerContent.addEventListener('click', onDrawerClick);
       drawerContent.addEventListener('change', onDrawerChange);
       drawerContent.addEventListener('input', onDrawerInput);
@@ -726,6 +776,7 @@ export function render({ data, query }) {
 
       return () => {
         controller.abort();
+        recording?.stop();
         if (gamepadTimer) clearInterval(gamepadTimer);
         if (backdropTimer) clearTimeout(backdropTimer);
         releaseStageUrls();

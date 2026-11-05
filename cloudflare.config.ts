@@ -6,7 +6,7 @@ export default defineConfig({
     name: 'retro-arcade',
     entrypoint: './worker/index.js',
     compatibilityDate: '2026-10-31',
-    assets: { runWorkerFirst: ['/roms/*', '/runtime/libvba.wasm', '/runtime/libnes.wasm', '/runtime/libfba_v2.wasm', '/games/*', '/api/*'] },
+    assets: { runWorkerFirst: ['/roms/*', '/runtime/libvba.wasm', '/runtime/libnes.wasm', '/runtime/libfba_v2.wasm', '/games/*', '/videos/*', '/api/*'] },
     env: {
       ASSETS: bindings.assets(),
       RESOURCES: bindings.r2({ name: 'pokemon-dark-phantom-resources' })

@@ -1,7 +1,8 @@
 import { formatPlayTime, formatRelativeTime, getSaveSlots } from '../store.js';
 import { getSyncCode, listCloudSaves } from '../cloud.js';
 import { loadResourcesInfo } from '../resources.js';
-import { coverMarkup, emptyState, escapeHtml, formatPlayers, icon } from '../ui.js';
+import { coverMarkup, emptyState, escapeHtml, formatPlayers, icon, toast } from '../ui.js';
+import { formatVideoTime, getGameVideo } from '../videos.js';
 
 function screenshotArt(game, shot, index) {
   return `<div class="shot-art shot-tone-${escapeHtml(shot.tone || 'forest')} shot-index-${index}">
@@ -22,6 +23,17 @@ function mediaChrome() {
         <span class="shot-icons">${icon('volume')}${icon('fullscreen')}</span>
       </span>
     </span>`;
+}
+
+// 实机录像：直接播放 R2 上的视频，Range 请求由 worker 处理，可拖拽进度
+function videoMarkup(game, video) {
+  const poster = game.cover ? escapeHtml(game.cover) : '';
+  const duration = Number(video.duration) || 0;
+  return `<video class="shot-video" src="${escapeHtml(video.url)}"${poster ? ` poster="${poster}"` : ''} playsinline webkit-playsinline preload="metadata" controls></video>
+    <button class="shot-video-play" type="button" aria-label="播放${escapeHtml(game.shortName || game.name)}实机画面">
+      <span class="shot-center">${icon('play')}</span>
+    </button>
+    <span class="shot-badge">实机录像${duration ? ` <b>${formatVideoTime(duration)}</b>` : ''}</span>`;
 }
 
 function cloudBadge() {
@@ -131,8 +143,8 @@ export function render({ data, query }) {
         <strong>${Number(game.score || 0).toFixed(1)}</strong>
       </div>
     </section>
-    <div class="shots-scroll" aria-label="游戏截图">
-      ${shots.map((shot, index) => `<figure class="shot-slide">
+    <div class="shots-scroll" aria-label="游戏画面与截图">
+      ${shots.map((shot, index) => `<figure class="shot-slide" data-shot-index="${index}"${index === 0 ? ' data-shot-primary' : ''}>
         ${screenshotArt(game, shot, index)}
         <button class="shot-hit" type="button" data-launch="${escapeHtml(game.id)}" aria-label="${available ? '启动游戏' : '游戏即将上线'}"></button>
         ${mediaChrome()}
@@ -177,6 +189,44 @@ export function render({ data, query }) {
 
       let destroyed = false;
       let imageUrls = new Map();
+      const videoController = new AbortController();
+
+      // 首屏「游戏画面」：R2 上有实机录像就换成真播放器，没有就保留插画占位
+      const primaryShot = el.querySelector('.shot-slide[data-shot-primary]');
+      if (primaryShot && available) {
+        (async () => {
+          const video = await getGameVideo(game.id, { signal: videoController.signal });
+          if (destroyed || !video || !primaryShot.isConnected) return;
+          primaryShot.innerHTML = videoMarkup(game, video);
+          primaryShot.classList.add('has-video');
+          const media = primaryShot.querySelector('.shot-video');
+          const playButton = primaryShot.querySelector('.shot-video-play');
+          if (!media || !playButton) return;
+          // 时长以视频自身元数据为准：CLI 批量上传的素材没有附带时长也能显示
+          const refreshDuration = () => {
+            if (!Number.isFinite(media.duration) || media.duration <= 0) return;
+            const badge = primaryShot.querySelector('.shot-badge');
+            if (!badge) return;
+            let label = badge.querySelector('b');
+            if (!label) {
+              label = document.createElement('b');
+              badge.appendChild(document.createTextNode(' '));
+              badge.appendChild(label);
+            }
+            label.textContent = formatVideoTime(media.duration);
+          };
+          media.addEventListener('loadedmetadata', refreshDuration);
+          if (media.readyState >= 1) refreshDuration();
+          playButton.addEventListener('click', event => {
+            event.preventDefault();
+            event.stopPropagation();
+            media.play().catch(() => toast('当前浏览器无法播放这段视频'));
+          });
+          media.addEventListener('playing', () => primaryShot.classList.add('is-playing'));
+          media.addEventListener('pause', () => primaryShot.classList.remove('is-playing'));
+          media.addEventListener('ended', () => primaryShot.classList.remove('is-playing'));
+        })();
+      }
       const releaseImages = () => {
         for (const url of imageUrls.values()) URL.revokeObjectURL(url);
         imageUrls = new Map();
@@ -221,6 +271,7 @@ export function render({ data, query }) {
 
       return () => {
         destroyed = true;
+        videoController.abort();
         window.removeEventListener('scroll', onScroll);
         toggle.removeEventListener('click', onToggle);
         releaseImages();

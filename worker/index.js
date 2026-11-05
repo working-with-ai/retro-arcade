@@ -9,6 +9,13 @@ const MAX_SAVE_BYTES = 4 * 1024 * 1024;
 const MAX_SYNC_OBJECTS = 300;
 const MAX_SYNC_BYTES = 100 * 1024 * 1024;
 const CLOUD_PREFIX = 'cloud-saves/';
+const VIDEO_PREFIX = 'videos/';
+const MAX_VIDEO_BYTES = 12 * 1024 * 1024;
+const VIDEO_EXTENSIONS = ['mp4', 'webm'];
+const VIDEO_CONTENT_TYPES = {
+  mp4: 'video/mp4',
+  webm: 'video/webm'
+};
 const syncLocks = new Map();
 
 const gameMap = new Map(catalog.games.map(game => [game.id, game]));
@@ -58,9 +65,9 @@ async function withSyncLock(code, task) {
   return run;
 }
 
-async function readBodyWithLimit(request) {
+async function readBodyWithLimit(request, limit = MAX_SAVE_BYTES) {
   const length = Number(request.headers.get('Content-Length'));
-  if (Number.isFinite(length) && length > MAX_SAVE_BYTES) return { tooLarge: true };
+  if (Number.isFinite(length) && length > limit) return { tooLarge: true };
   if (!request.body) return { body: new Uint8Array(0) };
   const reader = request.body.getReader();
   const chunks = [];
@@ -70,7 +77,7 @@ async function readBodyWithLimit(request) {
       const { value, done } = await reader.read();
       if (done) break;
       total += value.byteLength;
-      if (total > MAX_SAVE_BYTES) {
+      if (total > limit) {
         try { await reader.cancel(); } catch {}
         return { tooLarge: true };
       }
@@ -262,6 +269,97 @@ async function handleGameAsset(request, env, url) {
   }
 }
 
+async function findVideo(bucket, gameId) {
+  for (const ext of VIDEO_EXTENSIONS) {
+    const key = `${VIDEO_PREFIX}${gameId}/clip.${ext}`;
+    const metadata = await bucket.head(key);
+    if (metadata) return { key, metadata, ext };
+  }
+  return null;
+}
+
+async function handleVideoStream(request, env, url) {
+  const headers = corsHeaders();
+  if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers });
+  if (!['GET', 'HEAD'].includes(request.method)) {
+    headers.set('Allow', 'GET, HEAD, OPTIONS');
+    return new Response('Method not allowed', { status: 405, headers });
+  }
+  const match = /^\/videos\/([A-Za-z0-9_-]{1,64})(?:\.[a-z0-9]{2,4})?$/.exec(url.pathname);
+  if (!match) return new Response('Not found', { status: 404, headers });
+  try {
+    const found = await findVideo(env.RESOURCES, match[1]);
+    if (!found) return new Response('Not found', { status: 404, headers });
+    const contentType = found.metadata.httpMetadata?.contentType || VIDEO_CONTENT_TYPES[found.ext];
+    return await serveStoredObject(request, env, found.key, found.metadata, contentType);
+  } catch (error) {
+    console.error(JSON.stringify({ event: 'video_stream_error', gameId: match[1], message: error.message }));
+    headers.set('Cache-Control', 'no-store');
+    return new Response('视频暂时无法加载', { status: 502, headers });
+  }
+}
+
+async function handleVideoApi(request, env, url) {
+  if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: apiHeaders() });
+  const match = /^\/api\/videos\/([A-Za-z0-9_-]{1,64})$/.exec(url.pathname);
+  if (!match) return json({ error: 'Invalid game id' }, 400);
+  const gameId = match[1];
+  if (!gameMap.has(gameId)) return json({ error: 'Unknown game' }, 404);
+
+  if (request.method === 'GET') {
+    const found = await findVideo(env.RESOURCES, gameId);
+    if (!found) return json({ video: null });
+    const metadata = found.metadata;
+    return json({
+      video: {
+        url: `/videos/${gameId}`,
+        contentType: metadata.httpMetadata?.contentType || VIDEO_CONTENT_TYPES[found.ext],
+        size: metadata.size,
+        duration: Number(metadata.customMetadata?.duration) || 0,
+        width: Number(metadata.customMetadata?.width) || 0,
+        height: Number(metadata.customMetadata?.height) || 0,
+        recordedAt: Number(metadata.customMetadata?.recordedAt) || Number(metadata.uploaded) || 0
+      }
+    });
+  }
+
+  if (request.method === 'PUT') {
+    const contentType = (request.headers.get('Content-Type') || '').split(';')[0].trim().toLowerCase();
+    const ext = VIDEO_EXTENSIONS.find(item => VIDEO_CONTENT_TYPES[item] === contentType);
+    if (!ext) return json({ error: 'Only mp4 or webm clips are supported' }, 415);
+    const { body, tooLarge } = await readBodyWithLimit(request, MAX_VIDEO_BYTES);
+    if (tooLarge) return json({ error: 'Video is too large' }, 413);
+    if (!body.length) return json({ error: 'Empty video' }, 400);
+    const duration = Math.max(0, Math.min(600, Number(url.searchParams.get('duration')) || 0));
+    const width = Math.max(0, Math.min(4096, Number(url.searchParams.get('width')) || 0));
+    const height = Math.max(0, Math.min(4096, Number(url.searchParams.get('height')) || 0));
+    const existing = await findVideo(env.RESOURCES, gameId);
+    const key = `${VIDEO_PREFIX}${gameId}/clip.${ext}`;
+    await makeRoom(env.RESOURCES, body.length, key);
+    await env.RESOURCES.put(key, body, {
+      httpMetadata: { contentType, cacheControl: 'public, max-age=86400' },
+      customMetadata: {
+        duration: String(duration),
+        width: String(width),
+        height: String(height),
+        recordedAt: String(Date.now())
+      }
+    });
+    if (existing && existing.key !== key) await env.RESOURCES.delete(existing.key);
+    console.log(JSON.stringify({ event: 'video_saved', gameId, bytes: body.length, ext }));
+    return json({ ok: true, gameId, url: `/videos/${gameId}`, duration }, existing ? 200 : 201);
+  }
+
+  if (request.method === 'DELETE') {
+    const existing = await findVideo(env.RESOURCES, gameId);
+    if (!existing) return json({ error: 'Not found' }, 404);
+    await env.RESOURCES.delete(existing.key);
+    return new Response(null, { status: 204, headers: apiHeaders() });
+  }
+
+  return json({ error: 'Method not allowed' }, 405);
+}
+
 function apiHeaders() {
   return corsHeaders('GET, POST, PUT, DELETE, OPTIONS');
 }
@@ -332,6 +430,7 @@ function parseSavePath(url) {
 
 async function handleApi(request, env, url) {
   if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: apiHeaders() });
+  if (url.pathname.startsWith('/api/videos/')) return handleVideoApi(request, env, url);
   if (url.pathname === '/api/sync') {
     if (request.method !== 'POST') return json({ error: 'Method not allowed' }, 405);
     return json({ code: syncCode() }, 201);
@@ -410,6 +509,7 @@ export default {
     const url = new URL(request.url);
     if (url.pathname.startsWith('/api/')) return handleApi(request, env, url);
     if (url.pathname.startsWith('/games/')) return handleGameAsset(request, env, url);
+    if (url.pathname.startsWith('/videos/')) return handleVideoStream(request, env, url);
     const resource = resources[url.pathname];
     if (!resource) return env.ASSETS.fetch(request);
     return handleResource(request, env, resource);

@@ -1,6 +1,7 @@
 node_modules/
 .cloudflare/
 .cloudflare-public/
+media/videos/
 .env
 .env.*
 .dev.vars*

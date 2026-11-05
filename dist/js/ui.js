@@ -34,6 +34,7 @@ const ICON_PATHS = {
   edit: '<path d="m4 20 4.5-1 10-10-3.5-3.5-10 10z"/><path d="m13.8 7.2 3.5 3.5"/>',
   speakerOff: '<path d="M4.5 9.5h3l4-3.5v12l-4-3.5h-3z"/><path d="m16 9 5 6M21 9l-5 6"/>',
   finger: '<path d="M9.2 12.5V5.2a1.5 1.5 0 0 1 3 0v6.3l.2-1.6a1.4 1.4 0 0 1 2.8.3v1.3l.3-.9a1.4 1.4 0 0 1 2.7.6v1.2l.4-.6a1.3 1.3 0 0 1 2.4.9v2.7c0 3.2-2.2 5.6-5.4 5.6h-1.8c-1.6 0-3-.8-3.9-2.1l-3.2-4.6a1.4 1.4 0 0 1 2.2-1.7z" fill="currentColor" stroke="none"/>',
+  video: '<rect x="3" y="6.2" width="12.6" height="11.6" rx="2.4"/><path d="m15.6 12 5.4-3.3v6.6L15.6 12z"/><circle cx="9.3" cy="12" r="2.2" fill="currentColor" stroke="none"/>',
   cloud: '<path d="M7.5 18.5h-.8a4 4 0 0 1-.4-8 5.6 5.6 0 0 1 10.9-1 3.8 3.8 0 0 1 .3 7.6"/><path d="M12 19.5v-6.8M9.4 15.2 12 12.6l2.6 2.6"/>',
   menu: '<path d="M5 7h14M5 12h14M5 17h14"/>',
   frame: '<path d="M4 8V4h4M16 4h4v4M20 16v4h-4M8 20H4v-4"/><rect x="8.5" y="8.5" width="7" height="7" rx="1"/>',

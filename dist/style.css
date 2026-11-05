@@ -2070,6 +2070,62 @@ svg {
   background: transparent;
 }
 
+/* 实机录像：真实 <video> 覆盖插画占位 */
+.shot-slide.has-video {
+  background: #000;
+}
+
+.shot-video {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+}
+
+.shot-video-play {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  background: rgba(0, 0, 0, 0.14);
+  transition: opacity 0.18s ease;
+}
+
+.shot-video-play .shot-center {
+  position: static;
+  transform: none;
+}
+
+.shot-slide.has-video.is-playing .shot-video-play {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.shot-badge {
+  position: absolute;
+  z-index: 7;
+  left: 11px;
+  top: 10px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.42);
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 10px;
+  letter-spacing: 0.4px;
+  pointer-events: none;
+}
+
+.shot-badge b {
+  font-weight: 600;
+}
+
 .shot-center {
   position: absolute;
   z-index: 4;
@@ -3338,6 +3394,16 @@ svg {
 
 .play-float-icons button.is-active {
   color: #4a9cff;
+}
+
+.play-float-icons .float-record.is-recording {
+  color: #ff4d5e;
+  animation: record-pulse 1.1s ease-in-out infinite;
+}
+
+@keyframes record-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
 }
 
 .play-float-icons .icon {

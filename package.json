@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "cf dev",
     "build": "node deploy/prepare-assets.mjs && cf build",
-    "deploy": "cf deploy --prebuilt --mode production"
+    "deploy": "cf deploy --prebuilt --mode production",
+    "videos:sync": "node deploy/sync-videos.mjs"
   },
   "dependencies": {
     "fflate": "0.8.3"
