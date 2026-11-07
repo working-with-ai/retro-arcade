@@ -32,7 +32,7 @@
    gh run watch <databaseId> --repo working-with-ai/retro-arcade --exit-status --interval 10
    ```
 
-   工作流依次安装依赖、构建、部署预检、上传游戏及模拟器资源到 R2、发布 Worker 和静态资源。只有对应提交的任务显示 `completed` 且 `conclusion=success`，才算 CI 部署成功；失败时查看该任务日志定位原因。
+   工作流按 `DEPLOY_MODE` 安装依赖、构建并完成部署预检；仅在 `PLATFORM_DATABASE_ENABLED=true` 时执行 `node deploy/migrate-platform.mjs` 初始化/迁移平台数据库；仅 production 上传游戏及模拟器资源到 R2，staging 跳过上传。最后执行 `npx cf deploy --prebuilt --mode "$DEPLOY_MODE"` 发布 Worker 和静态资源。只有对应提交的任务显示 `completed` 且 `conclusion=success`，才算 CI 部署成功；失败时查看该任务日志定位原因。
 
 5. 部署后核验 `https://play.accemarket.com`：页面和修改的静态文件可访问；涉及视频时，检查 `/api/videos/<game.id>` 返回有效元数据，`/videos/<game.id>` 的 Range 请求返回 `206`，并抽查详情页实际播放。
 6. 报告提交 SHA、部署任务链接、线上验证结果及尚未解决的问题。推送成功和部署成功分开确认。
@@ -45,4 +45,6 @@
 
 ## 手动部署
 
-用户明确要求手动发布，或需要绕过已定位的 CI 问题时，在上述构建和部署预检通过后执行 `npm run deploy`。使用 `cf auth whoami` 确认账号；凭证使用本地登录或环境变量，避免写入仓库。手动部署同样需要完成线上核验。
+手动运行 GitHub Actions 时选择 `environment`（默认 staging，可选 production）；`database_enabled` 或仓库变量 `PLATFORM_DATABASE_ENABLED` 为 true 时执行数据库初始化/迁移。推送 main 默认发布 production。
+
+用户明确要求本地手动发布，或需要绕过已定位的 CI 问题时，先选择 `DEPLOY_MODE=production` 或 `staging`，使用 `cf auth whoami` 确认账号，并按相同模式完成构建和预检。启用数据库时先执行 `node deploy/migrate-platform.mjs`，仅 production 执行 `node deploy/upload-r2.mjs`，最后执行 `npx cf deploy --prebuilt --mode "$DEPLOY_MODE"`。模式和功能开关需在构建、迁移、发布各步骤保持一致；凭证使用本地登录或环境变量，避免写入仓库。手动部署同样需要完成线上核验。

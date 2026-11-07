@@ -1,4 +1,5 @@
 import { readFile, readdir } from 'node:fs/promises';
+import { MEMBERSHIP_LIMITS } from '../dist/js/membership-limits.js';
 const account=process.env.CLOUDFLARE_ACCOUNT_ID,token=process.env.CLOUDFLARE_API_TOKEN;
 if(!account||!token)throw Error('Cloudflare account and deployment credentials are required');
 const projectConfig=await readFile(new URL('../cloudflare.config.ts',import.meta.url),'utf8');
@@ -30,6 +31,9 @@ if(!database)database=await api('/d1/database','POST',{name});
 const dbId=database.uuid||database.id;
 async function query(sql,params=[]){const result=await api(`/d1/database/${dbId}/query`,'POST',{sql,params});if(result.some(r=>r.success===false))throw Error('D1 SQL migration failed');return result;}
 await query('CREATE TABLE IF NOT EXISTS schema_migrations (id TEXT PRIMARY KEY, applied_at INTEGER NOT NULL)');
+// Seed shared limits before installing the quota trigger, including on existing databases.
+await query('CREATE TABLE IF NOT EXISTS membership_limits (tier TEXT PRIMARY KEY, max_bytes INTEGER NOT NULL, max_saves INTEGER NOT NULL, max_presets INTEGER NOT NULL)');
+await query('INSERT INTO membership_limits(tier,max_bytes,max_saves,max_presets) VALUES(?,?,?,?),(?,?,?,?) ON CONFLICT(tier) DO UPDATE SET max_bytes=excluded.max_bytes,max_saves=excluded.max_saves,max_presets=excluded.max_presets',Object.entries(MEMBERSHIP_LIMITS).flatMap(([tier,plan])=>[tier,plan.maxBytes,plan.maxSaves,plan.maxPresets]));
 for(const file of (await readdir(new URL('../migrations/',import.meta.url))).filter(f=>f.endsWith('.sql')).sort()){
   const existing=await query('SELECT id FROM schema_migrations WHERE id=?',[file]);if(existing[0].results.length)continue;
   // Migrations use idempotent DDL and do not drop or rewrite existing application data.

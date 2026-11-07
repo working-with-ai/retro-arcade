@@ -1,3 +1,6 @@
+import { AUTH_SECRETS, PAYMENT_SECRETS } from './config.js';
+import { MEMBERSHIP_LIMITS } from '../../dist/js/membership-limits.js';
+
 export const DAY = 86400000;
 export const MAX_STATE = 4 * 1024 * 1024;
 const encoder = new TextEncoder();
@@ -47,17 +50,18 @@ export async function mac(secret, value) {
   return hex(await crypto.subtle.sign('HMAC', key, bytes(value)));
 }
 export function features(env) {
-  const auth = env.AUTH_ENABLED === 'true' && !!env.DB && ['AUTH_SECRET', 'PHONE_ENCRYPTION_KEY', 'ALIYUN_ACCESS_KEY_ID', 'ALIYUN_ACCESS_KEY_SECRET', 'SMS_SIGN_NAME', 'SMS_TEMPLATE_CODE', 'TURNSTILE_SECRET', 'TURNSTILE_SITE_KEY'].every(k => !!env[k]);
-  const payments = auth && env.PAYMENTS_ENABLED === 'true' && ['WX_MCH_ID','WX_APP_ID','WX_PRIVATE_KEY','WX_SERIAL_NO','WX_API_V3_KEY','WX_PUBLIC_KEY','WX_PUBLIC_KEY_ID','WX_APP_SECRET'].every(k => !!env[k]);
+  const auth = env.AUTH_ENABLED === 'true' && !!env.DB && AUTH_SECRETS.every(k => !!env[k]);
+  const payments = auth && env.PAYMENTS_ENABLED === 'true' && PAYMENT_SECRETS.every(k => !!env[k]);
   return { auth, payments, relays: auth && env.RELAYS_ENABLED === 'true', touchEditor: true, turnstileSiteKey: auth ? env.TURNSTILE_SITE_KEY : null };
 }
 export function limits(user) {
-  const member = user.member_until > Date.now();
-  return { member, expiresAt: user.member_until, maxBytes: member ? 1073741824 : 104857600, maxSaves: member ? 3000 : 300, maxPresets: member ? 5 : 1 };
+  const expiresAt = user?.member_until || 0, member = expiresAt > Date.now();
+  return { member, expiresAt, ...MEMBERSHIP_LIMITS[member ? 'member' : 'free'] };
 }
+export const sessionToken = request => /(?:^|;\s*)ra_session=([^;]+)/.exec(request.headers.get('Cookie') || '')?.[1];
 export async function session(request, env, required = true) {
   if (!env.DB) { if (required) fail(503, 'UNAVAILABLE', '账号服务尚未开放'); return null; }
-  const token = /(?:^|;\s*)ra_session=([^;]+)/.exec(request.headers.get('Cookie') || '')?.[1];
+  const token = sessionToken(request);
   const user = token ? await first(env, 'SELECT u.* FROM sessions s JOIN users u ON u.id=s.user_id WHERE s.token_hash=? AND s.expires_at>?', await hash(token), Date.now()) : null;
   if (!user && required) fail(401, 'LOGIN_REQUIRED', '请先登录');
   return user;

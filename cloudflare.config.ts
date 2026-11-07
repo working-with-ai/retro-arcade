@@ -1,4 +1,5 @@
 import { bindings, defineConfig, triggers } from 'cf/config';
+import { AUTH_SECRETS, PAYMENT_SECRETS } from './worker/platform/config.js';
 
 export default defineConfig(({ mode }) => {
 const staging = mode === 'staging';
@@ -6,9 +7,7 @@ const database = process.env.PLATFORM_DATABASE_ENABLED === 'true';
 const auth = database && process.env.PLATFORM_AUTH_ENABLED === 'true';
 const payments = auth && process.env.PLATFORM_PAYMENTS_ENABLED === 'true';
 const relays = auth && process.env.PLATFORM_RELAYS_ENABLED === 'true';
-const authSecrets = ['AUTH_SECRET','PHONE_ENCRYPTION_KEY','ALIYUN_ACCESS_KEY_ID','ALIYUN_ACCESS_KEY_SECRET','SMS_SIGN_NAME','SMS_TEMPLATE_CODE','TURNSTILE_SECRET','TURNSTILE_SITE_KEY'];
-const paymentSecrets = ['WX_MCH_ID','WX_APP_ID','WX_PRIVATE_KEY','WX_SERIAL_NO','WX_API_V3_KEY','WX_PUBLIC_KEY','WX_PUBLIC_KEY_ID','WX_APP_SECRET'];
-const secrets = [...(auth ? authSecrets : []), ...(payments ? paymentSecrets : [])];
+const secrets = [...(auth ? AUTH_SECRETS : []), ...(payments ? PAYMENT_SECRETS : [])];
 return {
   accountId: '46bfda57b03f5303659ef8d27f94374a',
   worker: {

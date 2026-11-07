@@ -4,13 +4,14 @@ import { accountUser, api } from './account.js';
 
 const SYNC_KEY = 'ra:sync-code';
 const CODE_PATTERN = /^[A-Z2-7]{26}$/;
+const ACCOUNT_SYNC_MODE = '@account';
 
 export function normalizeSyncCode(value) {
   return String(value || '').replace(/\s+/g, '').toUpperCase();
 }
 
 export function getSyncCode() {
-  if (accountUser()) return '@account';
+  if (accountUser()) return ACCOUNT_SYNC_MODE;
   return getLegacySyncCode();
 }
 
@@ -56,7 +57,7 @@ export async function createSyncCode() {
 }
 
 export async function listCloudSaves(code = getSyncCode()) {
-  if (code === '@account') return (await api('/api/me/saves')).saves;
+  if (code === ACCOUNT_SYNC_MODE) return (await api('/api/me/saves')).saves;
   if (!code) return [];
   const response = await checked(await fetch(`/api/sync/${encodeURIComponent(code)}`));
   const data = await response.json();
@@ -70,7 +71,7 @@ export async function uploadCloudSave(slot, contents, code = getSyncCode()) {
     createdAt: String(slot.createdAt || Date.now()),
     seconds: String(Math.max(0, Number(slot.seconds) || 0))
   });
-  if (code === '@account') {
+  if (code === ACCOUNT_SYNC_MODE) {
     await api(`/api/me/saves/${encodeURIComponent(slot.gameId)}/${encodeURIComponent(slot.id)}?${query}`, {method:'PUT',body:contents});
     return true;
   }
@@ -85,7 +86,7 @@ export async function uploadCloudSave(slot, contents, code = getSyncCode()) {
 }
 
 export async function downloadCloudSave(gameId, slotId, code = getSyncCode(), signal) {
-  if (code === '@account') return api(`/api/me/saves/${encodeURIComponent(gameId)}/${encodeURIComponent(slotId)}`, {signal});
+  if (code === ACCOUNT_SYNC_MODE) return api(`/api/me/saves/${encodeURIComponent(gameId)}/${encodeURIComponent(slotId)}`, {signal});
   if (!code) throw new Error('还没有开启云存档同步');
   const url = `/api/sync/${encodeURIComponent(code)}/${encodeURIComponent(gameId)}/${encodeURIComponent(slotId)}`;
   const response = await checked(await fetch(url, { signal }));
@@ -93,7 +94,7 @@ export async function downloadCloudSave(gameId, slotId, code = getSyncCode(), si
 }
 
 export async function deleteCloudSave(gameId, slotId, code = getSyncCode()) {
-  if (code === '@account') { await api(`/api/me/saves/${encodeURIComponent(gameId)}/${encodeURIComponent(slotId)}`, {method:'DELETE'}); return; }
+  if (code === ACCOUNT_SYNC_MODE) { await api(`/api/me/saves/${encodeURIComponent(gameId)}/${encodeURIComponent(slotId)}`, {method:'DELETE'}); return; }
   if (!code) throw new Error('还没有开启云存档同步');
   const url = `/api/sync/${encodeURIComponent(code)}/${encodeURIComponent(gameId)}/${encodeURIComponent(slotId)}`;
   await checked(await fetch(url, { method: 'DELETE' }));

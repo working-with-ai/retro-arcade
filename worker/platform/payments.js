@@ -79,7 +79,7 @@ function orderView(order) {
 }
 export async function paymentRoute(request,env,url,user) {
   const path=url.pathname,now=Date.now();
-  if(path==='/api/membership')return response({products,available:features(env).payments,limits:user?limits(user):{member:false,maxBytes:104857600,maxSaves:300,maxPresets:1}});
+  if(path==='/api/membership')return response({products,available:features(env).payments,limits:limits(user)});
   if(!user)fail(401,'LOGIN_REQUIRED','请先登录');
   if(!features(env).payments)fail(503,'UNAVAILABLE','会员支付尚未开放');
   if(path==='/api/orders'&&request.method==='POST') {

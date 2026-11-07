@@ -1,4 +1,5 @@
 import { accountUser } from '../account.js';
+import { MEMBERSHIP_LIMITS } from '../membership-limits.js';
 import { activePreset, setActivePreset, presetsFor, savePreset, removePreset, clampControl } from '../touch-layout.js';
 import { escapeHtml as h,toast } from '../ui.js';
 function transformOf(element){let a=1,b=0,c=0,d=1;for(let node=element;node&&node!==document.documentElement;node=node.parentElement){const t=getComputedStyle(node).transform;if(t==='none')continue;const m=new DOMMatrixReadOnly(t);[a,b,c,d]=[m.a*a+m.c*b,m.b*a+m.d*b,m.a*c+m.c*d,m.b*c+m.d*d];}return[a,b,c,d];}
@@ -74,11 +75,11 @@ export function createTouchEditor({root,platform,player}){
       if(action==='reset'){draft.variants[orientation()]=structuredClone(defaults);fields();position();return;}
       if(action==='delete'){if(confirm('删除当前预设？')){removePreset(platform,draft.id);setActivePreset(platform,'');close();}return;}
       if(action==='new'){
-        if(presetsFor(platform).length >= (accountUser()?.maxPresets||1))throw Error('预设数量已达当前方案上限');
+        if(presetsFor(platform).length >= (accountUser()?.maxPresets||MEMBERSHIP_LIMITS.free.maxPresets))throw Error('预设数量已达当前方案上限');
         draft.id=crypto.randomUUID();
       }
       draft.name=String(draft.name||'我的布局').trim().slice(0,20)||'我的布局';
-      savePreset(platform,draft,accountUser()?.maxPresets||1);setActivePreset(platform,draft.id);close();toast('触屏布局已保存，可在账号页同步');
+      savePreset(platform,draft,accountUser()?.maxPresets||MEMBERSHIP_LIMITS.free.maxPresets);setActivePreset(platform,draft.id);close();toast('触屏布局已保存，可在账号页同步');
     }catch(e){pane.querySelector('[data-editor-status]').textContent=e.message;}
   },{signal});
   window.addEventListener('resize',()=>{if(editing){draft.variants[orientation()]||={};fields();}requestAnimationFrame(position);},{signal});

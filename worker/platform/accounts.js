@@ -1,4 +1,5 @@
 import { MAX_STATE, id, hash, first, all, run, stmt, jsonBody, bodyBytes, safeId, fail, response, limits, publicUser } from './core.js';
+import { MEMBERSHIP_LIMITS } from '../../dist/js/membership-limits.js';
 export async function saveAccount(env, user, gameId, slotId, body, metadata = {}) {
   if (!safeId(gameId) || !safeId(slotId) || !body.length || body.length>MAX_STATE) fail(400, 'SAVE_INVALID', '存档格式或大小不正确');
   const operation = id(), key = `account-saves/${user.id}/${operation}.state`, now = Date.now();
@@ -23,11 +24,11 @@ export async function validateSettings(value, maxPresets, previous = {}) {
   const layouts = {};
   for (const platform of ['FC','GBA','街机']) {
     const list = value.layouts?.[platform]; if (list === undefined) continue;
-    if (!Array.isArray(list) || list.length>5) fail(400,'SETTINGS','布局数量不正确');
+    if (!Array.isArray(list) || list.length>MEMBERSHIP_LIMITS.member.maxPresets) fail(400,'SETTINGS','布局数量不正确');
     const old = previous.layouts?.[platform] || [];
     if (list.length>maxPresets) {
       // Expired subscribers can retain/export/delete saved layouts, but cannot change excess presets.
-      if (list.length>old.length || list.some((x,i)=>i>=maxPresets && JSON.stringify(x)!==JSON.stringify(old.find(y=>y.id===x.id)))) fail(403,'MEMBER_REQUIRED','当前方案可编辑一套布局，额外预设将保留');
+      if (list.length>old.length || list.some((x,i)=>i>=maxPresets && JSON.stringify(x)!==JSON.stringify(old.find(y=>y.id===x.id)))) fail(403,'MEMBER_REQUIRED',`当前方案可编辑${maxPresets}套布局，额外预设将保留`);
     }
     const seen = new Set();
     layouts[platform] = list.map(preset => {
@@ -39,6 +40,7 @@ export async function validateSettings(value, maxPresets, previous = {}) {
         if (typeof controls!=='object' || Array.isArray(controls) || Object.keys(controls).length>24) fail(400,'SETTINGS','布局格式错误');
         variants[orientation] = {};
         for (const [key,c] of Object.entries(controls)) {
+          // Keep keys and ranges aligned with getLayouts/clampControl in dist/js/touch-layout.js.
           if (!/^(stick|a|b|c|d|e|f|l|r|turbo-a|turbo-b|combo-abc|coin|select|start|speed)$/.test(key) || !c || ![c.x,c.y,c.size,c.opacity].every(Number.isFinite) || c.x<0 || c.x>1 || c.y<0 || c.y>1 || c.size<0.6 || c.size>1.8 || c.opacity<0.2 || c.opacity>1) fail(400,'SETTINGS','按键位置或大小无效');
           variants[orientation][key] = { x:c.x,y:c.y,size:c.size,opacity:c.opacity,hidden:!!c.hidden };
         }

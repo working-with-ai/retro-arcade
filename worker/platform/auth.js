@@ -1,4 +1,4 @@
-import { DAY, bytes, b64, unb64, id, hash, mac, first, run, stmt, jsonBody, fail, response, features, session, rate, publicUser } from './core.js';
+import { DAY, bytes, b64, unb64, id, hash, mac, first, run, stmt, jsonBody, fail, response, features, session, sessionToken, rate, publicUser } from './core.js';
 async function encryptPhone(phone, secret) {
   const key = await crypto.subtle.importKey('raw', unb64(secret), 'AES-GCM', false, ['encrypt']);
   const iv = crypto.getRandomValues(new Uint8Array(12));
@@ -18,7 +18,7 @@ export async function authRoute(request, env, url) {
   if (request.method !== 'POST') fail(405, 'METHOD', '不支持此操作');
   if (url.pathname === '/api/auth/logout') {
     if(!env.DB)fail(503,'UNAVAILABLE','账号服务尚未开放');
-    const token = /(?:^|;\s*)ra_session=([^;]+)/.exec(request.headers.get('Cookie') || '')?.[1];
+    const token = sessionToken(request);
     if (token) await run(env, 'DELETE FROM sessions WHERE token_hash=?', await hash(token));
     return response({ ok: true }, 200, { 'Set-Cookie': 'ra_session=; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=0' });
   }

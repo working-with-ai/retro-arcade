@@ -56,10 +56,8 @@ export async function maintainPlatform(env) {
   }
   // Sweep a bounded page per run. Persistent cursor avoids repeatedly scanning the first page.
   for(const prefix of ['account-saves/','relay-saves/']) {
-    const cursorKey=`gc:${prefix}`;
-    // Cursor stored in a dedicated rate-limit key; settings has a real-user foreign key.
-    const cursorRow=await first(env,'SELECT key FROM rate_limits WHERE key LIKE ? LIMIT 1',`${cursorKey}%`);
-    const cursor=cursorRow?.key.slice(cursorKey.length)||undefined;
+    const cursorRow=await first(env,'SELECT cursor FROM maintenance_cursors WHERE prefix=?',prefix);
+    const cursor=cursorRow?.cursor||undefined;
     const page=await env.RESOURCES.list({prefix,limit:100,cursor});
     for(const object of page.objects) {
       if(Number(object.uploaded)>now-DAY)continue;
@@ -70,7 +68,7 @@ export async function maintainPlatform(env) {
         if(!step||((step.status!=='active')&&now>(step.ended_at||step.expires_at)+30*DAY))await env.RESOURCES.delete(object.key);
       }
     }
-    if(cursorRow)await run(env,'DELETE FROM rate_limits WHERE key=?',cursorRow.key);
-    if(page.truncated)await run(env,'INSERT INTO rate_limits(key,count,expires_at) VALUES(?,0,?) ON CONFLICT(key) DO UPDATE SET expires_at=excluded.expires_at',cursorKey+page.cursor,now+DAY);
+    if(page.truncated)await run(env,'INSERT INTO maintenance_cursors(prefix,cursor) VALUES(?,?) ON CONFLICT(prefix) DO UPDATE SET cursor=excluded.cursor',prefix,page.cursor);
+    else await run(env,'DELETE FROM maintenance_cursors WHERE prefix=?',prefix);
   }
 }
