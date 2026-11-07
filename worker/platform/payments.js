@@ -1,4 +1,4 @@
-import { DAY, bytes, b64, unb64, id, hash, first, all, run, stmt, jsonBody, bodyBytes, fail, response, features, session, limits, rate } from './core.js';
+import { ApiError, DAY, bytes, b64, unb64, id, hash, first, all, run, stmt, jsonBody, bodyBytes, fail, response, features, session, limits, rate } from './core.js';
 export const products = [{id:'month',name:'月卡',amount:990,days:30},{id:'year',name:'年卡',amount:6900,days:365}];
 async function pemKey(pem,kind,usage) {
   const raw=unb64(pem.replace(/-----[^-]+-----|\s/g,''));
@@ -17,8 +17,9 @@ async function verifyWechat(env,headers,body) {
 export async function wechat(env,method,path,data) {
   const timestamp=String(Math.floor(Date.now()/1000)),nonce=id(),body=data?JSON.stringify(data):'';
   const signed=await signature(env,`${method}\n${path}\n${timestamp}\n${nonce}\n${body}\n`);
-  const res=await fetch(`https://api.mch.weixin.qq.com${path}`,{method,headers:{Authorization:`WECHATPAY2-SHA256-RSA2048 mchid="${env.WX_MCH_ID}",nonce_str="${nonce}",timestamp="${timestamp}",serial_no="${env.WX_SERIAL_NO}",signature="${signed}"`,Accept:'application/json','Content-Type':'application/json','Wechatpay-Serial':env.WX_PUBLIC_KEY_ID},...(body?{body}:{})});
+  const res=await fetch(`https://api.mch.weixin.qq.com${path}`,{method,signal:AbortSignal.timeout(10000),headers:{Authorization:`WECHATPAY2-SHA256-RSA2048 mchid="${env.WX_MCH_ID}",nonce_str="${nonce}",timestamp="${timestamp}",serial_no="${env.WX_SERIAL_NO}",signature="${signed}"`,Accept:'application/json','Content-Type':'application/json','Wechatpay-Serial':env.WX_PUBLIC_KEY_ID},...(body?{body}:{})});
   const text=await res.text();await verifyWechat(env,res.headers,text);
+  if(res.status===404)fail(404,'PAYMENT_ORDER_NOT_FOUND','微信支付订单不存在');
   if(!res.ok)fail(502,'PAYMENT_PROVIDER','支付服务暂时不可用');
   return text?JSON.parse(text):{};
 }
@@ -32,6 +33,24 @@ export async function settle(env,transaction) {
     stmt(env,"UPDATE orders SET status='paid',paid_at=?,transaction_id=? WHERE id=? AND status NOT IN ('paid','refunded')",paidAt,transaction.transaction_id,order.id),
     stmt(env,"INSERT INTO grants(order_id,user_id,paid_at,duration) SELECT id,user_id,paid_at,duration FROM orders WHERE id=? AND status='paid' ON CONFLICT(order_id) DO NOTHING",order.id)
   ]);
+}
+export async function reconcileOrder(env,order,now=Date.now()) {
+  let transaction;
+  try {
+    transaction=await wechat(env,'GET',`/v3/pay/transactions/out-trade-no/${order.id}?mchid=${encodeURIComponent(env.WX_MCH_ID)}`);
+  } catch(error) {
+    if(!(error instanceof ApiError)||error.code!=='PAYMENT_ORDER_NOT_FOUND')throw error;
+    // JSAPI orders do not exist at WeChat until the customer completes OAuth.
+    if(now>=order.expires_at)await run(env,"UPDATE orders SET status='expired' WHERE id=? AND status='pending'",order.id);
+    return first(env,'SELECT * FROM orders WHERE id=?',order.id);
+  }
+  if(transaction.trade_state==='SUCCESS')await settle(env,transaction);
+  else {
+    const overdue=now>=order.expires_at;
+    if(overdue&&transaction.trade_state==='NOTPAY')await wechat(env,'POST',`/v3/pay/transactions/out-trade-no/${order.id}/close`,{mchid:env.WX_MCH_ID});
+    if((overdue&&transaction.trade_state==='NOTPAY')||['CLOSED','REVOKED','PAYERROR'].includes(transaction.trade_state))await run(env,"UPDATE orders SET status='expired' WHERE id=? AND status='pending'",order.id);
+  }
+  return first(env,'SELECT * FROM orders WHERE id=?',order.id);
 }
 export async function paymentWebhook(request,env,url) {
   if(!features(env).payments)fail(503,'UNAVAILABLE','支付尚未开放');
@@ -80,13 +99,7 @@ export async function paymentRoute(request,env,url,user) {
     let order=await first(env,'SELECT * FROM orders WHERE id=? AND user_id=?',match[1],user.id);if(!order)fail(404,'ORDER','订单不存在');
     if(['pending','expired'].includes(order.status)) {
       await rate(env,`query:${order.id}`,30,60000);
-      const transaction=await wechat(env,'GET',`/v3/pay/transactions/out-trade-no/${order.id}?mchid=${encodeURIComponent(env.WX_MCH_ID)}`);
-      await settle(env,transaction);
-      if(now>order.expires_at&&transaction.trade_state==='NOTPAY') {
-        await wechat(env,'POST',`/v3/pay/transactions/out-trade-no/${order.id}/close`,{mchid:env.WX_MCH_ID});
-        await run(env,"UPDATE orders SET status='expired' WHERE id=? AND status='pending'",order.id);
-      }
-      order=await first(env,'SELECT * FROM orders WHERE id=?',order.id);
+      order=await reconcileOrder(env,order,now);
     }
     return response(orderView(order));
   }

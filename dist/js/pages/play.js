@@ -210,7 +210,7 @@ export function render({ data, query }) {
           <button type="button" class="drawer-item" data-menu-action="reload">${icon('reload')}<span>重新加载</span></button>
           <button type="button" class="drawer-item" data-menu-action="keys" data-action="keys">${icon('keyboard')}<span>按键映射</span></button>
           ${isH5 ? `<button type="button" class="drawer-item" data-menu-action="touch">${icon('gamepad')}<span>编辑触屏布局</span></button>` : ''}
-          ${relayAvailable ? `<button type="button" class="drawer-item" data-menu-action="relay">${icon('cloud')}<span>${query.get('relay') ? '提交接力进度' : '发起挑战接力'}</span></button>` : ''}
+          <button type="button" class="drawer-item" data-menu-action="relay" ${relayAvailable ? '' : 'disabled'}>${icon('cloud')}<span>${query.get('relay') ? '提交接力进度' : '发起挑战接力'}${relayAvailable ? '' : '（尚未开放）'}</span></button>
           <button type="button" class="drawer-exit" data-menu-action="exit">退出游戏</button>
         </div>`;
       }

@@ -2,7 +2,7 @@ import { ApiError, DAY, first, all, run, response, features, originCheck, sessio
 import { authRoute } from './auth.js';
 import { accountRoute } from './accounts.js';
 import { relayRoute } from './relays.js';
-import { paymentRoute, paymentWebhook, wechat, settle } from './payments.js';
+import { paymentRoute, paymentWebhook, reconcileOrder } from './payments.js';
 export async function platformApi(request,env,url,games,resources) {
   const p=url.pathname;
   if(!/^\/api\/(capabilities|auth(?:\/|$)|me(?:\/|$)|membership(?:\/|$)|orders(?:\/|$)|payments(?:\/|$)|relays(?:\/|$)|admin(?:\/|$))/.test(p))return null;
@@ -44,13 +44,15 @@ export async function maintainPlatform(env) {
   await run(env,'DELETE FROM uploads WHERE created_at<?',now-3600000);
   await run(env,"UPDATE relays SET status='closed',ended_at=expires_at,lease_owner=NULL,lease_hash=NULL,lease_until=0 WHERE status='active' AND expires_at<?",now);
   if(features(env).payments) {
-    const orders=await all(env,"SELECT * FROM orders WHERE status='pending' AND expires_at<? ORDER BY created_at LIMIT 10",now);
-    for(const order of orders)try {
-      const data=await wechat(env,'GET',`/v3/pay/transactions/out-trade-no/${order.id}?mchid=${encodeURIComponent(env.WX_MCH_ID)}`);
-      await settle(env,data);
-      if(data.trade_state==='NOTPAY')await wechat(env,'POST',`/v3/pay/transactions/out-trade-no/${order.id}/close`,{mchid:env.WX_MCH_ID});
-      if(data.trade_state!=='SUCCESS')await run(env,"UPDATE orders SET status='expired' WHERE id=? AND status='pending'",order.id);
-    }catch {console.error(JSON.stringify({event:'order_reconcile_failed',orderId:order.id}));}
+    const orders=await all(env,"SELECT o.* FROM orders o LEFT JOIN order_reconciliation r ON r.order_id=o.id WHERE o.status='pending' AND o.expires_at<? AND COALESCE(r.retry_after,0)<=? ORDER BY COALESCE(r.retry_after,0),o.created_at LIMIT 10",now,now);
+    for(const order of orders) {
+      // Advance before calling WeChat so failures cannot monopolize the next batch.
+      await run(env,'INSERT INTO order_reconciliation(order_id,retry_after) VALUES(?,?) ON CONFLICT(order_id) DO UPDATE SET retry_after=excluded.retry_after',order.id,now+300000);
+      try {
+        const updated=await reconcileOrder(env,order,now);
+        if(updated.status!=='pending')await run(env,'DELETE FROM order_reconciliation WHERE order_id=?',order.id);
+      }catch {console.error(JSON.stringify({event:'order_reconcile_failed',orderId:order.id}));}
+    }
   }
   // Sweep a bounded page per run. Persistent cursor avoids repeatedly scanning the first page.
   for(const prefix of ['account-saves/','relay-saves/']) {
