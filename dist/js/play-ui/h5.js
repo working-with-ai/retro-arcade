@@ -1,3 +1,4 @@
+import { createTouchEditor } from './touch-editor.js';
 const ACTION_SETS = {
   FC: [
     ['turbo-a', 'AA', 'h5-aa'], ['a', 'A', 'h5-a'],
@@ -49,7 +50,8 @@ export function h5Markup(platform) {
   </section>`;
 }
 
-export function mountH5({ root, player, onSpeed }) {
+export function mountH5({ root, player, onSpeed, platform }) {
+  const editor = createTouchEditor({root,player,platform});
   const stick = root.querySelector('[data-h5-stick]');
   const knob = root.querySelector('[data-h5-knob]');
   const speedButton = root.querySelector('[data-h5-action="speed"]');
@@ -113,7 +115,7 @@ export function mountH5({ root, player, onSpeed }) {
       button.addEventListener('click', event => {
         event.preventDefault();
         event.stopPropagation();
-        if (!enabled) return;
+        if (!enabled || editor.isEditing()) return;
         const speed = onSpeed();
         button.textContent = speed === 1 ? '加速' : `x${speed}`;
       }, { signal });
@@ -153,8 +155,12 @@ export function mountH5({ root, player, onSpeed }) {
   }
 
   return {
+    openEditor: () => editor.open(),
+    cancelEditor: () => editor.cancel(),
+    isEditing: () => editor.isEditing(),
     setVisible(visible) {
       root.hidden = !visible;
+      if (visible) requestAnimationFrame(() => editor.apply());
     },
     setEnabled(value) {
       enabled = Boolean(value);
@@ -169,6 +175,7 @@ export function mountH5({ root, player, onSpeed }) {
       if (speedButton) speedButton.textContent = speed === 1 ? '加速' : `x${speed}`;
     },
     destroy() {
+      editor.destroy();
       controller.abort();
       clearDirections();
     }

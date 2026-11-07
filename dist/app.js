@@ -1,5 +1,6 @@
 import { back, navigate, restoreScroll, routeKey, saveScroll, startRouter } from './js/router.js';
 import { loadData } from './js/store.js';
+import { initializeAccount } from './js/account.js';
 import { toast } from './js/ui.js';
 import { render as renderHome } from './js/pages/home.js';
 import { render as renderDiscover } from './js/pages/discover.js';
@@ -10,6 +11,10 @@ import { render as renderList } from './js/pages/list.js';
 import { render as renderPlay } from './js/pages/play.js';
 import { render as renderCategory } from './js/pages/category.js';
 import { render as renderHelp } from './js/pages/help.js';
+import { render as renderAccount } from './js/pages/account.js';
+import { render as renderMembership } from './js/pages/membership.js';
+import { render as renderRelays } from './js/pages/relays.js';
+import { render as renderModeration } from './js/pages/moderation.js';
 
 const PAGES = {
   '/': renderHome,
@@ -20,7 +25,12 @@ const PAGES = {
   '/list': renderList,
   '/play': renderPlay,
   '/category': renderCategory,
-  '/help': renderHelp
+  '/help': renderHelp,
+  '/account': renderAccount,
+  '/membership': renderMembership,
+  '/order': renderMembership,
+  '/relays': renderRelays,
+  '/moderation': renderModeration
 };
 const TAB_ROUTES = new Set(['/', '/discover', '/search', '/my']);
 
@@ -185,7 +195,7 @@ async function boot() {
   app.innerHTML = bootMarkup();
   setupGlobalClicks();
   try {
-    data = await loadData();
+    [data] = await Promise.all([loadData(), initializeAccount()]);
   } catch (error) {
     console.error(error);
     renderError(error.message || '游戏目录加载失败');

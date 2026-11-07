@@ -8,3 +8,5 @@ await cp('dist', '.cloudflare-public', {
   recursive: true,
   filter: path => !excluded.has(path)
 });
+await mkdir('.cloudflare-public/vendor', { recursive: true });
+await cp('node_modules/qrcode-generator/dist/qrcode.mjs', '.cloudflare-public/vendor/qrcode.js');

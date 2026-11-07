@@ -30,6 +30,8 @@ export function createGamePlayer({
   slotId,
   stageId,
   cloudSlotId,
+  relayState,
+  onRelayLoaded,
   canvas,
   touchPad,
   statusElement,
@@ -134,7 +136,14 @@ export function createGamePlayer({
 
   async function loadPendingState() {
     try {
-      if (stageId) {
+      if (relayState) {
+        if (!paused) togglePause();
+        setInputPaused(true);
+        await loadStateBytes(await relayState(), '已读取接力存档');
+        if (onRelayLoaded) onRelayLoaded();
+        setInputPaused(false);
+        if (paused) togglePause();
+      } else if (stageId) {
         const stage = assets?.stages?.find(item => String(item.id) === String(stageId));
         if (!stage) throw new Error('预置关卡不存在');
         await loadStateBytes(stage.state, `已进入${stage.label}`, `${rootPath}/stage.state`);
@@ -598,6 +607,7 @@ export function createGamePlayer({
   function setInputPaused(value) {
     inputPaused = Boolean(value);
     pressedKeys.clear();
+    if (inputPaused) touchActions.forEach(set => set.clear());
   }
 
   // 街机 pad_setting 中的特殊键（BIOS / SPn），标签按原名，只有一个 SP 时显示为“SP”
@@ -674,6 +684,7 @@ export function createGamePlayer({
 
   bindControls();
   const api = {
+    snapshot: () => new Uint8Array(captureState()),
     start,
     destroy,
     handleReady,

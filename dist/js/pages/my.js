@@ -1,4 +1,5 @@
 import { formatPlayTime, formatRelativeTime, getHistory, getLocalProfile, saveLocalProfile } from '../store.js';
+import { accountUser, api, setAccountUser } from '../account.js';
 import {
   clearSyncCode,
   createSyncCode,
@@ -11,6 +12,7 @@ import {
 import { avatarMarkup, coverMarkup, emptyState, escapeHtml, icon, launchButton, toast } from '../ui.js';
 
 function syncMarkup() {
+  if (accountUser()) return '<p class="sync-copy">已使用账号云存档，游戏中保存的进度会自动上传。旧同步码数据可从账号页复制导入。</p><a class="sync-primary" href="#/account">管理账号与云存档</a>';
   const code = getSyncCode();
   if (!code) {
     return `<p class="sync-copy">生成一个同步码，在另一台设备输入它，就能读取同一份云存档。</p>
@@ -36,7 +38,7 @@ function syncMarkup() {
 export function render({ data }) {
   document.title = '我的 · 一局童年';
   const history = getHistory();
-  const profile = getLocalProfile();
+  const profile = accountUser() || getLocalProfile();
   const recent = history
     .map(item => ({ ...item, game: data.gamesById.get(item.id) }))
     .filter(item => item.game);
@@ -53,23 +55,24 @@ export function render({ data }) {
     ${avatarMarkup('my-avatar')}
     <div class="my-profile-copy">
       <h1 id="profile-name">${escapeHtml(profile.nickname)}</h1>
-      <p>本地档案 · 无需登录</p>
+      <p>${accountUser() ? '账号已登录' : '本地档案 · 无需登录'}</p>
     </div>
-    <button class="my-chevron" type="button" data-profile-edit aria-label="编辑本地昵称" aria-expanded="false" aria-controls="profile-form">${icon('chevron')}</button>
+    <button class="my-chevron" type="button" data-profile-edit aria-label="编辑昵称" aria-expanded="false" aria-controls="profile-form">${icon('chevron')}</button>
   </header>
   <form class="profile-form" id="profile-form" hidden>
-    <label for="profile-nickname">本地昵称</label>
+    <label for="profile-nickname">${accountUser() ? '账号昵称' : '本地昵称'}</label>
     <input id="profile-nickname" name="nickname" maxlength="20" required value="${escapeHtml(profile.nickname)}" autocomplete="nickname">
-    <p>保存在当前浏览器，可输入 1–20 个字符。</p>
+    <p>${accountUser() ? '保存在当前账号' : '保存在当前浏览器'}，可输入 1–20 个字符。</p>
     <div><button type="submit" class="sync-primary">保存</button><button type="button" class="sync-secondary" data-profile-cancel>取消</button></div>
     <span id="profile-error" role="status"></span>
   </form>
-  <a class="vip-card" href="#/help">
+  <div class="account-entry-links"><a href="#/account">${accountUser() ? '账号与云空间' : '手机号登录 / 注册'}</a><a href="#/relays">挑战接力</a></div>
+  <a class="vip-card" href="#/membership">
     <span class="vip-copy">
-      <strong>游玩工具箱</strong>
-      <span>金手指 · 云存档 · 自定义按键</span>
+      <strong>会员云空间</strong>
+      <span>更多云存档 · 更多触屏布局预设</span>
     </span>
-    <span class="vip-buy">查看指南</span>
+    <span class="vip-buy">查看权益</span>
     <span class="vip-orbit orbit-one"></span>
     <span class="vip-orbit orbit-two"></span>
   </a>
@@ -113,19 +116,20 @@ export function render({ data }) {
       };
       const openProfile = () => {
         if (!profileForm.hidden) return closeProfile();
-        nicknameInput.value = getLocalProfile().nickname;
+        nicknameInput.value = (accountUser() || getLocalProfile()).nickname;
         profileError.textContent = '';
         profileForm.hidden = false;
         editProfile.setAttribute('aria-expanded', 'true');
         nicknameInput.focus();
       };
-      const submitProfile = event => {
+      const submitProfile = async event => {
         event.preventDefault();
         try {
-          const saved = saveLocalProfile(nicknameInput.value);
+          const saved = accountUser() ? (await api('/api/me', {method:'PATCH',body:{nickname:nicknameInput.value}})).user : saveLocalProfile(nicknameInput.value);
+          if (accountUser()) setAccountUser(saved);
           el.querySelector('#profile-name').textContent = saved.nickname;
           closeProfile();
-          toast('昵称已保存到本机');
+          toast(accountUser() ? '账号昵称已保存' : '昵称已保存到本机');
         } catch (error) {
           profileError.textContent = error.message;
         }

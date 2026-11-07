@@ -1,6 +1,7 @@
 import { unzipSync } from 'fflate';
 import resources from './resources.json' with { type: 'json' };
 import catalog from '../dist/games.json' with { type: 'json' };
+import { platformApi, maintainPlatform } from './platform/index.js';
 
 const cacheLimit = 10_000_000_000;
 const SYNC_CODE = /^[A-Z2-7]{26}$/;
@@ -507,6 +508,8 @@ async function handleApi(request, env, url) {
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
+    const platform = await platformApi(request, env, url, gameMap, resources);
+    if (platform) return platform;
     if (url.pathname.startsWith('/api/')) return handleApi(request, env, url);
     if (url.pathname.startsWith('/games/')) return handleGameAsset(request, env, url);
     if (url.pathname.startsWith('/videos/')) return handleVideoStream(request, env, url);
@@ -516,5 +519,6 @@ export default {
   },
   async scheduled(_event, env) {
     await makeRoom(env.RESOURCES);
+    await maintainPlatform(env);
   }
 };

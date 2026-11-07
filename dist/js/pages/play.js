@@ -1,4 +1,6 @@
 import { getSyncCode, listCloudSaves } from '../cloud.js';
+import { api, accountUser } from '../account.js';
+import { relayToken } from './relays.js';
 import {
   actionsFor,
   assignGamepads,
@@ -102,6 +104,11 @@ export function render({ data, query }) {
       let storeFilter = 'general';
       let stageUrls = new Map();
       let h5 = null;
+      let relayInfo = null;
+      let relayCandidate = null;
+      let gameFingerprint = null;
+      let relayAvailable = false;
+      let pendingRelaySubmission = null;
       let backdropTimer = 0;
       const controller = new AbortController();
       const signal = controller.signal;
@@ -111,6 +118,16 @@ export function render({ data, query }) {
         slotId: query.get('slot'),
         stageId: query.get('stage'),
         cloudSlotId: query.get('cloud'),
+        relayState: query.get('relay') ? async () => {
+          const result = await api('/api/relays/' + encodeURIComponent(query.get('relay')), {signal});
+          const info = result.relay;
+          if (info.gameId !== game.id || !info.compatible || !info.leaseMine || info.leaseUntil <= Date.now()) throw new Error('接棒无效或已过期，请返回挑战页面重新接棒');
+          const state = await api(`/api/relays/${encodeURIComponent(info.id)}/state?seq=${info.headSeq}`, {signal});
+          relayCandidate = info;
+          toast('已读取接力存档，请在时限内提交下一棒');
+          return state;
+        } : null,
+        onRelayLoaded: () => { relayInfo = relayCandidate; },
         canvas,
         touchPad: null,
         statusElement: statusEl,
@@ -146,7 +163,12 @@ export function render({ data, query }) {
           if (/失败|已保存|已读取|已进入|已切换|已导入|已导出|已覆盖|已删除|已重置|重新加载/.test(text)) toast(text);
         }
       });
-      h5 = isH5 ? mountH5({ root: touchRoot, player, onSpeed: cycleSpeed }) : null;
+      h5 = isH5 ? mountH5({ root: touchRoot, player, onSpeed: cycleSpeed, platform }) : null;
+      api('/api/capabilities', {signal}).then(c => {
+        relayAvailable = c.relays;
+        if (drawerType === 'menu') renderMenu();
+        if (c.relays) return api('/api/relays/compatibility?gameId=' + encodeURIComponent(game.id), {signal}).then(v => { gameFingerprint = v.fingerprint; });
+      }).catch(() => {});
       h5?.setVisible(false);
       h5?.updateSpeed(player.getSpeed());
 
@@ -187,6 +209,8 @@ export function render({ data, query }) {
           <button type="button" class="drawer-item" data-menu-action="mute">${icon(muted ? 'speakerOff' : 'volume')}<span>声音</span></button>
           <button type="button" class="drawer-item" data-menu-action="reload">${icon('reload')}<span>重新加载</span></button>
           <button type="button" class="drawer-item" data-menu-action="keys" data-action="keys">${icon('keyboard')}<span>按键映射</span></button>
+          ${isH5 ? `<button type="button" class="drawer-item" data-menu-action="touch">${icon('gamepad')}<span>编辑触屏布局</span></button>` : ''}
+          ${relayAvailable ? `<button type="button" class="drawer-item" data-menu-action="relay">${icon('cloud')}<span>${query.get('relay') ? '提交接力进度' : '发起挑战接力'}</span></button>` : ''}
           <button type="button" class="drawer-exit" data-menu-action="exit">退出游戏</button>
         </div>`;
       }
@@ -496,6 +520,29 @@ export function render({ data, query }) {
             else closeDrawer();
           } else if (action === 'keys') {
             openDrawer('keys');
+          } else if (action === 'touch') {
+            closeDrawer();
+            h5?.openEditor();
+          } else if (action === 'relay') {
+            if (!accountUser()) { toast('请先登录账号后参与接力'); return; }
+            const capabilities = await api('/api/capabilities', {signal});
+            if (!capabilities.relays) { toast('挑战接力暂未开放'); return; }
+            if (query.get('relay')) {
+              if (!relayInfo) throw new Error('接力存档尚未读取成功');
+              if (!pendingRelaySubmission) pendingRelaySubmission = {id:crypto.randomUUID(),body:player.snapshot()};
+              await api(`/api/relays/${encodeURIComponent(relayInfo.id)}/submit`, {method:'POST',body:pendingRelaySubmission.body,headers:{'X-Relay-Lease':relayToken(relayInfo.id),'X-Relay-Revision':String(relayInfo.headSeq),'Idempotency-Key':pendingRelaySubmission.id},signal});
+              toast('接力进度已提交');
+              navigate('/relays?id='+relayInfo.id);
+            } else {
+              if (!gameFingerprint) throw new Error('正在确认游戏资源版本，请稍后重试');
+              const title = prompt('挑战标题（最多50字）', `${game.shortName || game.name}接力`);
+              if (!title?.trim()) return;
+              const description = prompt('挑战说明（最多200字）', '接着这份存档，一起继续闯关！');
+              if (description === null) return;
+              const params = new URLSearchParams({gameId:game.id,title:title.trim(),description,fingerprint:gameFingerprint});
+              const result = await api('/api/relays?'+params, {method:'POST',body:player.snapshot(),signal});
+              navigate('/relays?id='+result.id);
+            }
           } else if (action === 'pause') {
             player.togglePause();
           } else if (action === 'exit') {
@@ -699,6 +746,7 @@ export function render({ data, query }) {
       const onFloat = event => {
         const button = event.target.closest('[data-drawer]');
         if (!button) return;
+        if (h5?.isEditing()) h5.cancelEditor();
         if (drawerOpen && button.dataset.drawer === drawerType) closeDrawer();
         else {
           drawerTrigger = button;

@@ -8,6 +8,8 @@ export function render() {
     <button type="button" class="catalog-back" data-back aria-label="返回">${icon('back')}</button><h1>游玩指南</h1><span class="catalog-back"></span>
   </header>
   <main class="help-main">
+    <details class="help-item"><summary>账号、会员与挑战接力</summary><p>个人页可进入账号与云空间。账号登录、会员购买和挑战接力按服务开放状态提供；未开放时不影响免费游玩。会员不自动续费，增加云存档容量和布局预设数量，基础游戏、金手指、本地存档和触屏编辑保持免费。</p><a href="#/account">账号与云空间</a> · <a href="#/membership">会员权益</a> · <a href="#/relays">挑战接力</a></details>
+    <details class="help-item"><summary>怎么编辑手机按键布局？</summary><p>在游戏内打开「菜单 → 编辑触屏布局」，拖动按键，调整大小、透明度和显示状态，再保存。横竖屏分别设置，FC、GBA、街机分别保存。编辑时游戏暂停，取消不保存；可恢复默认。登录后从账号页同步布局，云端与本机不同会让你选择保留哪个版本。</p></details>
     <section class="help-intro"><p>把快乐留在这一局</p><h2>挑游戏，随时开玩</h2><span>无需登录，即可使用当前已开放的游玩工具。</span><a class="primary-pill" href="#/category">浏览游戏分类</a></section>
     <details class="help-item" open><summary>怎么开始游戏？</summary><p>从首页、分类或搜索进入游戏详情，点击「启动游戏」，等待资源加载完成后点击「开始游戏」。街机游戏先投币，再按开始；FC 和 GBA 使用开始键进入游戏。</p></details>
     <details class="help-item"><summary>键盘、手柄和触屏怎么操作？</summary><p>在游戏内打开「菜单 → 按键映射」，可查看并修改键盘按键、设置组合键和连发。连接手柄后可在按键映射中分配玩家。手机和平板会显示屏幕摇杆与按键。</p></details>
