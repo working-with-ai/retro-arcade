@@ -4145,7 +4145,7 @@ svg {
   pointer-events: auto;
 }
 
-.h5-system button {
+.h5-system-key {
   width: 54px;
   height: 34px;
   border: 1px solid rgba(255, 255, 255, 0.13);
@@ -4154,9 +4154,11 @@ svg {
   color: #d8dbe0;
   font-size: 11px;
   opacity: 0.92;
+  pointer-events: auto;
+  touch-action: none;
 }
 
-.h5-system button:active {
+.h5-system-key:active {
   background: rgba(90, 94, 102, 0.9);
 }
 
@@ -4335,7 +4337,7 @@ svg {
 }
 
 .h5-controls.is-disabled .h5-stick,
-.h5-controls.is-disabled .h5-system button,
+.h5-controls.is-disabled .h5-system-key,
 .h5-controls.is-disabled .h5-key {
   pointer-events: none;
 }
@@ -4977,7 +4979,7 @@ svg {
   gap: 3.8vmin;
 }
 
-.h5-system button {
+.h5-system-key {
   width: 12.9vmin;
   height: 6.2vmin;
   padding: 0;
