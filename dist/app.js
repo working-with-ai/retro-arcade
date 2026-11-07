@@ -8,6 +8,8 @@ import { render as renderMy } from './js/pages/my.js';
 import { render as renderDetails } from './js/pages/details.js';
 import { render as renderList } from './js/pages/list.js';
 import { render as renderPlay } from './js/pages/play.js';
+import { render as renderCategory } from './js/pages/category.js';
+import { render as renderHelp } from './js/pages/help.js';
 
 const PAGES = {
   '/': renderHome,
@@ -16,7 +18,9 @@ const PAGES = {
   '/my': renderMy,
   '/details': renderDetails,
   '/list': renderList,
-  '/play': renderPlay
+  '/play': renderPlay,
+  '/category': renderCategory,
+  '/help': renderHelp
 };
 const TAB_ROUTES = new Set(['/', '/discover', '/search', '/my']);
 

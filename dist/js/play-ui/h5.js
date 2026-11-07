@@ -39,7 +39,7 @@ export function h5Markup(platform) {
       <span class="h5-stick-knob" data-h5-knob></span>
     </div>
     <div class="h5-system">
-      <button type="button" data-h5-action="${select}" data-h5-momentary>投币</button>
+      <button type="button" data-h5-action="${select}" data-h5-momentary>${platform === '街机' ? '投币' : '选择'}</button>
       <button type="button" data-h5-action="start" data-h5-momentary>开始</button>
       <button type="button" data-h5-action="speed">加速</button>
     </div>

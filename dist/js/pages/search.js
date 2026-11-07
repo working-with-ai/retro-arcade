@@ -1,4 +1,5 @@
 import { getListCount, navigate, replace, saveListCount } from '../router.js';
+import { catalogFilters, catalogHref, catalogPlatforms, catalogTypes, filterCatalog, SORT_OPTIONS } from '../catalog.js';
 import {
   addSearchTerm,
   clearSearchHistory,
@@ -44,12 +45,13 @@ function hotBlock(data) {
 }
 
 function resultsHead(games) {
-  if (!games.length) return '';
   return `<div class="search-result-head"><h2>搜索结果</h2><span>${games.length} 款</span></div>`;
 }
 
 export function render({ data, query }) {
   const initialTerm = (query.get('q') || '').trim();
+  let filters = catalogFilters(data, query);
+  const select = (key, label, options) => `<label>${label}<select data-search-filter="${key}">${options.map(option => `<option value="${escapeHtml(option.id)}"${filters[key] === option.id ? ' selected' : ''}>${escapeHtml(option.name)}</option>`).join('')}</select></label>`;
   document.title = initialTerm ? `${initialTerm} · 搜索 · 一局童年` : '搜索 · 一局童年';
   const history = getSearchHistory();
   const promo = {
@@ -75,6 +77,11 @@ export function render({ data, query }) {
   </header>
   <main class="search-main">
     <section class="search-results ${initialTerm ? '' : 'is-hidden'}" id="search-results">
+      <div class="search-filter-bar" aria-label="筛选搜索结果">
+        ${select('platform', '平台', [{ id: '', name: '全部平台' }, ...catalogPlatforms(data).map(id => ({ id, name: id }))])}
+        ${select('type', '类型', [{ id: '', name: '全部类型' }, ...catalogTypes(data).map(id => ({ id, name: id }))])}
+        ${select('sort', '排序', SORT_OPTIONS)}
+      </div>
       <div id="search-result-head"></div>
       <div class="search-result-list" id="search-result-list"></div>
     </section>
@@ -100,7 +107,7 @@ export function render({ data, query }) {
       let infinite = null;
 
       const showResults = term => {
-        const games = searchGames(data, term);
+        const games = filterCatalog(searchGames(data, term), filters);
         if (infinite) {
           infinite.destroy();
           infinite = null;
@@ -111,10 +118,10 @@ export function render({ data, query }) {
         idle.classList.toggle('is-hidden', Boolean(term));
         if (!term) return;
         if (!games.length) {
-          resultList.innerHTML = emptyState('没有找到相关游戏', '换个关键词试试，或看看热搜榜');
+          resultList.innerHTML = `${emptyState('没有找到相关游戏', '换个关键词，或清除平台和类型筛选')}<button type="button" class="text-button" data-reset-filters>清除筛选</button>`;
           return;
         }
-        const key = `/search?${new URLSearchParams({ q: term })}`;
+        const key = catalogHref('/search', filters, { q: term }).slice(1);
         infinite = mountInfiniteList({
           host: resultList,
           items: games,
@@ -133,14 +140,26 @@ export function render({ data, query }) {
           return;
         }
         addSearchTerm(clean);
-        navigate(`/search?q=${encodeURIComponent(clean)}`);
+        navigate(catalogHref('/search', filters, { q: clean }).slice(1));
       };
 
       const onInput = () => {
         const term = input.value.trim();
         showResults(term);
         // 只同步地址不重绘，返回时按实际输入恢复结果
-        replace(term ? `/search?q=${encodeURIComponent(term)}` : '/search', { silent: true });
+        replace(catalogHref('/search', filters, { q: term }).slice(1), { silent: true });
+      };
+      const onFilter = event => {
+        const key = event.target.dataset.searchFilter;
+        if (!key) return;
+        filters = { ...filters, [key]: event.target.value };
+        onInput();
+      };
+      const onReset = event => {
+        if (!event.target.closest('[data-reset-filters]')) return;
+        filters = { platform: '', type: '', sort: 'hot' };
+        for (const control of el.querySelectorAll('[data-search-filter]')) control.value = filters[control.dataset.searchFilter];
+        onInput();
       };
       const onSubmit = event => {
         event.preventDefault();
@@ -163,12 +182,16 @@ export function render({ data, query }) {
       input.addEventListener('input', onInput);
       form.addEventListener('submit', onSubmit);
       idle.addEventListener('click', onClick);
+      resultsEl.addEventListener('change', onFilter);
+      resultsEl.addEventListener('click', onReset);
       showResults(initialTerm);
 
       return () => {
         input.removeEventListener('input', onInput);
         form.removeEventListener('submit', onSubmit);
         idle.removeEventListener('click', onClick);
+        resultsEl.removeEventListener('change', onFilter);
+        resultsEl.removeEventListener('click', onReset);
         if (infinite) infinite.destroy();
       };
     }

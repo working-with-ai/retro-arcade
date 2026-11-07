@@ -8,7 +8,7 @@ export function render({ data, route, query }) {
   const el = document.createElement('div');
   el.className = 'page page-discover';
   el.innerHTML = `<header class="sub-header">
-    <h1>爽玩宝库</h1>
+    <h1>爽玩宝库</h1><a class="catalog-entry" href="#/category">全部分类 ${icon('chevron')}</a>
   </header>
   <main class="discover-main">
     <a class="feature-banner" href="#/list?section=classic" aria-label="打开速通挑战专题">

@@ -1,4 +1,4 @@
-import { formatPlayTime, formatRelativeTime, getHistory } from '../store.js';
+import { formatPlayTime, formatRelativeTime, getHistory, getLocalProfile, saveLocalProfile } from '../store.js';
 import {
   clearSyncCode,
   createSyncCode,
@@ -36,10 +36,10 @@ function syncMarkup() {
 export function render({ data }) {
   document.title = '我的 · 一局童年';
   const history = getHistory();
+  const profile = getLocalProfile();
   const recent = history
     .map(item => ({ ...item, game: data.gamesById.get(item.id) }))
-    .filter(item => item.game)
-    .slice(0, 4);
+    .filter(item => item.game);
   const playedCount = history.length;
   const totalSeconds = history.reduce((sum, item) => sum + item.seconds, 0);
 
@@ -47,25 +47,32 @@ export function render({ data }) {
   el.className = 'page page-my';
   el.innerHTML = `<div class="my-topbar">
     <a class="my-icon-button" href="licenses.html" aria-label="模拟器来源与许可">?</a>
-    <button class="my-icon-button" type="button" data-toast="更多功能即将开放" aria-label="更多">${icon('more')}</button>
+    <a class="my-icon-button" href="#/help" aria-label="游玩指南">${icon('menu')}</a>
   </div>
   <header class="my-profile">
     ${avatarMarkup('my-avatar')}
     <div class="my-profile-copy">
-      <h1>一局童年玩家</h1>
+      <h1 id="profile-name">${escapeHtml(profile.nickname)}</h1>
       <p>本地档案 · 无需登录</p>
     </div>
-    <button class="my-chevron" type="button" data-toast="账号功能暂未开放" aria-label="账号">${icon('chevron')}</button>
+    <button class="my-chevron" type="button" data-profile-edit aria-label="编辑本地昵称" aria-expanded="false" aria-controls="profile-form">${icon('chevron')}</button>
   </header>
-  <button class="vip-card" type="button" data-toast="VIP 功能暂未开放，敬请期待">
+  <form class="profile-form" id="profile-form" hidden>
+    <label for="profile-nickname">本地昵称</label>
+    <input id="profile-nickname" name="nickname" maxlength="20" required value="${escapeHtml(profile.nickname)}" autocomplete="nickname">
+    <p>保存在当前浏览器，可输入 1–20 个字符。</p>
+    <div><button type="submit" class="sync-primary">保存</button><button type="button" class="sync-secondary" data-profile-cancel>取消</button></div>
+    <span id="profile-error" role="status"></span>
+  </form>
+  <a class="vip-card" href="#/help">
     <span class="vip-copy">
-      <strong>超级VIP专属</strong>
-      <span>金手指 · 无限畅玩</span>
+      <strong>游玩工具箱</strong>
+      <span>金手指 · 云存档 · 自定义按键</span>
     </span>
-    <span class="vip-buy">立即购买</span>
+    <span class="vip-buy">查看指南</span>
     <span class="vip-orbit orbit-one"></span>
     <span class="vip-orbit orbit-two"></span>
-  </button>
+  </a>
   <section class="sync-card" id="sync-card">
     <div class="sync-head">
       <h2>云存档同步</h2>
@@ -94,6 +101,38 @@ export function render({ data }) {
   return {
     el,
     mount() {
+      const profileForm = el.querySelector('#profile-form');
+      const editProfile = el.querySelector('[data-profile-edit]');
+      const cancelProfile = el.querySelector('[data-profile-cancel]');
+      const nicknameInput = el.querySelector('#profile-nickname');
+      const profileError = el.querySelector('#profile-error');
+      const closeProfile = () => {
+        profileForm.hidden = true;
+        editProfile.setAttribute('aria-expanded', 'false');
+        editProfile.focus();
+      };
+      const openProfile = () => {
+        if (!profileForm.hidden) return closeProfile();
+        nicknameInput.value = getLocalProfile().nickname;
+        profileError.textContent = '';
+        profileForm.hidden = false;
+        editProfile.setAttribute('aria-expanded', 'true');
+        nicknameInput.focus();
+      };
+      const submitProfile = event => {
+        event.preventDefault();
+        try {
+          const saved = saveLocalProfile(nicknameInput.value);
+          el.querySelector('#profile-name').textContent = saved.nickname;
+          closeProfile();
+          toast('昵称已保存到本机');
+        } catch (error) {
+          profileError.textContent = error.message;
+        }
+      };
+      editProfile.addEventListener('click', openProfile);
+      cancelProfile.addEventListener('click', closeProfile);
+      profileForm.addEventListener('submit', submitProfile);
       const card = el.querySelector('#sync-card');
       const body = el.querySelector('#sync-body');
       const refresh = () => { body.innerHTML = syncMarkup(); };
@@ -161,7 +200,12 @@ export function render({ data }) {
         }
       };
       card.addEventListener('click', onClick);
-      return () => card.removeEventListener('click', onClick);
+      return () => {
+        card.removeEventListener('click', onClick);
+        editProfile.removeEventListener('click', openProfile);
+        cancelProfile.removeEventListener('click', closeProfile);
+        profileForm.removeEventListener('submit', submitProfile);
+      };
     }
   };
 }

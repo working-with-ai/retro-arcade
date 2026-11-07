@@ -9,7 +9,6 @@ const RANK_TABS = [
   { name: 'FC榜', index: 2 },
   { name: 'GBA榜', index: 3 }
 ];
-const PLATFORM_RANK = { arcade: 1, fc: 2, gba: 3 };
 
 function homeNav(tabsIdx) {
   const tabs = [0, 1, 2].map(index => {
@@ -34,7 +33,7 @@ function bannerCarousel(data) {
 
 function platformRow(data) {
   return `<section class="platform-row" aria-label="游戏平台">${data.platforms.map(platform => `
-    <a class="platform-card platform-${platform.theme}" href="#/?tabsIdx=2&tagsIdx=${PLATFORM_RANK[platform.theme] || 0}">
+    <a class="platform-card platform-${platform.theme}" href="#/category?platform=${encodeURIComponent(platform.name)}">
       <span class="platform-icon">${platformIcon(platform.icon)}</span>
       <span>${escapeHtml(platform.name)}</span>
     </a>`).join('')}</section>`;

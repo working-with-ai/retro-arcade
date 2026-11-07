@@ -1,6 +1,23 @@
 const HISTORY_KEY = 'ra:history';
 const SEARCH_KEY = 'ra:search';
 const SAVES_KEY = 'ra:saves';
+const PROFILE_KEY = 'ra:profile';
+
+export function getLocalProfile() {
+  const profile = readJSON(PROFILE_KEY, {});
+  return { nickname: typeof profile.nickname === 'string' && profile.nickname.trim() ? profile.nickname.trim().slice(0, 20) : '一局童年玩家' };
+}
+
+export function saveLocalProfile(nickname) {
+  const value = String(nickname || '').trim();
+  if (!value || value.length > 20) throw new Error('昵称需为 1–20 个字符');
+  try {
+    localStorage.setItem(PROFILE_KEY, JSON.stringify({ nickname: value }));
+  } catch {
+    throw new Error('当前浏览器无法保存资料，请检查网站存储设置');
+  }
+  return { nickname: value };
+}
 
 let dataPromise;
 
