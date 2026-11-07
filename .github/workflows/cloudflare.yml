@@ -25,6 +25,10 @@ jobs:
       CF_SEND_TELEMETRY: 'false'
       DEPLOY_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.environment || 'production' }}
       PLATFORM_DATABASE_ENABLED: ${{ vars.PLATFORM_DATABASE_ENABLED || 'false' }}
+      PLATFORM_AUTH_ENABLED: ${{ vars.PLATFORM_AUTH_ENABLED || 'false' }}
+      PLATFORM_PAYMENTS_ENABLED: ${{ vars.PLATFORM_PAYMENTS_ENABLED || 'false' }}
+      PLATFORM_RELAYS_ENABLED: ${{ vars.PLATFORM_RELAYS_ENABLED || 'false' }}
+      PLATFORM_ADMIN_USER_IDS: ${{ vars.PLATFORM_ADMIN_USER_IDS || '' }}
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
