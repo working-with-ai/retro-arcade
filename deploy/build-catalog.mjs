@@ -4,6 +4,7 @@ import { basename } from 'node:path';
 const manifestPath = process.argv[2] || '/Users/qilin.guo/AiProjects/res/wufan-ranking-resources.json';
 const outputPath = new URL('../dist/games.json', import.meta.url);
 const manifest = JSON.parse(await readFile(manifestPath, 'utf8'));
+const screenshots = JSON.parse(await readFile(new URL('./wufan-screenshots.json', import.meta.url), 'utf8'));
 
 const PLATFORM = {
   FC: { gameMode: 'FC', gameType: 35, plugin: 'FC', slug: 'fc' },
@@ -131,11 +132,7 @@ const games = manifest.games.map(game => {
     cover: ext ? `games/${id}/cover.${ext}` : '',
     coverExt: ext,
     coverTone: (game.rank % 4) + 1,
-    screenshots: [
-      { label: '游戏画面', tone: ['forest', 'city', 'dungeon', 'sky', 'neon', 'space'][game.rank % 6] },
-      { label: '经典关卡', tone: ['sunset', 'snow', 'neon', 'city'][game.rank % 4] },
-      { label: '挑战时刻', tone: ['dungeon', 'space', 'forest', 'sunset'][game.rank % 4] }
-    ],
+    screenshots: (screenshots[id]?.images || []).map(image => ({ src: image.src })),
     playable: true,
     hasResources: Boolean(objectOf(game, 'resources')),
     core: coreFor(game, id, info, rom)

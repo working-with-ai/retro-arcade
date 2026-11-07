@@ -249,10 +249,16 @@ async function handleGameAsset(request, env, url) {
   if (!game) return new Response('Not found', { status: 404, headers });
   const base = `ranking/hot/${game.r2Id}`;
   let key = '';
+  const shot = /^shot-(\d{1,2})\.(jpg|jpeg|png|webp)$/.exec(file);
   let contentType = CONTENT_TYPES[file.split('.').pop()] || 'application/octet-stream';
   let cacheControl = 'public, max-age=86400';
   if (file === 'rom.zip') key = `${base}/rom.zip`;
   else if (file === 'resources.zip') key = `${base}/resources.zip`;
+  else if (shot) {
+    key = `${base}/shots/${shot[1]}.${shot[2]}`;
+    contentType = CONTENT_TYPES[shot[2]] || 'image/jpeg';
+    cacheControl = 'public, max-age=604800';
+  }
   else if (file === 'cover' || file === `cover.${game.coverExt}`) {
     key = `${base}/cover.${game.coverExt}`;
     contentType = CONTENT_TYPES[game.coverExt] || 'image/png';

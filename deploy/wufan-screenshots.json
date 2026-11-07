@@ -1,0 +1,4893 @@
+{
+  "9895614": {
+    "upstreamGameId": "9895614",
+    "sourceUpstreamId": "9895614",
+    "pickedBy": "ranking",
+    "r2Id": "9895614",
+    "name": "雪人兄弟 街机版",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/c2/be/c2bef8f729889f8a7ba21fb02f9c7aa9.jpg",
+        "src": "games/9895614/shot-1.jpg",
+        "r2Key": "ranking/hot/9895614/shots/1.jpg",
+        "bytes": 60149,
+        "sha256": "33ed6a602b4ffea2cf89f5752fd4b63913c7fc2b916a5f4bb1d07587a500c47c",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/36/ab/36ab5ae749dbd4fb82735c2f09bd9783.jpg",
+        "src": "games/9895614/shot-2.jpg",
+        "r2Key": "ranking/hot/9895614/shots/2.jpg",
+        "bytes": 62964,
+        "sha256": "9ae127ee2b52cac0026df88518d4db78f76eadd313a7afcab4544a1b1f5d79d5",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/2b/52/2b5227e9df815708dae44325d4dfc6d4.jpg",
+        "src": "games/9895614/shot-3.jpg",
+        "r2Key": "ranking/hot/9895614/shots/3.jpg",
+        "bytes": 58431,
+        "sha256": "8f475ec99326001443f216b8b39cbbb4df9e6cfaf84fb8d6b9073b4a54832924",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "108333622": {
+    "upstreamGameId": "108333622",
+    "sourceUpstreamId": "108333622",
+    "pickedBy": "ranking",
+    "r2Id": "108333622",
+    "name": "97恐龙快打2代",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/48/ed/48ed2c2f267490d9cbc36b5aa341c3f6.jpg",
+        "src": "games/108333622/shot-1.jpg",
+        "r2Key": "ranking/hot/108333622/shots/1.jpg",
+        "bytes": 64271,
+        "sha256": "80abf7e7feaff3cfe523f04f060340760f86078e722a9306377307099d6866f2",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/1d/7d/1d7d5cc3b4411179453705c477dab0a2.jpg",
+        "src": "games/108333622/shot-2.jpg",
+        "r2Key": "ranking/hot/108333622/shots/2.jpg",
+        "bytes": 49512,
+        "sha256": "8b9e83be01b78c0494cfd0b7a2f868628e597970ec754ece65a1b937a655d3a3",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/17/4d/174d48ade7147df4f5b26fed26a4a146.jpg",
+        "src": "games/108333622/shot-3.jpg",
+        "r2Key": "ranking/hot/108333622/shots/3.jpg",
+        "bytes": 48532,
+        "sha256": "7f61d53fd6b26cd7c8c59e6ecc280181572f8d1e167fca0661713af8730a8f61",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/34/9a/349a4a830382a84d76ce32629f0b8aab.jpg",
+        "src": "games/108333622/shot-4.jpg",
+        "r2Key": "ranking/hot/108333622/shots/4.jpg",
+        "bytes": 55873,
+        "sha256": "705a8390deed7ccfba25c423e8198a7b4c433887fcf1bfe9392af0a38bcc7f4a",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "109358328": {
+    "upstreamGameId": "109358328",
+    "sourceUpstreamId": "109358328",
+    "pickedBy": "ranking",
+    "r2Id": "109358328",
+    "name": "三国志2 霸王的大陆 纯净版0.96",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/bc/73/bc731111320ea29e0d8e33d5cd740d83.jpg",
+        "src": "games/109358328/shot-1.jpg",
+        "r2Key": "ranking/hot/109358328/shots/1.jpg",
+        "bytes": 68518,
+        "sha256": "1a1aefe3b0edb592b62d753f133c9a35b49264beb857743ae782ae0aa31b84be",
+        "width": 568,
+        "height": 320
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/eb/6f/eb6f33d9e5b0971a8f3c1d14a947a009.png",
+        "src": "games/109358328/shot-2.png",
+        "r2Key": "ranking/hot/109358328/shots/2.png",
+        "bytes": 90977,
+        "sha256": "954e5aeaad0d254c6ff81328c32d3e46e880c67a514e5e4131a7a38763693363",
+        "width": 309,
+        "height": 271
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/3d/e5/3de540b5a832228fa7bfba9f04267df6.png",
+        "src": "games/109358328/shot-3.png",
+        "r2Key": "ranking/hot/109358328/shots/3.png",
+        "bytes": 38990,
+        "sha256": "a0847099154c25a517882970f02efce83b74f3070341c18a0d7aec82010b1278",
+        "width": 357,
+        "height": 328
+      }
+    ]
+  },
+  "122078927": {
+    "upstreamGameId": "122078927",
+    "sourceUpstreamId": "122078927",
+    "pickedBy": "ranking",
+    "r2Id": "122078927",
+    "name": "西游释厄传",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/13/aa/13aa2d2f9aac46a7f1e3e0bb702ad644.jpg",
+        "src": "games/122078927/shot-1.jpg",
+        "r2Key": "ranking/hot/122078927/shots/1.jpg",
+        "bytes": 47499,
+        "sha256": "d7173c4343272d8a385ed55cfa516a15f77ecd248215c3fd821abb33559f772b",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/a6/9c/a69ce74ddc100ba4147f7635eb066f7f.jpg",
+        "src": "games/122078927/shot-2.jpg",
+        "r2Key": "ranking/hot/122078927/shots/2.jpg",
+        "bytes": 38397,
+        "sha256": "1be24fa6739acbc59208cd188b8a9d775ad8c9a017d8831a0e065e185071b01f",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/93/67/93679740dc64d2efffe435506e600a6a.jpg",
+        "src": "games/122078927/shot-3.jpg",
+        "r2Key": "ranking/hot/122078927/shots/3.jpg",
+        "bytes": 49134,
+        "sha256": "8725a165e5ca851e5d8baa764b37c7efd1dd47e36f8695492e26ff5f7db7a7ba",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/2f/93/2f9301abfd9b72feb6da66dfb7b28792.jpg",
+        "src": "games/122078927/shot-4.jpg",
+        "r2Key": "ranking/hot/122078927/shots/4.jpg",
+        "bytes": 46648,
+        "sha256": "39673056503c9e63438a224bd318cbfe42a70a33bbf6fee47c8151cfc784d251",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "161304317": {
+    "upstreamGameId": "161304317",
+    "sourceUpstreamId": "161304317",
+    "pickedBy": "ranking",
+    "r2Id": "161304317",
+    "name": "名将 4人联机版",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/65/51/6551519891eb3f3781500187dd1bed24.jpg",
+        "src": "games/161304317/shot-1.jpg",
+        "r2Key": "ranking/hot/161304317/shots/1.jpg",
+        "bytes": 60889,
+        "sha256": "f5b763a40b1bbb1e901c2cff2b8d8e6d3c8cc92a268ec551dfeb598dda8c5e9b",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/b8/79/b8791c008b0b670c039e52b11686ab44.jpg",
+        "src": "games/161304317/shot-2.jpg",
+        "r2Key": "ranking/hot/161304317/shots/2.jpg",
+        "bytes": 53908,
+        "sha256": "217ec7cc09fe692e20208b15b5801d7eee7adb827027fb326e00f1a6e16b3df3",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/92/8a/928ad9d598dfa3f73868d95223d2035f.jpg",
+        "src": "games/161304317/shot-3.jpg",
+        "r2Key": "ranking/hot/161304317/shots/3.jpg",
+        "bytes": 62268,
+        "sha256": "6256c0e0d364a35fc0db3ee8945bc75e2b671852c49efdb60cbd2e03d0c76da3",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/62/cf/62cf967fc46495298c9751eccadb5478.jpg",
+        "src": "games/161304317/shot-4.jpg",
+        "r2Key": "ranking/hot/161304317/shots/4.jpg",
+        "bytes": 61273,
+        "sha256": "3cfcb8bb545de9f46b6dbebf4abb8d1bd1c0479f71b6a1e96b57744dd3341ada",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 5,
+        "source": "https://ctimg2018.myyx618.com/upload/images/65/56/6556d758adb0c72b81a78b1fb7c3bd48.png",
+        "src": "games/161304317/shot-5.png",
+        "r2Key": "ranking/hot/161304317/shots/5.png",
+        "bytes": 21017,
+        "sha256": "8ae17ab2d81cb7f31c4116f1df918c68e434d46212d25930f04ff7eaec68658b",
+        "width": 384,
+        "height": 224
+      },
+      {
+        "order": 6,
+        "source": "https://ctimg2018.myyx618.com/upload/images/f5/21/f52177d760a84bc17c5317fed8c3bac8.jpg",
+        "src": "games/161304317/shot-6.jpg",
+        "r2Key": "ranking/hot/161304317/shots/6.jpg",
+        "bytes": 74550,
+        "sha256": "ce85983811d96d49b8f1b5cac1de3b9d13aedb8256c77639aad32ced758986d3",
+        "width": 640,
+        "height": 360
+      }
+    ]
+  },
+  "174465372": {
+    "upstreamGameId": "174465372",
+    "sourceUpstreamId": "174465372",
+    "pickedBy": "ranking",
+    "r2Id": "174465372",
+    "name": "群雄起源 女将版154",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/d4/d9/d4d9dcf9555226d19146187ebfd5006a.jpg",
+        "src": "games/174465372/shot-1.jpg",
+        "r2Key": "ranking/hot/174465372/shots/1.jpg",
+        "bytes": 57688,
+        "sha256": "82ad0ec40af54d264a2117362a6d66a7ba099b259a6f7e826ea962ac6d986dd4",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/ea/f2/eaf282715bd9009f273eb87c305b44b6.jpg",
+        "src": "games/174465372/shot-2.jpg",
+        "r2Key": "ranking/hot/174465372/shots/2.jpg",
+        "bytes": 69341,
+        "sha256": "72c21bcdc5f4c7397ee2201cfc78592305071f4e7d3c7e6d4dd3c67b1834d86f",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/fa/41/fa413669e31ddd0f130e437f4b137a73.jpg",
+        "src": "games/174465372/shot-3.jpg",
+        "r2Key": "ranking/hot/174465372/shots/3.jpg",
+        "bytes": 56509,
+        "sha256": "2462f7771e96f04ffa0370624884ecf8d7ff54450bd9e1c4d286f7b24cb2d14d",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "210765038": {
+    "upstreamGameId": "210765038",
+    "sourceUpstreamId": "210765038",
+    "pickedBy": "ranking",
+    "r2Id": "210765038",
+    "name": "三国志 三剑圣",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/3c/99/3c99c934a73549ab200dd7e408499aa0.jpg",
+        "src": "games/210765038/shot-1.jpg",
+        "r2Key": "ranking/hot/210765038/shots/1.jpg",
+        "bytes": 44440,
+        "sha256": "eba2abf0d3c5f0bb0323ec645e75560cde2581fb65a421d521e7c703e0fbc4a4",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/09/ec/09ecabb340b65795e7772d6a5b7e5ddb.jpg",
+        "src": "games/210765038/shot-2.jpg",
+        "r2Key": "ranking/hot/210765038/shots/2.jpg",
+        "bytes": 45476,
+        "sha256": "d042afd18a35e5ec0d46fba1482e88eacc17cb004d38c6fed0e4bab80aae1d17",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/e3/09/e309c1e5ee750cd081d67d39fdfccec6.jpg",
+        "src": "games/210765038/shot-3.jpg",
+        "r2Key": "ranking/hot/210765038/shots/3.jpg",
+        "bytes": 46765,
+        "sha256": "059978d314d597f4436cea3122962426c94dcb7149cfd659754e65efbe11ca1d",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/62/c3/62c3a9054b2ef2dea31a8c3c83214467.jpg",
+        "src": "games/210765038/shot-4.jpg",
+        "r2Key": "ranking/hot/210765038/shots/4.jpg",
+        "bytes": 50714,
+        "sha256": "4fe62a24dfc46e21cf5399ab3ee86846460b7b7fb377c0cdd68e1f4c51c61377",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "273215008": {
+    "upstreamGameId": "273215008",
+    "sourceUpstreamId": "273215008",
+    "pickedBy": "detail",
+    "r2Id": "273215008",
+    "name": "街头霸王6 十二人",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/79/a3/79a3c454b4835f6d4acb41f90c4b22c6.png",
+        "src": "games/273215008/shot-1.png",
+        "r2Key": "ranking/hot/273215008/shots/1.png",
+        "bytes": 62393,
+        "sha256": "41d239ad82f939a52885ad3f994c4c5e736a0d93535ab7492b16b25c7e49fdd0",
+        "width": 356,
+        "height": 329
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/fc/8a/fc8a091adc94117e1cab322139452efa.png",
+        "src": "games/273215008/shot-2.png",
+        "r2Key": "ranking/hot/273215008/shots/2.png",
+        "bytes": 56472,
+        "sha256": "a822ed77351943a313a36abae85167654309ebb83012c61e86547614498f65d2",
+        "width": 356,
+        "height": 329
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/2f/e6/2fe6c2d56ddcd507ae097e6bb7af6511.png",
+        "src": "games/273215008/shot-3.png",
+        "r2Key": "ranking/hot/273215008/shots/3.png",
+        "bytes": 59361,
+        "sha256": "e0df40dbf97c9b639dd899a8b060e5840c17976c862ff843523cef2cea85aa99",
+        "width": 352,
+        "height": 330
+      }
+    ]
+  },
+  "279316473": {
+    "upstreamGameId": "279316473",
+    "sourceUpstreamId": "279316473",
+    "pickedBy": "detail",
+    "r2Id": "279316473",
+    "name": "口袋妖怪 圣灰 汉化版",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/a2/8e/a28ecd7e6878551249d531f1ea23264d.jpg",
+        "src": "games/279316473/shot-1.jpg",
+        "r2Key": "ranking/hot/279316473/shots/1.jpg",
+        "bytes": 32769,
+        "sha256": "1bd988ff30eed1928c37f7e28baf75822872e5e7bea2b04d06652586ed55b52c",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/83/93/8393042945f6602cf1125e2d915d1116.jpg",
+        "src": "games/279316473/shot-2.jpg",
+        "r2Key": "ranking/hot/279316473/shots/2.jpg",
+        "bytes": 26832,
+        "sha256": "1fdff520ae349243cafd47001deba3a4575054d9e2a5d0ce98c0e74a31fe63eb",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/2d/68/2d681a6732f5b03730ed9efb94a9029e.jpg",
+        "src": "games/279316473/shot-3.jpg",
+        "r2Key": "ranking/hot/279316473/shots/3.jpg",
+        "bytes": 42954,
+        "sha256": "4130f2255f1bf484e251b22266b1d4cc4282a93bf016859acb5ce5be4cf5bf64",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/8e/e2/8ee29001e124a54da2eb9801324e30f5.jpg",
+        "src": "games/279316473/shot-4.jpg",
+        "r2Key": "ranking/hot/279316473/shots/4.jpg",
+        "bytes": 35241,
+        "sha256": "b3e46a83656beca0d44242778d2ac96703ce43a72f1ba0615f74a35ae07bd675",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "338506589": {
+    "upstreamGameId": "338506589",
+    "sourceUpstreamId": "338506589",
+    "pickedBy": "ranking",
+    "r2Id": "338506589",
+    "name": "NEO炸弹人",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/df/12/df121d2048897bb2a9cfe72a5bb739ce.jpg",
+        "src": "games/338506589/shot-1.jpg",
+        "r2Key": "ranking/hot/338506589/shots/1.jpg",
+        "bytes": 96829,
+        "sha256": "8e1261125f344e44d7e092a667861c306ad64aa60b1ca7420b55a98fbf67c20b",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/01/b4/01b4e1ecca7d1685c70c882df7a9d7ec.jpg",
+        "src": "games/338506589/shot-2.jpg",
+        "r2Key": "ranking/hot/338506589/shots/2.jpg",
+        "bytes": 81193,
+        "sha256": "20706ca2a8f17bf53055e192a8ab252517d672fded09eedaf288224109dec3ed",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/49/ab/49ab1bb008729d0a1a81d1b80708ecf5.jpg",
+        "src": "games/338506589/shot-3.jpg",
+        "r2Key": "ranking/hot/338506589/shots/3.jpg",
+        "bytes": 95953,
+        "sha256": "0ba64c12df13a26326145415fb95d5f09cfa717ddd5f90a2c21df6bbfa68869d",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "364512461": {
+    "upstreamGameId": "364512461",
+    "sourceUpstreamId": "364512461",
+    "pickedBy": "ranking",
+    "r2Id": "364512461",
+    "name": "恐龙快打 加强版",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/34/9a/349a4a830382a84d76ce32629f0b8aab.jpg",
+        "src": "games/364512461/shot-1.jpg",
+        "r2Key": "ranking/hot/364512461/shots/1.jpg",
+        "bytes": 55873,
+        "sha256": "705a8390deed7ccfba25c423e8198a7b4c433887fcf1bfe9392af0a38bcc7f4a",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/a4/3b/a43b86b6cab838bdaecf4de8dbf21229.jpg",
+        "src": "games/364512461/shot-2.jpg",
+        "r2Key": "ranking/hot/364512461/shots/2.jpg",
+        "bytes": 67721,
+        "sha256": "79ccb48d6a4efae897f4b592bcfdf5a2ad5ca18decbaad75c9bec37373716462",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/4b/07/4b07d481807492e0a3544255635ce659.jpg",
+        "src": "games/364512461/shot-3.jpg",
+        "r2Key": "ranking/hot/364512461/shots/3.jpg",
+        "bytes": 73341,
+        "sha256": "2c249dbf53af7e25883bffe0ed7e6f5d0da065555441295c641bf627902e2fb3",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/b3/fc/b3fc46685422281cd0d20deeb38fb264.jpg",
+        "src": "games/364512461/shot-4.jpg",
+        "r2Key": "ranking/hot/364512461/shots/4.jpg",
+        "bytes": 61164,
+        "sha256": "465a2a4ac73313caf25e5a32dc7df0f90ae5a1afdab64341f39c790b1fdab043",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "376019615": {
+    "upstreamGameId": "376019615",
+    "sourceUpstreamId": "376019615",
+    "pickedBy": "detail",
+    "r2Id": "376019615",
+    "name": "超级玛丽 生人勿近",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/a4/a8/a4a8e1f6304309c9a90ae447ccc36c69.jpg",
+        "src": "games/376019615/shot-1.jpg",
+        "r2Key": "ranking/hot/376019615/shots/1.jpg",
+        "bytes": 38233,
+        "sha256": "1471322a9149c1f8c0797392ac77dee9fc7fac3f8405813bee7a47b45059bc9b",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/9e/f4/9ef46411ffbdca239ea8a613a0b3f5ab.jpg",
+        "src": "games/376019615/shot-2.jpg",
+        "r2Key": "ranking/hot/376019615/shots/2.jpg",
+        "bytes": 32488,
+        "sha256": "38c042251eee2b8418c922ab0e5d5182ef6610b43a3d83796abe005ec4f943a2",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/71/36/7136c527eb32698e90144907c6895bfa.jpg",
+        "src": "games/376019615/shot-3.jpg",
+        "r2Key": "ranking/hot/376019615/shots/3.jpg",
+        "bytes": 33335,
+        "sha256": "fc33bd4fd78985962a1bc0d4b944e4382ee088a916c0b6528f1937a86d8e7b70",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/60/43/6043d51bc251f724cf16ac2889423206.jpg",
+        "src": "games/376019615/shot-4.jpg",
+        "r2Key": "ranking/hot/376019615/shots/4.jpg",
+        "bytes": 31879,
+        "sha256": "a1b09df76807e6b5b11fc0ee6a97abf0ccc97ea9449993ca634a2274783e97a4",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "395302752": {
+    "upstreamGameId": "395302752",
+    "sourceUpstreamId": "395302752",
+    "pickedBy": "ranking",
+    "r2Id": "395302752",
+    "name": "口袋妖怪 火红",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/7c/2a/7c2a3fb4481c77b953ba0d970de33715.jpg",
+        "src": "games/395302752/shot-1.jpg",
+        "r2Key": "ranking/hot/395302752/shots/1.jpg",
+        "bytes": 31543,
+        "sha256": "b6504c4be2fbe48ee710553503d70e2d8601f9f3e44d6cfb2d7a61a3be416173",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/a1/c7/a1c73c147a38a8b3652e152c0d6c80c4.jpg",
+        "src": "games/395302752/shot-2.jpg",
+        "r2Key": "ranking/hot/395302752/shots/2.jpg",
+        "bytes": 33519,
+        "sha256": "dbfb03869828cf28444c7ef3d3831d6bbb65f5b2a4412501eab5791763187d08",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/f2/f6/f2f68658afae5ad9b6e7961dfdabf2b3.jpg",
+        "src": "games/395302752/shot-3.jpg",
+        "r2Key": "ranking/hot/395302752/shots/3.jpg",
+        "bytes": 43128,
+        "sha256": "78ecb1ca345198732d5fb21305839e9c5bc2b91f195f5aae3f90fd0c19d8a863",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/90/cc/90ccab759659d20fab8e33d6ed06d3a7.jpg",
+        "src": "games/395302752/shot-4.jpg",
+        "r2Key": "ranking/hot/395302752/shots/4.jpg",
+        "bytes": 53128,
+        "sha256": "be65ed92bdc3ea6054fe4dcd3734d4b19ba0451d87553e6238e3f6a59191d45f",
+        "width": 267,
+        "height": 178
+      }
+    ]
+  },
+  "400160155": {
+    "upstreamGameId": "400160155",
+    "sourceUpstreamId": "400160155",
+    "pickedBy": "ranking",
+    "r2Id": "400160155",
+    "name": "西游释厄传 群魔乱舞大招简化无限气",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/9d/9d/9d9dfb7707e09c204d739e8153f58850.jpg",
+        "src": "games/400160155/shot-1.jpg",
+        "r2Key": "ranking/hot/400160155/shots/1.jpg",
+        "bytes": 80727,
+        "sha256": "ee90e5892bc21f90edfddd125d84671fdd25640292bed846e77ef878c41b1353",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/d6/2e/d62e80eaffb38365dd3c00d7b543dfa5.jpg",
+        "src": "games/400160155/shot-2.jpg",
+        "r2Key": "ranking/hot/400160155/shots/2.jpg",
+        "bytes": 67146,
+        "sha256": "5f0056b210fe96d7858345a4a059b2e11e8bd1982e61cbe77e0c351d43d99ee6",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/e5/96/e596de1d272e785ab9dc020e03c43cfd.jpg",
+        "src": "games/400160155/shot-3.jpg",
+        "r2Key": "ranking/hot/400160155/shots/3.jpg",
+        "bytes": 73733,
+        "sha256": "090449c43faeafc414d9ffa9cf591e90243fc1ea7149c7773ae97256a0a6d2f3",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "452377455": {
+    "upstreamGameId": "452377455",
+    "sourceUpstreamId": "452377455",
+    "pickedBy": "detail",
+    "r2Id": "452377455",
+    "name": "魂斗罗",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/c7/4f/c74ff05b307f539b2b79ae0a3b847227.jpg",
+        "src": "games/452377455/shot-1.jpg",
+        "r2Key": "ranking/hot/452377455/shots/1.jpg",
+        "bytes": 52363,
+        "sha256": "69c9d16a1233ca6269b8dfa5a187fe8b4cd7dafc0c0a66453790f6b220709e8d",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/7c/c7/7cc762ce3f437b009d1b959f6fb924b1.jpg",
+        "src": "games/452377455/shot-2.jpg",
+        "r2Key": "ranking/hot/452377455/shots/2.jpg",
+        "bytes": 47036,
+        "sha256": "243e1766441b3a4e0219acc8ee44b9d394b66697a78bf87a896927b97550f470",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/7d/29/7d29a79e7af0ae2c659adcdb548f7817.jpg",
+        "src": "games/452377455/shot-3.jpg",
+        "r2Key": "ranking/hot/452377455/shots/3.jpg",
+        "bytes": 54057,
+        "sha256": "e9a77a9b7df7d799c840842def2c38e3d6691ba3484c168f9ecb98d1a38fe61a",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/ad/8e/ad8efb4149f306a7eeb429e609e07aa9.jpg",
+        "src": "games/452377455/shot-4.jpg",
+        "r2Key": "ranking/hot/452377455/shots/4.jpg",
+        "bytes": 51530,
+        "sha256": "89659876249ea109fd26d09f3d179eccdd9c15ce9e3c2d3d0d371f7e32106a85",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "470319217": {
+    "upstreamGameId": "470319217",
+    "sourceUpstreamId": "470319217",
+    "pickedBy": "ranking",
+    "r2Id": "470319217",
+    "name": "口袋妖怪 西班牙火箭队 五周目汉化",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/9e/61/9e61c545cb2000439bbc0a920992f4b4.jpg",
+        "src": "games/470319217/shot-1.jpg",
+        "r2Key": "ranking/hot/470319217/shots/1.jpg",
+        "bytes": 96672,
+        "sha256": "ddee6ae9ad7d6a5c6856c621058e3b0e01ff45e9301c6611df3ded3dfc31397d",
+        "width": 717,
+        "height": 478
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/58/5a/585a4a18954abc8976afc6b41be1dbd4.jpg",
+        "src": "games/470319217/shot-2.jpg",
+        "r2Key": "ranking/hot/470319217/shots/2.jpg",
+        "bytes": 76078,
+        "sha256": "6a5927b41af2bd61e1aa3e29b25f5c550a305a85eb9c07c03b55095fba52512b",
+        "width": 935,
+        "height": 512
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/4a/cf/4acf970eea1bae1f7e49fcc6f01b8fb9.jpg",
+        "src": "games/470319217/shot-3.jpg",
+        "r2Key": "ranking/hot/470319217/shots/3.jpg",
+        "bytes": 59300,
+        "sha256": "1fffa6f3868167c72f2c6c9191be19e8b82770ee012dba7314e26d071281b68f",
+        "width": 935,
+        "height": 501
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/16/ae/16ae01cc9073e4835b3b96fc0e47d67b.jpg",
+        "src": "games/470319217/shot-4.jpg",
+        "r2Key": "ranking/hot/470319217/shots/4.jpg",
+        "bytes": 108934,
+        "sha256": "bf6853e296e1facaf89e6ffa0f13a83b06f74feac3eceb01ea8a5dc01de1cc4c",
+        "width": 718,
+        "height": 479
+      },
+      {
+        "order": 5,
+        "source": "https://ctimg2018.myyx618.com/upload/images/af/4c/af4cdbf2d4eb98c00638d6da4355adc3.jpg",
+        "src": "games/470319217/shot-5.jpg",
+        "r2Key": "ranking/hot/470319217/shots/5.jpg",
+        "bytes": 134351,
+        "sha256": "bd68db1ba09b0a3884c8a681f1641a519a3e6317530676f5c94981e969372034",
+        "width": 717,
+        "height": 476
+      },
+      {
+        "order": 6,
+        "source": "https://ctimg2018.myyx618.com/upload/images/7b/22/7b22b104092143b7a7bc75fcf0a1afd3.jpg",
+        "src": "games/470319217/shot-6.jpg",
+        "r2Key": "ranking/hot/470319217/shots/6.jpg",
+        "bytes": 82260,
+        "sha256": "538a36e19f22ac5d173253694b09632c88c17474a3c74430d5ed840c4fa17f73",
+        "width": 937,
+        "height": 513
+      },
+      {
+        "order": 7,
+        "source": "https://ctimg2018.myyx618.com/upload/images/7e/e2/7ee26e109c18ac87e6f181d1a7c10aa3.jpg",
+        "src": "games/470319217/shot-7.jpg",
+        "r2Key": "ranking/hot/470319217/shots/7.jpg",
+        "bytes": 59300,
+        "sha256": "d9a89aba82c05d297d42958af6421f75e239b7465ef06f5a83a946ade1f8f201",
+        "width": 937,
+        "height": 501
+      },
+      {
+        "order": 8,
+        "source": "https://ctimg2018.myyx618.com/upload/images/79/86/7986f85f60429661290a44ebd872c806.jpg",
+        "src": "games/470319217/shot-8.jpg",
+        "r2Key": "ranking/hot/470319217/shots/8.jpg",
+        "bytes": 117028,
+        "sha256": "251e8ce529ab1d71d333dcf10abdd1c41b8cfacfcfb8b001eca5baccb3b4728a",
+        "width": 717,
+        "height": 476
+      },
+      {
+        "order": 9,
+        "source": "https://ctimg2018.myyx618.com/upload/images/e9/cf/e9cfd38f1e257071233988384ed03bd9.jpg",
+        "src": "games/470319217/shot-9.jpg",
+        "r2Key": "ranking/hot/470319217/shots/9.jpg",
+        "bytes": 92341,
+        "sha256": "c1cca535a83b7990604abbab176611feffee35d69c65db860a128ee08ea45e1a",
+        "width": 717,
+        "height": 477
+      }
+    ]
+  },
+  "474504294": {
+    "upstreamGameId": "474504294",
+    "sourceUpstreamId": "474504294",
+    "pickedBy": "ranking",
+    "r2Id": "474504294",
+    "name": "三国志 群雄起源v1.5up6",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/09/2e/092ee146bc3c0d4be3dac7aa14b7fea9.jpg",
+        "src": "games/474504294/shot-1.jpg",
+        "r2Key": "ranking/hot/474504294/shots/1.jpg",
+        "bytes": 53422,
+        "sha256": "d74f7e0ae1685699fa0c14f92f5de37d0eab0066cc0b719f849f9fe966bf3be7",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/ff/ad/ffad5d731847e96cc3654b707dd170c2.jpg",
+        "src": "games/474504294/shot-2.jpg",
+        "r2Key": "ranking/hot/474504294/shots/2.jpg",
+        "bytes": 27835,
+        "sha256": "0b886d1fb140d54f641443b1d9009f44b47fca8c60c43455dd39fc6f2f3a9b89",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/3d/c4/3dc45b2a3d3c95374097ecac120f5922.jpg",
+        "src": "games/474504294/shot-3.jpg",
+        "r2Key": "ranking/hot/474504294/shots/3.jpg",
+        "bytes": 46466,
+        "sha256": "cfa7aa60e937823b6163c2726f87ae4f5ea422249c3b26c240081da29de713f8",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/45/1b/451b5c64ee26014c36cd60cef4fd9e28.jpg",
+        "src": "games/474504294/shot-4.jpg",
+        "r2Key": "ranking/hot/474504294/shots/4.jpg",
+        "bytes": 63616,
+        "sha256": "cfae1a5104721a5ba092f8346670020f9ce12261eeb9ed0437a6ef53cb8416dd",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "485480531": {
+    "upstreamGameId": "485480531",
+    "sourceUpstreamId": "485480531",
+    "pickedBy": "detail",
+    "r2Id": "485480531",
+    "name": "圣火徽章外传 索菲亚的复苏 修复版",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/55/70/557013835f3d6ba885fa5f7b339a2285.jpg",
+        "src": "games/485480531/shot-1.jpg",
+        "r2Key": "ranking/hot/485480531/shots/1.jpg",
+        "bytes": 82279,
+        "sha256": "50696cac743a320ff5998721f6b1cae5c15cc506c7dac7c5d686eb04466776bd",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/19/40/19403dd6cf9fb25a6a835ed1803267c3.jpg",
+        "src": "games/485480531/shot-2.jpg",
+        "r2Key": "ranking/hot/485480531/shots/2.jpg",
+        "bytes": 75268,
+        "sha256": "bc18b141fe597501db24c31b23d06655ccf09fefb9eed9136c79c270eddc589a",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/ac/a9/aca92c5e8a64b6bdf62857233e905625.jpg",
+        "src": "games/485480531/shot-3.jpg",
+        "r2Key": "ranking/hot/485480531/shots/3.jpg",
+        "bytes": 30356,
+        "sha256": "cdd81b5554b7cb8ec1f06879e6cda99865811be25134c3d2d58f733492b1697e",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/5f/47/5f4700eaff78b5fe3eab612b19d1932d.jpg",
+        "src": "games/485480531/shot-4.jpg",
+        "r2Key": "ranking/hot/485480531/shots/4.jpg",
+        "bytes": 62346,
+        "sha256": "bbf731b6691025f28cbef014c1963f0c2f03f3db212d381b126680678dc34a38",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 5,
+        "source": "https://ctimg2018.myyx618.com/upload/images/ed/3a/ed3a3c119ace74cd3d724741f4a4e82c.jpg",
+        "src": "games/485480531/shot-5.jpg",
+        "r2Key": "ranking/hot/485480531/shots/5.jpg",
+        "bytes": 74930,
+        "sha256": "3a0756c79d5a8443ed8f12a60576988908d86f335f3501c6a8a41a02874e4db6",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 6,
+        "source": "https://ctimg2018.myyx618.com/upload/images/22/70/2270b279396c4852dd9a322366ad302c.jpg",
+        "src": "games/485480531/shot-6.jpg",
+        "r2Key": "ranking/hot/485480531/shots/6.jpg",
+        "bytes": 82852,
+        "sha256": "7e14745171c5060531199ec8cac9bb619610dd4ac2bcf2961c233aa94969c8b9",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "489783855": {
+    "upstreamGameId": "489783855",
+    "sourceUpstreamId": "489783855",
+    "pickedBy": "detail",
+    "r2Id": "489783855",
+    "name": "打击者1945",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/d5/81/d5815ff8e1f178d91d7d7ae217f23f17.jpg",
+        "src": "games/489783855/shot-1.jpg",
+        "r2Key": "ranking/hot/489783855/shots/1.jpg",
+        "bytes": 9404,
+        "sha256": "75cbd482a6250953d768ffa8f6ec7e34cff100aba009bfd5622ed2fcc8ff2c35",
+        "width": 312,
+        "height": 214
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/fc/d2/fcd2a5b4f828fb6a43fc03805648835e.png",
+        "src": "games/489783855/shot-2.png",
+        "r2Key": "ranking/hot/489783855/shots/2.png",
+        "bytes": 72128,
+        "sha256": "06e234e9003047573bd25b232498e14759476e4233e371f35a7aa182ca0f3282",
+        "width": 157,
+        "height": 225
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/3a/ff/3aff5411f6371b249c9916026ec29571.png",
+        "src": "games/489783855/shot-3.png",
+        "r2Key": "ranking/hot/489783855/shots/3.png",
+        "bytes": 44496,
+        "sha256": "8a1b63cd7a38245c105c429d94f0abde5a9173fd91cacc33f9dc55448b11d87b",
+        "width": 157,
+        "height": 225
+      }
+    ]
+  },
+  "530554297": {
+    "upstreamGameId": "530554297",
+    "sourceUpstreamId": "530554297",
+    "pickedBy": "ranking",
+    "r2Id": "530554297",
+    "name": "街头霸王2 四大天王",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/8e/88/8e88999f202b90c7f8c3185289aa7866.jpg",
+        "src": "games/530554297/shot-1.jpg",
+        "r2Key": "ranking/hot/530554297/shots/1.jpg",
+        "bytes": 53598,
+        "sha256": "c2b6c086ef5f4bcc16d37e3d84c60a81dc209064d4cb952e5c1db0ea2bd315eb",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/e0/23/e023df1af022530cb121e85670d6e0b2.jpg",
+        "src": "games/530554297/shot-2.jpg",
+        "r2Key": "ranking/hot/530554297/shots/2.jpg",
+        "bytes": 53539,
+        "sha256": "8ed549eade4f3754e67f258d334ade337b678b9c80446b05ccace49bc2b5f871",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/93/58/9358ee3eb4519dabca0b40c9d0b8aa0e.jpg",
+        "src": "games/530554297/shot-3.jpg",
+        "r2Key": "ranking/hot/530554297/shots/3.jpg",
+        "bytes": 55828,
+        "sha256": "69ed7fb9bb00faf742dd84ee0e830d931452685620a57ed142e92fdefdde550b",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/26/ac/26ac8af12c636bdb8949c72f8869612f.jpg",
+        "src": "games/530554297/shot-4.jpg",
+        "r2Key": "ranking/hot/530554297/shots/4.jpg",
+        "bytes": 69457,
+        "sha256": "212c457cbc0b43ebfc6e088e7c2e31020d903226bd8fbd1ba81e70eae5f51f21",
+        "width": 640,
+        "height": 360
+      }
+    ]
+  },
+  "563162603": {
+    "upstreamGameId": "563162603",
+    "sourceUpstreamId": "563162603",
+    "pickedBy": "ranking",
+    "r2Id": "563162603",
+    "name": "炸弹人",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/c5/26/c52677d68e6d689f080b92f464411a4a.jpg",
+        "src": "games/563162603/shot-1.jpg",
+        "r2Key": "ranking/hot/563162603/shots/1.jpg",
+        "bytes": 41174,
+        "sha256": "73604f28721356eb533637d3fe16cb8ba8fe62d41de8588325c61d2196a65dd5",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/a2/fc/a2fc4c0f237b060923a032e663b94345.jpg",
+        "src": "games/563162603/shot-2.jpg",
+        "r2Key": "ranking/hot/563162603/shots/2.jpg",
+        "bytes": 24067,
+        "sha256": "306e60a8dae7a6f04f995100cd226afc44af689868df101c209f987b77e930c0",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/75/8a/758ab3a7b58b723a1dbb4448cfa18f09.jpg",
+        "src": "games/563162603/shot-3.jpg",
+        "r2Key": "ranking/hot/563162603/shots/3.jpg",
+        "bytes": 41938,
+        "sha256": "da07b3d4bcf7bb1ef04ee714f5f19015ecefbdf10a9c274f0ca04c7a48ffa4f5",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/42/2e/422e8138ad5d0033d00e444666122bf5.jpg",
+        "src": "games/563162603/shot-4.jpg",
+        "r2Key": "ranking/hot/563162603/shots/4.jpg",
+        "bytes": 39380,
+        "sha256": "48f166b599a6e8247647bf0fece3f732f6c16be4d1cee366ef2d032ae882507e",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "595841479": {
+    "upstreamGameId": "595841479",
+    "sourceUpstreamId": "595841479",
+    "pickedBy": "detail",
+    "r2Id": "595841479",
+    "name": "恐龙快打 手枪无限子弹版",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/34/9a/349a4a830382a84d76ce32629f0b8aab.jpg",
+        "src": "games/595841479/shot-1.jpg",
+        "r2Key": "ranking/hot/595841479/shots/1.jpg",
+        "bytes": 55873,
+        "sha256": "705a8390deed7ccfba25c423e8198a7b4c433887fcf1bfe9392af0a38bcc7f4a",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/1d/7d/1d7d5cc3b4411179453705c477dab0a2.jpg",
+        "src": "games/595841479/shot-2.jpg",
+        "r2Key": "ranking/hot/595841479/shots/2.jpg",
+        "bytes": 49512,
+        "sha256": "8b9e83be01b78c0494cfd0b7a2f868628e597970ec754ece65a1b937a655d3a3",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/4a/b7/4ab73eb6668b33ad5985dd372ccf4982.jpg",
+        "src": "games/595841479/shot-3.jpg",
+        "r2Key": "ranking/hot/595841479/shots/3.jpg",
+        "bytes": 46036,
+        "sha256": "c894a4e465d9ccc57d43020030edb8247189ea57172d4719b5cd9ae1526ad491",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/17/4d/174d48ade7147df4f5b26fed26a4a146.jpg",
+        "src": "games/595841479/shot-4.jpg",
+        "r2Key": "ranking/hot/595841479/shots/4.jpg",
+        "bytes": 48532,
+        "sha256": "7f61d53fd6b26cd7c8c59e6ecc280181572f8d1e167fca0661713af8730a8f61",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "613232351": {
+    "upstreamGameId": "613232351",
+    "sourceUpstreamId": "613232351",
+    "pickedBy": "detail",
+    "r2Id": "613232351",
+    "name": "圣火徽章 原版修正版4.0",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/57/1d/571d76f2e410e6fc86ccf83fe9382a6e.jpg",
+        "src": "games/613232351/shot-1.jpg",
+        "r2Key": "ranking/hot/613232351/shots/1.jpg",
+        "bytes": 60121,
+        "sha256": "2e925b2ce1d82ee2cba93591c9ae3b9919f7b00ceb0051e6b85e3d154409bb87",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/48/48/48488d0a6119815102c7845bdb71f949.jpg",
+        "src": "games/613232351/shot-2.jpg",
+        "r2Key": "ranking/hot/613232351/shots/2.jpg",
+        "bytes": 71230,
+        "sha256": "c5604ad211522233b69800fcc93a34cf5c33d128a6b45de3e4f1b1a17533b856",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/78/e5/78e54917f6828b5a80827362884164ae.jpg",
+        "src": "games/613232351/shot-3.jpg",
+        "r2Key": "ranking/hot/613232351/shots/3.jpg",
+        "bytes": 34765,
+        "sha256": "b6f1ab2a30d9b5c530d7c361c3786003e241803c7579fa5351a0ba12e7416405",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/f9/8d/f98de78369f1b3c4408c2096fdf3fc4f.jpg",
+        "src": "games/613232351/shot-4.jpg",
+        "r2Key": "ranking/hot/613232351/shots/4.jpg",
+        "bytes": 71559,
+        "sha256": "061f9989f683cf9a031d8ec330c239b313eaada148f62d3c5983ded88188cc3e",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 5,
+        "source": "https://ctimg2018.myyx618.com/upload/images/61/e0/61e080fd45dd461c0b087f2a5cdf3e95.jpg",
+        "src": "games/613232351/shot-5.jpg",
+        "r2Key": "ranking/hot/613232351/shots/5.jpg",
+        "bytes": 31286,
+        "sha256": "b9b2620855d886418410e1c51f394267a4a6e6af5b1c6a79a7b9a4bbedddc2ef",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 6,
+        "source": "https://ctimg2018.myyx618.com/upload/images/d3/39/d33937ffb2706241efb21d77987e2563.jpg",
+        "src": "games/613232351/shot-6.jpg",
+        "r2Key": "ranking/hot/613232351/shots/6.jpg",
+        "bytes": 32377,
+        "sha256": "9f6505d8a44a60b28eee7666d6714d897989d518b347be3874915138c7e37c6c",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 7,
+        "source": "https://ctimg2018.myyx618.com/upload/images/67/c3/67c351862ab441eb4f64a02bb2ed9e8d.jpg",
+        "src": "games/613232351/shot-7.jpg",
+        "r2Key": "ranking/hot/613232351/shots/7.jpg",
+        "bytes": 62019,
+        "sha256": "d63c712c5688560318b6d8db2bc6c88f658c3db44f65cf00dfd779cab2ee8228",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "639324639": {
+    "upstreamGameId": "639324639",
+    "sourceUpstreamId": "639324639",
+    "pickedBy": "ranking",
+    "r2Id": "639324639",
+    "name": "重装机兵 中文版",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/2a/00/2a0086824f549dcdc8290807980bcd08.jpg",
+        "src": "games/639324639/shot-1.jpg",
+        "r2Key": "ranking/hot/639324639/shots/1.jpg",
+        "bytes": 48738,
+        "sha256": "859f688a6f52b551cd3fd8e8409c836a8316a5d9ef3d888673e8640798eb0822",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/3a/5d/3a5d075eb83eebc17fcfd357bc79aa9d.jpg",
+        "src": "games/639324639/shot-2.jpg",
+        "r2Key": "ranking/hot/639324639/shots/2.jpg",
+        "bytes": 51657,
+        "sha256": "83f64f8e3fffc433034ad492a04ef0b658655f7cced74b5a866b9f1d5df53f2f",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/83/37/83372d3980a055e247ce6f86bc6b3fcf.jpg",
+        "src": "games/639324639/shot-3.jpg",
+        "r2Key": "ranking/hot/639324639/shots/3.jpg",
+        "bytes": 21876,
+        "sha256": "fd135b96f4dd35f9db520050b6fd07012d31156280840d3e406b46ab7922b567",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/4a/f9/4af901cf4b2197cebec3c23c3d7cb672.jpg",
+        "src": "games/639324639/shot-4.jpg",
+        "r2Key": "ranking/hot/639324639/shots/4.jpg",
+        "bytes": 33809,
+        "sha256": "7603fbb15083b503d2a0519fc3b3d1e9a3eee8f0916069346fc86dba9be5d104",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 5,
+        "source": "https://ctimg2018.myyx618.com/upload/images/65/7c/657cee1cf9665df77663dfe685635492.jpg",
+        "src": "games/639324639/shot-5.jpg",
+        "r2Key": "ranking/hot/639324639/shots/5.jpg",
+        "bytes": 48532,
+        "sha256": "9c90ece73fabaa9ec146ca960e83ab2ca7b678e3f55cf99c8f80dc8f8d2467e6",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "654109170": {
+    "upstreamGameId": "654109170",
+    "sourceUpstreamId": "654109170",
+    "pickedBy": "detail",
+    "r2Id": "654109170",
+    "name": "超级玛丽3",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/05/0b/050bb1f3e7988e0d2b4cdd773cf0428f.jpg",
+        "src": "games/654109170/shot-1.jpg",
+        "r2Key": "ranking/hot/654109170/shots/1.jpg",
+        "bytes": 48599,
+        "sha256": "23de5f4a428ea8d81abbbe8f920b47887980d88bee3838942a027cb1708e7342",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/2d/4b/2d4bf52088d9296fe87e9c37cc81f258.jpg",
+        "src": "games/654109170/shot-2.jpg",
+        "r2Key": "ranking/hot/654109170/shots/2.jpg",
+        "bytes": 37226,
+        "sha256": "d7cd95c6531301f094f25c39b0df8e5e7dc285aef72188ae303a444b480fdfd2",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/16/68/1668a19646c2dc3ef173e253dc5ce1e8.jpg",
+        "src": "games/654109170/shot-3.jpg",
+        "r2Key": "ranking/hot/654109170/shots/3.jpg",
+        "bytes": 37783,
+        "sha256": "9f59f4f2949b61d6fbb0a68708b8e617cce745391e294517101af62b2d45db76",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/21/7a/217a5b8079273255ab3bf75a8c36e276.jpg",
+        "src": "games/654109170/shot-4.jpg",
+        "r2Key": "ranking/hot/654109170/shots/4.jpg",
+        "bytes": 71406,
+        "sha256": "5863866c5a56435ed337b7323152580af98b248677bc0aafa944b2540812288c",
+        "width": 568,
+        "height": 320
+      },
+      {
+        "order": 5,
+        "source": "https://ctimg2018.myyx618.com/upload/images/1f/69/1f694b368aba3a40ab56d3c1b59efec8.jpg",
+        "src": "games/654109170/shot-5.jpg",
+        "r2Key": "ranking/hot/654109170/shots/5.jpg",
+        "bytes": 59758,
+        "sha256": "003c74b796166c03d0eac1e6a47c7f4c73770c127cec04c08ae5b23af6105a4b",
+        "width": 568,
+        "height": 320
+      },
+      {
+        "order": 6,
+        "source": "https://ctimg2018.myyx618.com/upload/images/c5/cb/c5cb31b081bd0a1438aafe568288b99a.jpg",
+        "src": "games/654109170/shot-6.jpg",
+        "r2Key": "ranking/hot/654109170/shots/6.jpg",
+        "bytes": 38949,
+        "sha256": "c0d9e94a531494584c7bae66e3d29155ebec37c49a98645499da44dd1df133e7",
+        "width": 568,
+        "height": 320
+      }
+    ]
+  },
+  "660270848": {
+    "upstreamGameId": "660270848",
+    "sourceUpstreamId": "660270848",
+    "pickedBy": "detail",
+    "r2Id": "660270848",
+    "name": "特库摩世界杯足球赛 汉化版",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/3c/cb/3ccb2391c6b851ddccad308cae37ce10.png",
+        "src": "games/660270848/shot-1.png",
+        "r2Key": "ranking/hot/660270848/shots/1.png",
+        "bytes": 10033,
+        "sha256": "3fd280d37b4c44ed7700884a4e7ae9d364e0938ee9b6392dc2517a0f0fb2679f",
+        "width": 240,
+        "height": 225
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/73/02/73020b996bc93434e9a3707f9fdace51.png",
+        "src": "games/660270848/shot-2.png",
+        "r2Key": "ranking/hot/660270848/shots/2.png",
+        "bytes": 8746,
+        "sha256": "4a09ba94197165341c32b0e386d885f4f78c2dfb2d51e38ed7ed924403e8cb96",
+        "width": 240,
+        "height": 225
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/d9/24/d924c74e8ba642ef065098afaefb18be.png",
+        "src": "games/660270848/shot-3.png",
+        "r2Key": "ranking/hot/660270848/shots/3.png",
+        "bytes": 11683,
+        "sha256": "3f5d841e71af84575da023db671ac65722918d96bbb8df51bc7416734e158097",
+        "width": 240,
+        "height": 225
+      }
+    ]
+  },
+  "678044852": {
+    "upstreamGameId": "678044852",
+    "sourceUpstreamId": "678044852",
+    "pickedBy": "detail",
+    "r2Id": "678044852",
+    "name": "三十六计",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/65/70/6570f29ec7772f8cbe6ac40fb184d782.png",
+        "src": "games/678044852/shot-1.png",
+        "r2Key": "ranking/hot/678044852/shots/1.png",
+        "bytes": 57949,
+        "sha256": "c98df98f6934d487e1cde2a32c6018b73370984aa378c48bcf41c1a34661914c",
+        "width": 336,
+        "height": 308
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/94/6a/946a3c75954d8e84b8fcf2584b9b3e7c.jpg",
+        "src": "games/678044852/shot-2.jpg",
+        "r2Key": "ranking/hot/678044852/shots/2.jpg",
+        "bytes": 101799,
+        "sha256": "dde9e45672ee98d46952748248309992d07e76db556c65ee601adc0110e730c5",
+        "width": 337,
+        "height": 328
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/7e/92/7e92e0494bd262f298aa56a8fa4ab6af.png",
+        "src": "games/678044852/shot-3.png",
+        "r2Key": "ranking/hot/678044852/shots/3.png",
+        "bytes": 4105,
+        "sha256": "2a12c96fea53c1fad8b04fc3b93cf1c30bc91bfc67b7d59cd8ee9ed918b664a6",
+        "width": 234,
+        "height": 220
+      }
+    ]
+  },
+  "718639626": {
+    "upstreamGameId": "718639626",
+    "sourceUpstreamId": "718639626",
+    "pickedBy": "detail",
+    "r2Id": "718639626",
+    "name": "口袋妖怪 逃向蓝天1.5",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/c0/cd/c0cdd16e5fb519cd3b22970cbfa66466.png",
+        "src": "games/718639626/shot-1.png",
+        "r2Key": "ranking/hot/718639626/shots/1.png",
+        "bytes": 188902,
+        "sha256": "0a426767007a5001aaa23b58ad589fe3ebf08be0b92a94c672996f5c91adca13",
+        "width": 920,
+        "height": 550
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/ca/00/ca00a4b001343b0578c68630b5aac94d.png",
+        "src": "games/718639626/shot-2.png",
+        "r2Key": "ranking/hot/718639626/shots/2.png",
+        "bytes": 346686,
+        "sha256": "6637382dcdaab58cca23fa9bcea799e292b6755edd03548231ab630794ef521d",
+        "width": 920,
+        "height": 550
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/6e/cc/6ecc4c07c2eb752abcb0078dab95ceef.png",
+        "src": "games/718639626/shot-3.png",
+        "r2Key": "ranking/hot/718639626/shots/3.png",
+        "bytes": 303435,
+        "sha256": "7eaf1036769f9e7bcd9c6159b9922ca19be9bdd9432773fdbbdd1b51cecfae9d",
+        "width": 920,
+        "height": 550
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/9b/2e/9b2eb8468f9a621b2fb4e2e9a87da078.png",
+        "src": "games/718639626/shot-4.png",
+        "r2Key": "ranking/hot/718639626/shots/4.png",
+        "bytes": 98624,
+        "sha256": "66dc95da2a600086a86ba12641295b5995814d7d383ca747d2f10e7fb31024ae",
+        "width": 920,
+        "height": 550
+      },
+      {
+        "order": 5,
+        "source": "https://ctimg2018.myyx618.com/upload/images/1e/2f/1e2f9e44d087661baefa07f629ae0220.png",
+        "src": "games/718639626/shot-5.png",
+        "r2Key": "ranking/hot/718639626/shots/5.png",
+        "bytes": 206495,
+        "sha256": "171e8a868a76273802cb350d1a2cba61d91684a8172a7958434fba5e049c557c",
+        "width": 920,
+        "height": 550
+      }
+    ]
+  },
+  "721834261": {
+    "upstreamGameId": "721834261",
+    "sourceUpstreamId": "721834261",
+    "pickedBy": "detail",
+    "r2Id": "721834261",
+    "name": "战国传承3",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/b8/74/b87449fbe3fff86d41ea7657ca4a7299.png",
+        "src": "games/721834261/shot-1.png",
+        "r2Key": "ranking/hot/721834261/shots/1.png",
+        "bytes": 110023,
+        "sha256": "cf84f64fab3b8ed5c655f4cb7ef8c69847b7534c660357bb4176eb7c4e12cb07",
+        "width": 300,
+        "height": 210
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/5d/0f/5d0fa0d10832c93fc1c264f1d403ed5a.png",
+        "src": "games/721834261/shot-2.png",
+        "r2Key": "ranking/hot/721834261/shots/2.png",
+        "bytes": 111880,
+        "sha256": "d0c3b35f8d86b30a04b07fc49031e823a783ebe0354c2e8d6dd5cfb406637329",
+        "width": 300,
+        "height": 210
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/4f/c8/4fc8dc026fc2d16996baa4d2f784b42c.png",
+        "src": "games/721834261/shot-3.png",
+        "r2Key": "ranking/hot/721834261/shots/3.png",
+        "bytes": 122341,
+        "sha256": "da5af97c6903f5c85e7b68dbb00411bd7b0a69bbefbe38c4b1e4630530dce049",
+        "width": 300,
+        "height": 210
+      }
+    ]
+  },
+  "865949429": {
+    "upstreamGameId": "865949429",
+    "sourceUpstreamId": "865949429",
+    "pickedBy": "ranking",
+    "r2Id": "865949429",
+    "name": "忍者神龟3",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/66/ab/66abd6dcbda6052ade6adf23fa500ed6.jpg",
+        "src": "games/865949429/shot-1.jpg",
+        "r2Key": "ranking/hot/865949429/shots/1.jpg",
+        "bytes": 52992,
+        "sha256": "2082443598c43c830f1b411f8610f197ca12c514697b64b75ca4966293ed18bd",
+        "width": 797,
+        "height": 531
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/99/01/99017372465acb3b68afff0f92cb130f.jpeg",
+        "src": "games/865949429/shot-2.jpeg",
+        "r2Key": "ranking/hot/865949429/shots/2.jpeg",
+        "bytes": 65421,
+        "sha256": "08c3a811ad3194e98ce5d77679c776fc5288cc486589cc7c364853874b19d592",
+        "width": 448,
+        "height": 296
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/ed/13/ed1392dabe1ff4952d5dc2bcc44ad725.jpg",
+        "src": "games/865949429/shot-3.jpg",
+        "r2Key": "ranking/hot/865949429/shots/3.jpg",
+        "bytes": 133772,
+        "sha256": "3bff9b1224184e1935fa27fc3761aa98f493e2ae5312c0256865d83ca576bd61",
+        "width": 500,
+        "height": 455
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/6a/91/6a9168defa757d91534a560864707369.jpg",
+        "src": "games/865949429/shot-4.jpg",
+        "r2Key": "ranking/hot/865949429/shots/4.jpg",
+        "bytes": 49893,
+        "sha256": "d86615909d7d0d4fe286404dba4057ecf177473631b9fcee4bf641aea4f1196c",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "884133498": {
+    "upstreamGameId": "884133498",
+    "sourceUpstreamId": "884133498",
+    "pickedBy": "ranking",
+    "r2Id": "884133498",
+    "name": "SD快打旋风",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/14/fb/14fb390d2ce7dd890b6c2011a88e3c23.jpg",
+        "src": "games/884133498/shot-1.jpg",
+        "r2Key": "ranking/hot/884133498/shots/1.jpg",
+        "bytes": 45885,
+        "sha256": "2a7b0da2f8e30b72a2745ecbf0bfeb92f65a4421fcb33417236a73806ebe171b",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/e0/78/e078e9336c8bd2bab333661f39f775ab.jpg",
+        "src": "games/884133498/shot-2.jpg",
+        "r2Key": "ranking/hot/884133498/shots/2.jpg",
+        "bytes": 52987,
+        "sha256": "2ae1076540841a9026ed082cd5d892358a2c0b29513259fd8393e0728210f52a",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/f6/34/f634dee407d277f0ac24f320506e2aa5.jpg",
+        "src": "games/884133498/shot-3.jpg",
+        "r2Key": "ranking/hot/884133498/shots/3.jpg",
+        "bytes": 46329,
+        "sha256": "270977469905943960e43fe316099424863d85a900cefee074a5002dad20b4a2",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/07/41/07417bd5f4777edd7d86ba47cb3ffd80.jpg",
+        "src": "games/884133498/shot-4.jpg",
+        "r2Key": "ranking/hot/884133498/shots/4.jpg",
+        "bytes": 43231,
+        "sha256": "66bcf7f350471355b99b2e8e5295bc35d0000dd9714ee5d5bbfb171bc64c9a5a",
+        "width": 568,
+        "height": 320
+      },
+      {
+        "order": 5,
+        "source": "https://ctimg2018.myyx618.com/upload/images/5e/99/5e998531ee67b83611eea1dfa19abd8d.jpg",
+        "src": "games/884133498/shot-5.jpg",
+        "r2Key": "ranking/hot/884133498/shots/5.jpg",
+        "bytes": 48176,
+        "sha256": "9e6b0f6cfed5a8ba653fc48a666e3d5611098bdd5f3acc7aba6872a889a5b9d8",
+        "width": 568,
+        "height": 320
+      },
+      {
+        "order": 6,
+        "source": "https://ctimg2018.myyx618.com/upload/images/f3/b1/f3b1bff0ae268035a2c2d1ac280d10e9.jpg",
+        "src": "games/884133498/shot-6.jpg",
+        "r2Key": "ranking/hot/884133498/shots/6.jpg",
+        "bytes": 44697,
+        "sha256": "ab7aee462175fc44d4bedf02715fa21c8c3a77bb7aa70300def25792b4e5d4bc",
+        "width": 568,
+        "height": 320
+      }
+    ]
+  },
+  "911033564": {
+    "upstreamGameId": "911033564",
+    "sourceUpstreamId": "911033564",
+    "pickedBy": "ranking",
+    "r2Id": "911033564",
+    "name": "口袋妖怪 格查尔",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/8b/d0/8bd00aacd4dfeae5f883734c19099d76.jpg",
+        "src": "games/911033564/shot-1.jpg",
+        "r2Key": "ranking/hot/911033564/shots/1.jpg",
+        "bytes": 64888,
+        "sha256": "409f6e7564cc3d10f5e544a574fd472ba8f0121a1d137e0e9e60213495c3e812",
+        "width": 923,
+        "height": 553
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/ee/9c/ee9cb2dc5b2965ce7b6ed6fcf6ea8ea8.jpg",
+        "src": "games/911033564/shot-2.jpg",
+        "r2Key": "ranking/hot/911033564/shots/2.jpg",
+        "bytes": 91483,
+        "sha256": "298ff3dee933cb41ce890a2d6659003a5b700600de7401c52348e6d6c00c0ebd",
+        "width": 922,
+        "height": 557
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/85/ef/85ef9528b5bd4b5ab3fd31fb95705c90.jpg",
+        "src": "games/911033564/shot-3.jpg",
+        "r2Key": "ranking/hot/911033564/shots/3.jpg",
+        "bytes": 40959,
+        "sha256": "6985def76291f3628b64001283d2ca7678af88101011e14c639f7f9b9826946d",
+        "width": 921,
+        "height": 552
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/3f/ae/3fae1b732c9201c9fd83c8ef9fd66cb9.jpg",
+        "src": "games/911033564/shot-4.jpg",
+        "r2Key": "ranking/hot/911033564/shots/4.jpg",
+        "bytes": 62288,
+        "sha256": "05c272df4b94c04068d500ebae82b754e4cd96925585c88116818974a3777166",
+        "width": 922,
+        "height": 556
+      },
+      {
+        "order": 5,
+        "source": "https://ctimg2018.myyx618.com/upload/images/5d/33/5d333b2487cd9fc7b68c2c4283dfbb03.jpg",
+        "src": "games/911033564/shot-5.jpg",
+        "r2Key": "ranking/hot/911033564/shots/5.jpg",
+        "bytes": 64109,
+        "sha256": "5e7db468d225beef1b5cf58f678595b3c9a020c7fc2482cf3d53bc9840d9c343",
+        "width": 919,
+        "height": 558
+      }
+    ]
+  },
+  "948575402": {
+    "upstreamGameId": "948575402",
+    "sourceUpstreamId": "948575402",
+    "pickedBy": "ranking",
+    "r2Id": "948575402",
+    "name": "冒险岛",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/b5/9c/b59cc99d1df29b724b073ce7d39eb623.jpg",
+        "src": "games/948575402/shot-1.jpg",
+        "r2Key": "ranking/hot/948575402/shots/1.jpg",
+        "bytes": 61852,
+        "sha256": "ebcedddfe0fa2edd851217e26086059cc9b4e328f20f7b067fc1f8b853ab19d3",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/47/a1/47a1fe71bebb6dc24a8b03d168e391c4.jpg",
+        "src": "games/948575402/shot-2.jpg",
+        "r2Key": "ranking/hot/948575402/shots/2.jpg",
+        "bytes": 47187,
+        "sha256": "ec8b207660849983341ffe396fadd2f79d07f163271913d4425406315d7e4a04",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/79/18/79188973ea569b1cebf394b796bc0016.jpg",
+        "src": "games/948575402/shot-3.jpg",
+        "r2Key": "ranking/hot/948575402/shots/3.jpg",
+        "bytes": 61975,
+        "sha256": "8d162fdbf2e65bd12ab10f5220b64bfbb6b6ffdf937e900abccc8bdb7665900b",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/84/5a/845a21d28c14cd19a17367212f4ff93d.jpg",
+        "src": "games/948575402/shot-4.jpg",
+        "r2Key": "ranking/hot/948575402/shots/4.jpg",
+        "bytes": 66513,
+        "sha256": "fbab7c21b8693d89af6a3e06bb5559241259d5a66337225bfff64651b078ba17",
+        "width": 568,
+        "height": 320
+      },
+      {
+        "order": 5,
+        "source": "https://ctimg2018.myyx618.com/upload/images/20/44/20440448ce9f037d3c6a3dea73e59b45.jpg",
+        "src": "games/948575402/shot-5.jpg",
+        "r2Key": "ranking/hot/948575402/shots/5.jpg",
+        "bytes": 51522,
+        "sha256": "c7a09549ebd958f3d3f5bf75309348b13e730e67cf680b18695b88526bc5d521",
+        "width": 568,
+        "height": 320
+      },
+      {
+        "order": 6,
+        "source": "https://ctimg2018.myyx618.com/upload/images/00/2b/002bfe95144cacdb6ad3e3c40661dddb.jpg",
+        "src": "games/948575402/shot-6.jpg",
+        "r2Key": "ranking/hot/948575402/shots/6.jpg",
+        "bytes": 59174,
+        "sha256": "7bb8ddd38723e087e5b423e61cbee9340787cf837278fc537406fd4453f9b90d",
+        "width": 568,
+        "height": 320
+      }
+    ]
+  },
+  "953805076": {
+    "upstreamGameId": "953805076",
+    "sourceUpstreamId": "953805076",
+    "pickedBy": "ranking",
+    "r2Id": "953805076",
+    "name": "魂斗罗2 最强boss",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/1f/05/1f053e4c0f65f213112377e1cb0c2aae.jpg",
+        "src": "games/953805076/shot-1.jpg",
+        "r2Key": "ranking/hot/953805076/shots/1.jpg",
+        "bytes": 102831,
+        "sha256": "2e3d04ac7a1b191b2b8afe6841ad96d1f390188c0514a3e57397c7f8f12ae853",
+        "width": 920,
+        "height": 550
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/c4/ee/c4eef6b2c3c12cad5d90f8d610b7a356.jpg",
+        "src": "games/953805076/shot-2.jpg",
+        "r2Key": "ranking/hot/953805076/shots/2.jpg",
+        "bytes": 142197,
+        "sha256": "0e6e8f1eea41ec61ed7cd8bd98f2f5f63d8fe24ff935ab6f285d8bbf8ac7443b",
+        "width": 920,
+        "height": 550
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/0a/c5/0ac533042ef7cf49d3daf816d8c3a332.jpg",
+        "src": "games/953805076/shot-3.jpg",
+        "r2Key": "ranking/hot/953805076/shots/3.jpg",
+        "bytes": 156530,
+        "sha256": "14ef5d25fc8fb0fec7059a2c51eeffad70893c97b169b3499d8c191fb3571054",
+        "width": 920,
+        "height": 550
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/48/42/4842ff2ca1add387fcd7b4ae9ec7d68a.jpg",
+        "src": "games/953805076/shot-4.jpg",
+        "r2Key": "ranking/hot/953805076/shots/4.jpg",
+        "bytes": 194941,
+        "sha256": "f1f5a812f18c9ff8589e02fc7c4e632bab9024c696098d74884c90e131215db3",
+        "width": 920,
+        "height": 550
+      },
+      {
+        "order": 5,
+        "source": "https://ctimg2018.myyx618.com/upload/images/f0/4a/f04aaaf140943eef38ed04bfa1e02f79.jpg",
+        "src": "games/953805076/shot-5.jpg",
+        "r2Key": "ranking/hot/953805076/shots/5.jpg",
+        "bytes": 159744,
+        "sha256": "db8851688003901edbbab9c8dc94953195e4513b77ca0805ddcdec09f7f20d71",
+        "width": 920,
+        "height": 550
+      }
+    ]
+  },
+  "978217417": {
+    "upstreamGameId": "978217417",
+    "sourceUpstreamId": "978217417",
+    "pickedBy": "detail",
+    "r2Id": "978217417",
+    "name": "三国志1 中原之霸者 汉化版",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/43/10/431055a6a48536688439f92065bbd146.jpg",
+        "src": "games/978217417/shot-1.jpg",
+        "r2Key": "ranking/hot/978217417/shots/1.jpg",
+        "bytes": 49368,
+        "sha256": "027db4fa9cf5c311c5bd70c26162b980fafeda6ce8574fcd8534f5dd3d3271bd",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/e9/71/e971688d31b1f494396bde95ff2bb18c.jpg",
+        "src": "games/978217417/shot-2.jpg",
+        "r2Key": "ranking/hot/978217417/shots/2.jpg",
+        "bytes": 39084,
+        "sha256": "0a8e51efed25b793d6c24aeb0af52582013c5032388f86366dee1cc3c8fe9182",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/74/73/7473bd471945f67bd942a1fc599beb92.jpg",
+        "src": "games/978217417/shot-3.jpg",
+        "r2Key": "ranking/hot/978217417/shots/3.jpg",
+        "bytes": 50021,
+        "sha256": "cfd4895cfdd8d88ed180414edd7db5c85466a365ad2fce18374b6e18a73c29ea",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "1001073791": {
+    "upstreamGameId": "1001073791",
+    "sourceUpstreamId": "1001073791",
+    "pickedBy": "ranking",
+    "r2Id": "1001073791",
+    "name": "惩罚者",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/38/9d/389d553f321369cfccfb479410b10222.jpg",
+        "src": "games/1001073791/shot-1.jpg",
+        "r2Key": "ranking/hot/1001073791/shots/1.jpg",
+        "bytes": 60095,
+        "sha256": "3b1040b27e19af26d35c5b33b1d20ab02710969eb155308515c42744bd48dc13",
+        "width": 640,
+        "height": 360
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/70/16/70167556d6d90f3c05a23afc2e1bf7f9.jpg",
+        "src": "games/1001073791/shot-2.jpg",
+        "r2Key": "ranking/hot/1001073791/shots/2.jpg",
+        "bytes": 64763,
+        "sha256": "1c75e9197e1b1a3f32d0a207c89fd7b2b0ae558457f3577c371d728861d07fc5",
+        "width": 640,
+        "height": 360
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/9b/dd/9bdda8360a9e9b99ddc60905f092e771.jpg",
+        "src": "games/1001073791/shot-3.jpg",
+        "r2Key": "ranking/hot/1001073791/shots/3.jpg",
+        "bytes": 57692,
+        "sha256": "db90e925061d2a6f4b7acc3c6755c016e6fde580c056fa6c789d64c6a7323509",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "1042657924": {
+    "upstreamGameId": "1042657924",
+    "sourceUpstreamId": "1042657924",
+    "pickedBy": "detail",
+    "r2Id": "1042657924",
+    "name": "玛丽医生",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/7c/27/7c277b043d61c2127154d31d28dfd5ea.jpg",
+        "src": "games/1042657924/shot-1.jpg",
+        "r2Key": "ranking/hot/1042657924/shots/1.jpg",
+        "bytes": 12623,
+        "sha256": "583b9966a89fcbfc77c9877cc554e30c9b2761f6d9cf8bba35cc5c810767ea40",
+        "width": 220,
+        "height": 192
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/40/da/40da883bf780c662f36ce817a91c134c.png",
+        "src": "games/1042657924/shot-2.png",
+        "r2Key": "ranking/hot/1042657924/shots/2.png",
+        "bytes": 79052,
+        "sha256": "608b5963a25ac43458e1bf45e2189a8661308dc42c95fee4f030b3f3c9d91b94",
+        "width": 461,
+        "height": 373
+      }
+    ]
+  },
+  "1056989342": {
+    "upstreamGameId": "1056989342",
+    "sourceUpstreamId": "1056989342",
+    "pickedBy": "ranking",
+    "r2Id": "1056989342",
+    "name": "坦克大战",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/83/b1/83b1e496108a51c899443e871efcde60.jpg",
+        "src": "games/1056989342/shot-1.jpg",
+        "r2Key": "ranking/hot/1056989342/shots/1.jpg",
+        "bytes": 38623,
+        "sha256": "3fa6063b60dd73159a749ef0c9ff8f2db6705000a03c0dc1c29ca8ecdb352182",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/96/c7/96c78b67adf35609c86fd4d07b3d6e4b.jpg",
+        "src": "games/1056989342/shot-2.jpg",
+        "r2Key": "ranking/hot/1056989342/shots/2.jpg",
+        "bytes": 29065,
+        "sha256": "507dc978ceae5fe3cf9147c51aaf5f47bc76c07e06b996b32e1fefabe8da8fe6",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/a7/49/a7499229ca432be3beef747330d26463.jpg",
+        "src": "games/1056989342/shot-3.jpg",
+        "r2Key": "ranking/hot/1056989342/shots/3.jpg",
+        "bytes": 44426,
+        "sha256": "b9b04db497e439c86818288162096d0a7896735940fed84087d3a08321a57d67",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/32/fe/32fe0d771b0518218819a16b7f424099.jpg",
+        "src": "games/1056989342/shot-4.jpg",
+        "r2Key": "ranking/hot/1056989342/shots/4.jpg",
+        "bytes": 43886,
+        "sha256": "e39038dfebdeae58088398ed77781b26ba059c29fb10078abf67247201e98f19",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "1072158899": {
+    "upstreamGameId": "1072158899",
+    "sourceUpstreamId": "1072158899",
+    "pickedBy": "detail",
+    "r2Id": "1072158899",
+    "name": "绿色兵团",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/b1/48/b148ba481d5afbd79d59719ab81fa5ac.png",
+        "src": "games/1072158899/shot-1.png",
+        "r2Key": "ranking/hot/1072158899/shots/1.png",
+        "bytes": 31185,
+        "sha256": "e5beaf78f204021647b41065deb75399343e074e287d63a6618e1c84805d3d0f",
+        "width": 248,
+        "height": 225
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/bc/67/bc67e48067978b655358d940d52a79e5.png",
+        "src": "games/1072158899/shot-2.png",
+        "r2Key": "ranking/hot/1072158899/shots/2.png",
+        "bytes": 38927,
+        "sha256": "dc392a3d2114a786f9be02cee996e0000a0a7b012326d33c026ed41f208c4497",
+        "width": 248,
+        "height": 225
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/08/63/0863bc45e6723978ec59d862294cc8e4.png",
+        "src": "games/1072158899/shot-3.png",
+        "r2Key": "ranking/hot/1072158899/shots/3.png",
+        "bytes": 32652,
+        "sha256": "1928abe62454d519ce0965949a434553a1fd3d0bab8211578891ac64e46a1a85",
+        "width": 248,
+        "height": 225
+      }
+    ]
+  },
+  "1226998290": {
+    "upstreamGameId": "1226998290",
+    "sourceUpstreamId": "1226998290",
+    "pickedBy": "ranking",
+    "r2Id": "1226998290",
+    "name": "中国象棋",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/b0/f5/b0f525bcef1ef0b9005ae7f9f59279a7.jpg",
+        "src": "games/1226998290/shot-1.jpg",
+        "r2Key": "ranking/hot/1226998290/shots/1.jpg",
+        "bytes": 81185,
+        "sha256": "acae636b43e7a583f0fd36038faeef009b2baee9fcf13ca550d66ff63ef12aba",
+        "width": 254,
+        "height": 238
+      }
+    ]
+  },
+  "1241117653": {
+    "upstreamGameId": "1241117653",
+    "sourceUpstreamId": "1241117653",
+    "pickedBy": "ranking",
+    "r2Id": "1241117653",
+    "name": "口袋妖怪 究极绿宝石5.5",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/65/67/656772acb23b4ebad1f7cc5a9cd702dc.jpg",
+        "src": "games/1241117653/shot-1.jpg",
+        "r2Key": "ranking/hot/1241117653/shots/1.jpg",
+        "bytes": 64319,
+        "sha256": "70dc011ded55db7bf09e63d4026fa7c4bf0a9334410a5314918682bb435955b2",
+        "width": 240,
+        "height": 160
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/6e/95/6e951661845de6ed40c95bb7343fafe1.jpg",
+        "src": "games/1241117653/shot-2.jpg",
+        "r2Key": "ranking/hot/1241117653/shots/2.jpg",
+        "bytes": 49774,
+        "sha256": "20cff6baf5727ba072606a7361819118ba4e56b7a4c3bb674d83e9f5c52d9f90",
+        "width": 240,
+        "height": 160
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/74/43/7443dea8665090ed9762f82535ff2d28.jpg",
+        "src": "games/1241117653/shot-3.jpg",
+        "r2Key": "ranking/hot/1241117653/shots/3.jpg",
+        "bytes": 105647,
+        "sha256": "1a9d83b9222e29f908692be9a126ab75d592c49a3c94607d18fa2631dd486d3d",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/48/cc/48cc583ef7871269d0c84df39811b34b.jpg",
+        "src": "games/1241117653/shot-4.jpg",
+        "r2Key": "ranking/hot/1241117653/shots/4.jpg",
+        "bytes": 40638,
+        "sha256": "b79837acbd161b871195368082d0579adc95bfe684343a99a965116f32544692",
+        "width": 240,
+        "height": 160
+      },
+      {
+        "order": 5,
+        "source": "https://ctimg2018.myyx618.com/upload/images/20/cd/20cd2338bb9adfda2cd9fa80139e55da.jpg",
+        "src": "games/1241117653/shot-5.jpg",
+        "r2Key": "ranking/hot/1241117653/shots/5.jpg",
+        "bytes": 189911,
+        "sha256": "dceadc6cf01fec77e9c3e2b921f42baefa5ec36548a1948084089884c93f56c2",
+        "width": 580,
+        "height": 421
+      },
+      {
+        "order": 6,
+        "source": "https://ctimg2018.myyx618.com/upload/images/75/39/7539b984ce74b0267ce922a7ce5ff1d8.jpg",
+        "src": "games/1241117653/shot-6.jpg",
+        "r2Key": "ranking/hot/1241117653/shots/6.jpg",
+        "bytes": 119226,
+        "sha256": "78100fc6490b5c19c365b3f74d2e59ed74b87f838ce6a28ff56c074fc68aad65",
+        "width": 1280,
+        "height": 720
+      }
+    ]
+  },
+  "1286348009": {
+    "upstreamGameId": "1286348009",
+    "sourceUpstreamId": "1286348009",
+    "pickedBy": "ranking",
+    "r2Id": "1286348009",
+    "name": "圆桌骑士",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/b9/76/b9769ef2caee3bce21f6d00e9f0a518d.jpg",
+        "src": "games/1286348009/shot-1.jpg",
+        "r2Key": "ranking/hot/1286348009/shots/1.jpg",
+        "bytes": 79731,
+        "sha256": "1eb894e2aeb8f12903bea8e03dd8cab492a0bd3dcb66bcae6fcc1470af206380",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/dd/88/dd88b0d12e96bf561037251d347998b0.jpg",
+        "src": "games/1286348009/shot-2.jpg",
+        "r2Key": "ranking/hot/1286348009/shots/2.jpg",
+        "bytes": 88857,
+        "sha256": "567c9e7a22c65b5eafab7b2df9dae020b00c51e295b41f972899b2db31688cdf",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/83/d6/83d6752024ff93344ae0ce3e00c9b2de.jpg",
+        "src": "games/1286348009/shot-3.jpg",
+        "r2Key": "ranking/hot/1286348009/shots/3.jpg",
+        "bytes": 79166,
+        "sha256": "d0b193bd9da2cbeb064f3f333f1f5982b12b52f7b9c3b95f64c71560126deeca",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/28/75/2875c5e508aedd51e1af6455d72d93d0.jpg",
+        "src": "games/1286348009/shot-4.jpg",
+        "r2Key": "ranking/hot/1286348009/shots/4.jpg",
+        "bytes": 74005,
+        "sha256": "d879f389c45835dc130efc2ee14c828518a803c390136af34d1499e1de81d4a5",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "1398464272": {
+    "upstreamGameId": "1398464272",
+    "sourceUpstreamId": "1398464272",
+    "pickedBy": "ranking",
+    "r2Id": "1398464272",
+    "name": "三国战纪 乱世枭雄",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/6f/e5/6fe5bcb7c20aeda32eb98fbacea16526.jpg",
+        "src": "games/1398464272/shot-1.jpg",
+        "r2Key": "ranking/hot/1398464272/shots/1.jpg",
+        "bytes": 31547,
+        "sha256": "d7e5da6a51e504787323380e5ae9b540b56938c81eaee1ba6220beafe22faa41",
+        "width": 399,
+        "height": 300
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/80/bc/80bcbdd63005edc20d1d998b1a2aed44.jpg",
+        "src": "games/1398464272/shot-2.jpg",
+        "r2Key": "ranking/hot/1398464272/shots/2.jpg",
+        "bytes": 26643,
+        "sha256": "d6b55f19d64138fbd1bc2d1eb952f9e244cb689e111318bf9b29566130764320",
+        "width": 400,
+        "height": 300
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/9b/02/9b02312b227b50f79f29e755944aaed1.jpg",
+        "src": "games/1398464272/shot-3.jpg",
+        "r2Key": "ranking/hot/1398464272/shots/3.jpg",
+        "bytes": 110836,
+        "sha256": "8f59a8a54a6b86c83caff57de345cd6cea5fe8cb67cfce511b6625edf096cc6f",
+        "width": 303,
+        "height": 153
+      }
+    ]
+  },
+  "1412897545": {
+    "upstreamGameId": "1412897545",
+    "sourceUpstreamId": "1412897545",
+    "pickedBy": "ranking",
+    "r2Id": "1412897545",
+    "name": "傲剑狂刀",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/e1/df/e1df736b6210ebb6623731801ad6edec.jpg",
+        "src": "games/1412897545/shot-1.jpg",
+        "r2Key": "ranking/hot/1412897545/shots/1.jpg",
+        "bytes": 34336,
+        "sha256": "f9df957da2eaeacbcb92777b1884cccfaabf2b3051e9b6c42e559b4984ab2e00",
+        "width": 520,
+        "height": 260
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/5c/3c/5c3c2b80df1966adc72f78d4ed96a4bd.jpg",
+        "src": "games/1412897545/shot-2.jpg",
+        "r2Key": "ranking/hot/1412897545/shots/2.jpg",
+        "bytes": 31955,
+        "sha256": "1a06225834ca187988517d964e18041ac3bf76103ce263f569106be330f42517",
+        "width": 375,
+        "height": 300
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/87/cb/87cb9fa4acdc1963ea223a61b428d52e.jpg",
+        "src": "games/1412897545/shot-3.jpg",
+        "r2Key": "ranking/hot/1412897545/shots/3.jpg",
+        "bytes": 56042,
+        "sha256": "6f6ce44591544584c704cf7f5e6993cb58b1920423199bd2226be4831abc3fb7",
+        "width": 571,
+        "height": 427
+      }
+    ]
+  },
+  "1521405869": {
+    "upstreamGameId": "1521405869",
+    "sourceUpstreamId": "1521405869",
+    "pickedBy": "ranking",
+    "r2Id": "1521405869",
+    "name": "忍者神龟格斗（激龟快打）",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/0e/87/0e8782198ce2aab6d891f3cf40094c5f.jpg",
+        "src": "games/1521405869/shot-1.jpg",
+        "r2Key": "ranking/hot/1521405869/shots/1.jpg",
+        "bytes": 51998,
+        "sha256": "a01ad7873a6f2f797b2f960c7a911c5586bd5b422b921ddd2816e8675f9ad22b",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/49/f1/49f17ddb637cb4ac43de54b4bdbe7229.jpg",
+        "src": "games/1521405869/shot-2.jpg",
+        "r2Key": "ranking/hot/1521405869/shots/2.jpg",
+        "bytes": 41802,
+        "sha256": "f543f84c1e786fcce84ed2b14c998e6035e3cf6f2810903e4527cf41f9a760c0",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/0e/a4/0ea444ca33ad89de3015b7a8decbd34c.jpg",
+        "src": "games/1521405869/shot-3.jpg",
+        "r2Key": "ranking/hot/1521405869/shots/3.jpg",
+        "bytes": 50968,
+        "sha256": "219f8354a2036671c28bed7a35883d2fe62d459925dd41550d43163c71a601da",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/0e/45/0e45d0610a44015c018427b1cbc5792b.jpg",
+        "src": "games/1521405869/shot-4.jpg",
+        "r2Key": "ranking/hot/1521405869/shots/4.jpg",
+        "bytes": 49360,
+        "sha256": "7f300762236fad7796942c736dceb998c82c3fe897e350bf725966100c34f426",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 5,
+        "source": "https://ctimg2018.myyx618.com/upload/images/43/44/43445006e65b87a6178b469338e5375e.jpg",
+        "src": "games/1521405869/shot-5.jpg",
+        "r2Key": "ranking/hot/1521405869/shots/5.jpg",
+        "bytes": 49436,
+        "sha256": "ccd75a03b88114d8b0d7a65be85024a6c4a08140667e4b39521cf4593f153943",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 6,
+        "source": "https://ctimg2018.myyx618.com/upload/images/53/55/53558e883ea2bcae28aa129f510214cc.jpg",
+        "src": "games/1521405869/shot-6.jpg",
+        "r2Key": "ranking/hot/1521405869/shots/6.jpg",
+        "bytes": 51325,
+        "sha256": "3a044471a658d61e5a1c19f85753f87ea7138dc7224186749fc5b95e37d180d8",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "1663697867": {
+    "upstreamGameId": "1663697867",
+    "sourceUpstreamId": "1663697867",
+    "pickedBy": "ranking",
+    "r2Id": "1663697867",
+    "name": "超级玛丽",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/6f/95/6f95dc2ae3400d72db06cce39b7c86e7.jpg",
+        "src": "games/1663697867/shot-1.jpg",
+        "r2Key": "ranking/hot/1663697867/shots/1.jpg",
+        "bytes": 29850,
+        "sha256": "25122fc90102ae507215290e40e53b0aac713113a46c54247afede945da0e32b",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/c2/48/c24818dd150e1ef9152c8599759b430c.jpg",
+        "src": "games/1663697867/shot-2.jpg",
+        "r2Key": "ranking/hot/1663697867/shots/2.jpg",
+        "bytes": 34620,
+        "sha256": "2df47be1e3c11b3539cbc3d0449cd274e62f68ed953f321cb27bc4d133c61ced",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/fd/5b/fd5b9df4fc401403b39c88a4a7f2b92a.jpg",
+        "src": "games/1663697867/shot-3.jpg",
+        "r2Key": "ranking/hot/1663697867/shots/3.jpg",
+        "bytes": 30807,
+        "sha256": "efd0eec3f20ec49b63961ce40716a230eec88a236f95919cfd4d6da66c5554c3",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/a9/95/a995185ff6a4126add644d5625994006.jpg",
+        "src": "games/1663697867/shot-4.jpg",
+        "r2Key": "ranking/hot/1663697867/shots/4.jpg",
+        "bytes": 35345,
+        "sha256": "094bde993d878c79446a0f157ae8bd1d793c9f7463e77f21491202ddf4613f12",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "1679647640": {
+    "upstreamGameId": "1679647640",
+    "sourceUpstreamId": "1679647640",
+    "pickedBy": "ranking",
+    "r2Id": "1679647640",
+    "name": "口袋妖怪 水银FC",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/a5/af/a5afac08ae8a2e8f84bde793976255cb.jpg",
+        "src": "games/1679647640/shot-1.jpg",
+        "r2Key": "ranking/hot/1679647640/shots/1.jpg",
+        "bytes": 140293,
+        "sha256": "6276f7b5982f00fbf55357b48e83fa2f1877db48fb279e7edfcc3a7b585d8b35",
+        "width": 920,
+        "height": 550
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/c4/b7/c4b79bffd8ec34113bc43886d9bee716.jpg",
+        "src": "games/1679647640/shot-2.jpg",
+        "r2Key": "ranking/hot/1679647640/shots/2.jpg",
+        "bytes": 125877,
+        "sha256": "96197dfacf610e5ea7608187690578fb2f66180c354ca8b68f58a0be12d9d8d8",
+        "width": 920,
+        "height": 550
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/49/7c/497c2128969c30e4bf364501f46cf089.jpg",
+        "src": "games/1679647640/shot-3.jpg",
+        "r2Key": "ranking/hot/1679647640/shots/3.jpg",
+        "bytes": 177888,
+        "sha256": "2e522b097f72c523a5eb5ecdd0ac08a18dc494f28e8e4e92cdcc5d04c422e0b0",
+        "width": 920,
+        "height": 550
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/03/6d/036d60becc25eddedc613c99a6613344.jpg",
+        "src": "games/1679647640/shot-4.jpg",
+        "r2Key": "ranking/hot/1679647640/shots/4.jpg",
+        "bytes": 177650,
+        "sha256": "23208bf0da4529a2c8d756846980cff9a4ee79baedb29d80173d54e9a63e06fe",
+        "width": 920,
+        "height": 550
+      },
+      {
+        "order": 5,
+        "source": "https://ctimg2018.myyx618.com/upload/images/b1/f8/b1f89920876c81107679d8f60f949f92.jpg",
+        "src": "games/1679647640/shot-5.jpg",
+        "r2Key": "ranking/hot/1679647640/shots/5.jpg",
+        "bytes": 115191,
+        "sha256": "ddcc777af93599b3be90946780e4635cc7447dfe9bc2891ef93a7f06fd78d7d0",
+        "width": 920,
+        "height": 550
+      }
+    ]
+  },
+  "1736527658": {
+    "upstreamGameId": "1736527658",
+    "sourceUpstreamId": "1736527658",
+    "pickedBy": "ranking",
+    "r2Id": "1736527658",
+    "name": "三国战纪 风云再起",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/f1/14/f1148a89a1342f902da41f963dbc56ef.jpg",
+        "src": "games/1736527658/shot-1.jpg",
+        "r2Key": "ranking/hot/1736527658/shots/1.jpg",
+        "bytes": 47605,
+        "sha256": "7681099229c7f1733c8e7ffed40c0196cfe659f468e2ae1b1fe4be4442818f9f",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/f8/4b/f84b6934e950e746887160c111838507.jpg",
+        "src": "games/1736527658/shot-2.jpg",
+        "r2Key": "ranking/hot/1736527658/shots/2.jpg",
+        "bytes": 45512,
+        "sha256": "2475860869d06f9ca87381c058c869e93b60a24220ffd7eee392ab2bf8c03c94",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/2b/25/2b25d72f899fa5a7b7b9b4ffbbcd4748.jpg",
+        "src": "games/1736527658/shot-3.jpg",
+        "r2Key": "ranking/hot/1736527658/shots/3.jpg",
+        "bytes": 46327,
+        "sha256": "c31df9f738842997a464ccb19867e18b9e77e442ee90b445ddd7e79f7faeb1c4",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/0e/45/0e455cc376fd8e54cf2153ffdffa2ae6.jpg",
+        "src": "games/1736527658/shot-4.jpg",
+        "r2Key": "ranking/hot/1736527658/shots/4.jpg",
+        "bytes": 42213,
+        "sha256": "d8bc0c14fdfc8930b90595da539022b0306968882cba70906718d45ecc2a233f",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "1835287026": {
+    "upstreamGameId": "1835287026",
+    "sourceUpstreamId": "1835287026",
+    "pickedBy": "ranking",
+    "r2Id": "1835287026",
+    "name": "X战警",
+    "images": [
+      {
+        "order": 1,
+        "source": "http://ctimg2018.myyx618.com/upload/images/bd/5d/bd5df0002083a992955e71ce98b45b47.jpg",
+        "src": "games/1835287026/shot-1.jpg",
+        "r2Key": "ranking/hot/1835287026/shots/1.jpg",
+        "bytes": 72530,
+        "sha256": "fef520df7a0a5a200ffb10a8d6016a5428efb05c79356a7366192d0e34aa85ca",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "http://ctimg2018.myyx618.com/upload/images/c9/3e/c93eaa8edaf757bdb95418fee113c534.jpg",
+        "src": "games/1835287026/shot-2.jpg",
+        "r2Key": "ranking/hot/1835287026/shots/2.jpg",
+        "bytes": 71323,
+        "sha256": "0a34ac698cbc65abf3124101fe2ae9aa75acfec2888c6c3288fbd96d7a2631c6",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "http://ctimg2018.myyx618.com/upload/images/7a/d1/7ad18c68143bd3031cbb1f0006a8b361.jpg",
+        "src": "games/1835287026/shot-3.jpg",
+        "r2Key": "ranking/hot/1835287026/shots/3.jpg",
+        "bytes": 65178,
+        "sha256": "c98dcbc1a2fab48faa33356a94bb69d6facd770d90c6997d0e64046e3b202a1e",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "1883371097": {
+    "upstreamGameId": "1883371097",
+    "sourceUpstreamId": "1883371097",
+    "pickedBy": "ranking",
+    "r2Id": "1883371097",
+    "name": "三国志2",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/a1/da/a1dadd6980260ec32ba1ff671fe95961.jpg",
+        "src": "games/1883371097/shot-1.jpg",
+        "r2Key": "ranking/hot/1883371097/shots/1.jpg",
+        "bytes": 52132,
+        "sha256": "879e1a09a24a8daac6e696b3436ad2266b39e0f545307a7c769c530a09e39fc1",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/a7/12/a71223e92a394ba3875828280170fb8a.jpg",
+        "src": "games/1883371097/shot-2.jpg",
+        "r2Key": "ranking/hot/1883371097/shots/2.jpg",
+        "bytes": 31451,
+        "sha256": "2c973c8e7f324b40dd34eed696ee43493acea3c1d065adb8f0da4c2671d91050",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/cc/9e/cc9e2f73128b6ce1bd3cf1cb52311fc0.jpg",
+        "src": "games/1883371097/shot-3.jpg",
+        "r2Key": "ranking/hot/1883371097/shots/3.jpg",
+        "bytes": 46546,
+        "sha256": "af34db245eafffa719d62fbb5c6e30d29238a8a0bb9c1deccb099b67c2ae8206",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/f9/20/f9203738e5de9755cdf258c0f45e0e96.jpg",
+        "src": "games/1883371097/shot-4.jpg",
+        "r2Key": "ranking/hot/1883371097/shots/4.jpg",
+        "bytes": 51482,
+        "sha256": "267660cdc1b27ed1888321428c4f56e0784b5ef94a9e93df7e6d752c228eeabe",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "1999385152": {
+    "upstreamGameId": "1999385152",
+    "sourceUpstreamId": "1999385152",
+    "pickedBy": "detail",
+    "r2Id": "1999385152",
+    "name": "电精2",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/e6/ab/e6abb145014c2b0a5f098ba3610ccccf.jpg",
+        "src": "games/1999385152/shot-1.jpg",
+        "r2Key": "ranking/hot/1999385152/shots/1.jpg",
+        "bytes": 67560,
+        "sha256": "a29d99ee738db0d123aa75c2cac55064a3ff97487f69cfb343c75d19da0ea7cc",
+        "width": 640,
+        "height": 360
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/14/5f/145f68790c113648a8a9c2acdea32674.jpg",
+        "src": "games/1999385152/shot-2.jpg",
+        "r2Key": "ranking/hot/1999385152/shots/2.jpg",
+        "bytes": 64961,
+        "sha256": "6200683d68bf58e04bf082ab6a991da8ba4c54e178c65140d8174749be498192",
+        "width": 640,
+        "height": 360
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/d6/67/d6677c85be031c91cb3be7a22cfb0daa.jpg",
+        "src": "games/1999385152/shot-3.jpg",
+        "r2Key": "ranking/hot/1999385152/shots/3.jpg",
+        "bytes": 61409,
+        "sha256": "785029f641100fd97cd39a3d4d904add948c0a960ad58cff5b9c2c9bab58eaaf",
+        "width": 640,
+        "height": 360
+      }
+    ]
+  },
+  "2021858647": {
+    "upstreamGameId": "2021858647",
+    "sourceUpstreamId": "2021858647",
+    "pickedBy": "ranking",
+    "r2Id": "2021858647",
+    "name": "吞食天地2 中文版",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/25/b8/25b89275f230556aafb9e59d23267047.jpg",
+        "src": "games/2021858647/shot-1.jpg",
+        "r2Key": "ranking/hot/2021858647/shots/1.jpg",
+        "bytes": 50482,
+        "sha256": "3be125ceb78b51cb09fd94fef5841acfae3500257b1baddf30fdbd50417ea3b3",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/03/0c/030cfd85d40b3666241e1641d1d874d6.png",
+        "src": "games/2021858647/shot-2.png",
+        "r2Key": "ranking/hot/2021858647/shots/2.png",
+        "bytes": 42615,
+        "sha256": "e5802e57a1900a41a45819063fe2917151fa54c269ee658b46bb2cc2ecdd4cd9",
+        "width": 355,
+        "height": 332
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/28/60/286037d13847f5a7afa5f051900844c4.jpg",
+        "src": "games/2021858647/shot-3.jpg",
+        "r2Key": "ranking/hot/2021858647/shots/3.jpg",
+        "bytes": 40929,
+        "sha256": "f98d776e16d29e6ea25fe3962ff16e2b1715b3eb029d79ec6fec2ae3190046e3",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/82/fc/82fc065f39a6cda39f110929e0984aab.jpg",
+        "src": "games/2021858647/shot-4.jpg",
+        "r2Key": "ranking/hot/2021858647/shots/4.jpg",
+        "bytes": 45922,
+        "sha256": "54cbcfcb365c13011581ce55572075d95371c26ec2a01c78665b26b76e232941",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "2178284194": {
+    "upstreamGameId": "2178284194",
+    "sourceUpstreamId": "2178284194",
+    "pickedBy": "detail",
+    "r2Id": "2178284194",
+    "name": "口袋妖怪 神兽领域1.5",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/7c/3d/7c3d279c7e411178e2b00b269d7a2898.jpg",
+        "src": "games/2178284194/shot-1.jpg",
+        "r2Key": "ranking/hot/2178284194/shots/1.jpg",
+        "bytes": 47818,
+        "sha256": "ce203f1949e97366cf51ea75dd890b472e76d87b1a6c30f04f31e0b2e13b2b65",
+        "width": 470,
+        "height": 282
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/66/81/6681eefedafc7f3a23e2b8bef63f17e9.jpg",
+        "src": "games/2178284194/shot-2.jpg",
+        "r2Key": "ranking/hot/2178284194/shots/2.jpg",
+        "bytes": 49494,
+        "sha256": "e78d375205a763daab7fab498867a2c0f560c3a14686345c65372bc71ed52ef8",
+        "width": 470,
+        "height": 282
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/2c/7c/2c7cd7e8189d82cf8b22a83777be8240.jpg",
+        "src": "games/2178284194/shot-3.jpg",
+        "r2Key": "ranking/hot/2178284194/shots/3.jpg",
+        "bytes": 46434,
+        "sha256": "c9327ca487ed1a5bc210dd75b7d5a59ae07b90c641b2475ad113d59b94294c07",
+        "width": 470,
+        "height": 282
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/d0/2f/d02f7a7a7d193ed994614dc4af37e650.jpg",
+        "src": "games/2178284194/shot-4.jpg",
+        "r2Key": "ranking/hot/2178284194/shots/4.jpg",
+        "bytes": 50015,
+        "sha256": "3a05453a155688153003b5a0d9d56a6c03c7f6d0bee323f363516d54a2dfd782",
+        "width": 470,
+        "height": 282
+      },
+      {
+        "order": 5,
+        "source": "https://ctimg2018.myyx618.com/upload/images/c6/23/c623a1a5e0187e1f02b0bb99c6c9e410.jpg",
+        "src": "games/2178284194/shot-5.jpg",
+        "r2Key": "ranking/hot/2178284194/shots/5.jpg",
+        "bytes": 19010,
+        "sha256": "cab78b2ee251e7f0f736986d8eb5e3dd9ddfdee0bec51d26472f498392ed2d22",
+        "width": 470,
+        "height": 282
+      },
+      {
+        "order": 6,
+        "source": "https://ctimg2018.myyx618.com/upload/images/79/6c/796c475a64590ba8c9c445802d5c14ee.jpg",
+        "src": "games/2178284194/shot-6.jpg",
+        "r2Key": "ranking/hot/2178284194/shots/6.jpg",
+        "bytes": 50390,
+        "sha256": "ec39327510b194e10f6ef0a2d0eff823df5504f7b28c2c14dbae1504d4b8b534",
+        "width": 470,
+        "height": 282
+      }
+    ]
+  },
+  "2254081428": {
+    "upstreamGameId": "2254081428",
+    "sourceUpstreamId": "2254081428",
+    "pickedBy": "ranking",
+    "r2Id": "2254081428",
+    "name": "三国战纪 富甲天下",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/ef/d2/efd2cd4b15b8e1d58c34aec77a6c1c8e.jpg",
+        "src": "games/2254081428/shot-1.jpg",
+        "r2Key": "ranking/hot/2254081428/shots/1.jpg",
+        "bytes": 38548,
+        "sha256": "9b79a3776ef44c8225fb697a72d4c5885d93115ca4097ec98ba9a9715773cc48",
+        "width": 600,
+        "height": 297
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/11/d5/11d5273a44bf946f5c59977beb6d1bc7.jpg",
+        "src": "games/2254081428/shot-2.jpg",
+        "r2Key": "ranking/hot/2254081428/shots/2.jpg",
+        "bytes": 85374,
+        "sha256": "80b8d3371af0b77df50dc5906816050e88b3cf6dda3ebdc6b6c00f44136f2b6c",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/8c/b7/8cb7e2f6dc61e8574889941523c5fe09.jpg",
+        "src": "games/2254081428/shot-3.jpg",
+        "r2Key": "ranking/hot/2254081428/shots/3.jpg",
+        "bytes": 64057,
+        "sha256": "93224ac792206c693f7e5ab83c9f8be34450384c53ca478f03d4a8bd91482158",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "2398874910": {
+    "upstreamGameId": "2398874910",
+    "sourceUpstreamId": "2398874910",
+    "pickedBy": "detail",
+    "r2Id": "2398874910",
+    "name": "名将",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/65/51/6551519891eb3f3781500187dd1bed24.jpg",
+        "src": "games/2398874910/shot-1.jpg",
+        "r2Key": "ranking/hot/2398874910/shots/1.jpg",
+        "bytes": 60889,
+        "sha256": "f5b763a40b1bbb1e901c2cff2b8d8e6d3c8cc92a268ec551dfeb598dda8c5e9b",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/b8/79/b8791c008b0b670c039e52b11686ab44.jpg",
+        "src": "games/2398874910/shot-2.jpg",
+        "r2Key": "ranking/hot/2398874910/shots/2.jpg",
+        "bytes": 53908,
+        "sha256": "217ec7cc09fe692e20208b15b5801d7eee7adb827027fb326e00f1a6e16b3df3",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/62/cf/62cf967fc46495298c9751eccadb5478.jpg",
+        "src": "games/2398874910/shot-3.jpg",
+        "r2Key": "ranking/hot/2398874910/shots/3.jpg",
+        "bytes": 61273,
+        "sha256": "3cfcb8bb545de9f46b6dbebf4abb8d1bd1c0479f71b6a1e96b57744dd3341ada",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/92/8a/928ad9d598dfa3f73868d95223d2035f.jpg",
+        "src": "games/2398874910/shot-4.jpg",
+        "r2Key": "ranking/hot/2398874910/shots/4.jpg",
+        "bytes": 62268,
+        "sha256": "6256c0e0d364a35fc0db3ee8945bc75e2b671852c49efdb60cbd2e03d0c76da3",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "2440054051": {
+    "upstreamGameId": "2440054051",
+    "sourceUpstreamId": "2440054051",
+    "pickedBy": "ranking",
+    "r2Id": "2440054051",
+    "name": "俄罗斯方块",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/e0/7d/e07df0b740c45b760261ab2df541b176.png",
+        "src": "games/2440054051/shot-1.png",
+        "r2Key": "ranking/hot/2440054051/shots/1.png",
+        "bytes": 19689,
+        "sha256": "cae50856fda19bcff60df71e0cdbc96e5f9727eac9265a131ab2854512398dda",
+        "width": 250,
+        "height": 198
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/de/b7/deb7800e16fa450735aef5f83af6cc96.png",
+        "src": "games/2440054051/shot-2.png",
+        "r2Key": "ranking/hot/2440054051/shots/2.png",
+        "bytes": 14847,
+        "sha256": "880744fba07f04494adb0f1fa059cbfe70b7a8c74f4f6e16961262bb79b0e239",
+        "width": 247,
+        "height": 199
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/8e/dd/8eddf91a0e86495478217d5f850edbc3.png",
+        "src": "games/2440054051/shot-3.png",
+        "r2Key": "ranking/hot/2440054051/shots/3.png",
+        "bytes": 15858,
+        "sha256": "71f57b5318ee581eb6d6617199d5e8c416505d078f8e5a931b93a3c05b05f2cf",
+        "width": 252,
+        "height": 198
+      }
+    ]
+  },
+  "2443095290": {
+    "upstreamGameId": "2443095290",
+    "sourceUpstreamId": "2443095290",
+    "pickedBy": "detail",
+    "r2Id": "2443095290",
+    "name": "三国志 三圣剑",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/2f/fd/2ffdd169b6028d0391c9bf6d73888d8b.jpg",
+        "src": "games/2443095290/shot-1.jpg",
+        "r2Key": "ranking/hot/2443095290/shots/1.jpg",
+        "bytes": 65271,
+        "sha256": "b5668aef85f808ca678e6e3333bc06f61873135080ed2c455e5c206230d2f94a",
+        "width": 500,
+        "height": 375
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/61/31/6131e74fac4d979737a6578e746e8a4b.jpg",
+        "src": "games/2443095290/shot-2.jpg",
+        "r2Key": "ranking/hot/2443095290/shots/2.jpg",
+        "bytes": 15989,
+        "sha256": "1e4f7ff589ab7654279302246e63783dc3053729ec551c9dc1eb311b4f3d2118",
+        "width": 293,
+        "height": 220
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/df/f7/dff7bbbd488d4220cef5cd69d3b1f38f.jpg",
+        "src": "games/2443095290/shot-3.jpg",
+        "r2Key": "ranking/hot/2443095290/shots/3.jpg",
+        "bytes": 16661,
+        "sha256": "a4942332c9b1f2e69cfefddf11fdb1310e00dc4918779a74e32dfeb514fe51ee",
+        "width": 322,
+        "height": 220
+      }
+    ]
+  },
+  "2458975624": {
+    "upstreamGameId": "2458975624",
+    "sourceUpstreamId": "2458975624",
+    "pickedBy": "ranking",
+    "r2Id": "2458975624",
+    "name": "格斗双截龙",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/b2/a7/b2a7702924e2026ac91bec300f6c55de.jpg",
+        "src": "games/2458975624/shot-1.jpg",
+        "r2Key": "ranking/hot/2458975624/shots/1.jpg",
+        "bytes": 56153,
+        "sha256": "b9f2a54b467585c150653045d44be6aef50d36e8ae4c22b2c5255a248f164f9d",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/5d/59/5d595c5b06e83330a40f55007fafb6a9.jpg",
+        "src": "games/2458975624/shot-2.jpg",
+        "r2Key": "ranking/hot/2458975624/shots/2.jpg",
+        "bytes": 68920,
+        "sha256": "2d99569cb1953e9869236ef8b851c764614978c18620bee73e2704850304fb5b",
+        "width": 640,
+        "height": 360
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/6c/0d/6c0d775311fa15579e5188022493805c.jpg",
+        "src": "games/2458975624/shot-3.jpg",
+        "r2Key": "ranking/hot/2458975624/shots/3.jpg",
+        "bytes": 46071,
+        "sha256": "ad89dd58ddf5a775542d79c9a66b9b41dd67a5fd2f4fc54a35311844e82e4bab",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/00/2c/002c9cfb05b862d37f4eeb280eb8140c.jpg",
+        "src": "games/2458975624/shot-4.jpg",
+        "r2Key": "ranking/hot/2458975624/shots/4.jpg",
+        "bytes": 41541,
+        "sha256": "9474ff2d648eac857fe85857ab5c2a88393c556e183a866662b5854a4f7dd453",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "2465501517": {
+    "upstreamGameId": "2465501517",
+    "sourceUpstreamId": "2465501517",
+    "pickedBy": "ranking",
+    "r2Id": "2465501517",
+    "name": "三国战纪119 完美版",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/bc/90/bc907d18825f1e230a7a45b8429cc484.jpg",
+        "src": "games/2465501517/shot-1.jpg",
+        "r2Key": "ranking/hot/2465501517/shots/1.jpg",
+        "bytes": 18769,
+        "sha256": "56584695c52ecd14f1af27824115f6ab680877fed29fd876d7f274477d347652",
+        "width": 312,
+        "height": 214
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/08/fd/08fda76c9cd20ebc54a7e23dee813ae7.jpg",
+        "src": "games/2465501517/shot-2.jpg",
+        "r2Key": "ranking/hot/2465501517/shots/2.jpg",
+        "bytes": 33472,
+        "sha256": "530fe9c8a275c0a6ad926829d3bfbc0402bc45e205d3aefe036f06a0d07d0f9f",
+        "width": 480,
+        "height": 272
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/48/89/48891cc09a6ba31c3bebd09324fd24de.jpg",
+        "src": "games/2465501517/shot-3.jpg",
+        "r2Key": "ranking/hot/2465501517/shots/3.jpg",
+        "bytes": 34581,
+        "sha256": "c0bd519562220a8ac32b9fe2e35585b55ebb6254e4491ccbd4222c02381064bd",
+        "width": 480,
+        "height": 240
+      }
+    ]
+  },
+  "2581388577": {
+    "upstreamGameId": "2581388577",
+    "sourceUpstreamId": "2581388577",
+    "pickedBy": "ranking",
+    "r2Id": "2581388577",
+    "name": "口袋妖怪 解放 2.1.1.1",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/1e/d0/1ed0d6fd8341f00b34ebd3cc6309fdf3.png",
+        "src": "games/2581388577/shot-1.png",
+        "r2Key": "ranking/hot/2581388577/shots/1.png",
+        "bytes": 44410,
+        "sha256": "a85076612b31025ac81fe8e0ae003986aea2e76adab583413a28b2466ac8c7e0",
+        "width": 719,
+        "height": 474
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/25/c9/25c977893dcbeaf11b8218a0bb5d90e9.png",
+        "src": "games/2581388577/shot-2.png",
+        "r2Key": "ranking/hot/2581388577/shots/2.png",
+        "bytes": 41618,
+        "sha256": "8c87d77307d46110e72bf221ae5aec7c7785cbe00dea6a94863d43f06c88b77e",
+        "width": 714,
+        "height": 475
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/30/b1/30b1d12a094fd6d5585ee4acb2d50f60.png",
+        "src": "games/2581388577/shot-3.png",
+        "r2Key": "ranking/hot/2581388577/shots/3.png",
+        "bytes": 47312,
+        "sha256": "d70b5cbb96b63963aa231e7ffbdc7d1eef22e151359e436bcabf1922a52dfa58",
+        "width": 717,
+        "height": 474
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/6c/8b/6c8b81e3839ae078b3cf57366ef23601.png",
+        "src": "games/2581388577/shot-4.png",
+        "r2Key": "ranking/hot/2581388577/shots/4.png",
+        "bytes": 38649,
+        "sha256": "445d1ed2fb66c689b5581ac79a49ee903ab0d8bd7c606eae6539b33dc1d2f8d1",
+        "width": 716,
+        "height": 474
+      },
+      {
+        "order": 5,
+        "source": "https://ctimg2018.myyx618.com/upload/images/5e/85/5e850dcdd60a21bd3acbaa6212a3becb.png",
+        "src": "games/2581388577/shot-5.png",
+        "r2Key": "ranking/hot/2581388577/shots/5.png",
+        "bytes": 29266,
+        "sha256": "d9fb1d1079f6542c6ba9783d792f2ed68c6a14550ce18f4aa45328303fb3213b",
+        "width": 714,
+        "height": 473
+      }
+    ]
+  },
+  "2653682608": {
+    "upstreamGameId": "2653682608",
+    "sourceUpstreamId": "2653682608",
+    "pickedBy": "ranking",
+    "r2Id": "2653682608",
+    "name": "龙珠大冒险",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/d1/f6/d1f6da3d7fa35a3040d93ad78bcc2182.jpg",
+        "src": "games/2653682608/shot-1.jpg",
+        "r2Key": "ranking/hot/2653682608/shots/1.jpg",
+        "bytes": 21020,
+        "sha256": "107be11e41a540352aeaf50cb9171c3951fde782d714762f8ddbe05b4d68810f",
+        "width": 330,
+        "height": 220
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/6b/dd/6bdd93054e6fc0e53096698ec56bed5d.jpg",
+        "src": "games/2653682608/shot-2.jpg",
+        "r2Key": "ranking/hot/2653682608/shots/2.jpg",
+        "bytes": 17457,
+        "sha256": "87403a9e0729a75b260dc04c1ac46b013a662e468ef74acefe22289e2fe849e9",
+        "width": 303,
+        "height": 220
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/2f/1b/2f1b3e7abb7bcb9a93a798834e37cd9e.jpg",
+        "src": "games/2653682608/shot-3.jpg",
+        "r2Key": "ranking/hot/2653682608/shots/3.jpg",
+        "bytes": 16835,
+        "sha256": "a10e4940de59c8ecd34097f6cc7e98a3528454f5613301672180a1d28968ebf7",
+        "width": 330,
+        "height": 220
+      }
+    ]
+  },
+  "2740590570": {
+    "upstreamGameId": "2740590570",
+    "sourceUpstreamId": "2740590570",
+    "pickedBy": "ranking",
+    "r2Id": "2740590570",
+    "name": "三国志2 霸王的大陆",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/61/f5/61f55074b92a087c538d896752d0bdab.png",
+        "src": "games/2740590570/shot-1.png",
+        "r2Key": "ranking/hot/2740590570/shots/1.png",
+        "bytes": 141399,
+        "sha256": "7cc696c2e418380201570b5604cb7a9b347bda0c2c3cd1c973b10416227110cb",
+        "width": 261,
+        "height": 201
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/b1/b9/b1b912ef14947b0131750d8db9257443.png",
+        "src": "games/2740590570/shot-2.png",
+        "r2Key": "ranking/hot/2740590570/shots/2.png",
+        "bytes": 15298,
+        "sha256": "52a5dfca1256223260fb94b1e0a721bfbc873a5355165ac20fd3a92d5d43cdee",
+        "width": 271,
+        "height": 184
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/97/7b/977b07e65d0a9b0485a6e47aba65e8eb.png",
+        "src": "games/2740590570/shot-3.png",
+        "r2Key": "ranking/hot/2740590570/shots/3.png",
+        "bytes": 80882,
+        "sha256": "889febe0be993affe2af2d4944a187724beea85c19ff90e66ad010290fb8ac8a",
+        "width": 286,
+        "height": 185
+      }
+    ]
+  },
+  "2785620260": {
+    "upstreamGameId": "2785620260",
+    "sourceUpstreamId": "2785620260",
+    "pickedBy": "ranking",
+    "r2Id": "2785620260",
+    "name": "赤色要塞",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/e3/af/e3affd4149f7bc030b1657df648f795a.jpg",
+        "src": "games/2785620260/shot-1.jpg",
+        "r2Key": "ranking/hot/2785620260/shots/1.jpg",
+        "bytes": 43004,
+        "sha256": "682c004a3a6223da49e49c37fd26b986419e1ef9c13bdb3352ab34289527a592",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/bf/23/bf23da15992b57f3ab58dd2a8feb19d7.jpg",
+        "src": "games/2785620260/shot-2.jpg",
+        "r2Key": "ranking/hot/2785620260/shots/2.jpg",
+        "bytes": 52433,
+        "sha256": "57eaf145e7126eb7a9b8e9f741386c7a3fd27d594e5dc7c015a908bab819016c",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/a8/3f/a83fd98456ed4166c7bbf40ae76ec9d7.jpg",
+        "src": "games/2785620260/shot-3.jpg",
+        "r2Key": "ranking/hot/2785620260/shots/3.jpg",
+        "bytes": 48507,
+        "sha256": "18705acff8e5e32987ed38a9cd407fd3bd88d826ceb4e4638f22374ff0ca05ed",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/7d/e6/7de63b8ad13c0886437a6463bb070e12.jpg",
+        "src": "games/2785620260/shot-4.jpg",
+        "r2Key": "ranking/hot/2785620260/shots/4.jpg",
+        "bytes": 48868,
+        "sha256": "4e9e3548a9fa58c3c8302c448110a41b226ad027f1834f29bf31a5794175269a",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "2793650449": {
+    "upstreamGameId": "2793650449",
+    "sourceUpstreamId": "2793650449",
+    "pickedBy": "ranking",
+    "r2Id": "2793650449",
+    "name": "恐龙快打 天王版",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/df/bb/dfbb07010e0ffdb1a7348b37c74791c6.jpg",
+        "src": "games/2793650449/shot-1.jpg",
+        "r2Key": "ranking/hot/2793650449/shots/1.jpg",
+        "bytes": 86813,
+        "sha256": "728c69a2e0822314161e7ce780a8c857ed693d6e9657f0d9abbc548a1c096671",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/2c/f8/2cf8684176609512e249a10367f42a23.jpg",
+        "src": "games/2793650449/shot-2.jpg",
+        "r2Key": "ranking/hot/2793650449/shots/2.jpg",
+        "bytes": 73674,
+        "sha256": "d3307b4dd4db648b3ab8dfedbfa387a3c174d1f37742cc4d297818b1dc5da097",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/d9/ba/d9ba5d4fab0e6e64a4c611d1f23449e6.jpg",
+        "src": "games/2793650449/shot-3.jpg",
+        "r2Key": "ranking/hot/2793650449/shots/3.jpg",
+        "bytes": 67942,
+        "sha256": "c203fc27d6575ab2438eb845a4498d45851053cf485df20aff82230f7a0b4b56",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/62/e4/62e4491b6101d2dc1368d5d5dce57d32.jpg",
+        "src": "games/2793650449/shot-4.jpg",
+        "r2Key": "ranking/hot/2793650449/shots/4.jpg",
+        "bytes": 82631,
+        "sha256": "7ec697a1ad9ecd10d8f0faa013bace28bd1321aa0aac4078aff0d34c650a0a1b",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "2800650505": {
+    "upstreamGameId": "2800650505",
+    "sourceUpstreamId": "2800650505",
+    "pickedBy": "ranking",
+    "r2Id": "2800650505",
+    "name": "封神榜",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/a3/35/a335e0c64fcd69290af727ddd18cc72f.jpg",
+        "src": "games/2800650505/shot-1.jpg",
+        "r2Key": "ranking/hot/2800650505/shots/1.jpg",
+        "bytes": 49712,
+        "sha256": "905018d0b707961b7807fd7034b26712c286913dfa16fc7f85c7f6bc05f9635d",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/64/e5/64e557443e9a036b55adafe5156b7d94.jpg",
+        "src": "games/2800650505/shot-2.jpg",
+        "r2Key": "ranking/hot/2800650505/shots/2.jpg",
+        "bytes": 29376,
+        "sha256": "8cc3bac4b422cb13cbaefa12a40c8ca4ce64e8d280a3f1073c2be6a9d2396723",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/5e/b4/5eb41d68a259af1977a4e3d89dc64886.jpg",
+        "src": "games/2800650505/shot-3.jpg",
+        "r2Key": "ranking/hot/2800650505/shots/3.jpg",
+        "bytes": 52312,
+        "sha256": "19bb0a7f916bfc071a2f2cf807b83da145b8b87a8eef27d2afedfbc1cf2c90c3",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/07/95/0795a67e08662af36ada1851f26f68c9.jpg",
+        "src": "games/2800650505/shot-4.jpg",
+        "r2Key": "ranking/hot/2800650505/shots/4.jpg",
+        "bytes": 29256,
+        "sha256": "6be95f0ef4718897bf9c597173c6d301cbca824d0a47b6ae6c844ddc5c8dae6d",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 5,
+        "source": "https://ctimg2018.myyx618.com/upload/images/29/f2/29f2c9c3de947add2ccb030e14dbb76c.jpg",
+        "src": "games/2800650505/shot-5.jpg",
+        "r2Key": "ranking/hot/2800650505/shots/5.jpg",
+        "bytes": 49378,
+        "sha256": "fcce692ff550c79d79e3ee66c6608c19878fde84b341b7b1cbd8cac4cf2a675c",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "2895205432": {
+    "upstreamGameId": "2895205432",
+    "sourceUpstreamId": "2895205432",
+    "pickedBy": "detail",
+    "r2Id": "2895205432",
+    "name": "三国战纪 傲世三国",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/5b/1f/5b1ffc3204c24b25b955082cd30640e1.jpg",
+        "src": "games/2895205432/shot-1.jpg",
+        "r2Key": "ranking/hot/2895205432/shots/1.jpg",
+        "bytes": 16641,
+        "sha256": "39411f22cdd9057f243223e241208b67afbd85999cf6776051854f0ec5631f60",
+        "width": 312,
+        "height": 214
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/0a/60/0a604bcd2cfeb5cf2e4a3d3b9fcf1d76.jpg",
+        "src": "games/2895205432/shot-2.jpg",
+        "r2Key": "ranking/hot/2895205432/shots/2.jpg",
+        "bytes": 75313,
+        "sha256": "8d2bcfee425075018783596cf07f6524174ff17beaa0077925d3e070e35287e1",
+        "width": 639,
+        "height": 480
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/55/c5/55c59ddf149e1d5d58cd1b5eb90d1cc3.png",
+        "src": "games/2895205432/shot-3.png",
+        "r2Key": "ranking/hot/2895205432/shots/3.png",
+        "bytes": 304526,
+        "sha256": "3c8db7f4159dc97af707d52d5e489609bdc886ba51593990075f5f6d85ce1688",
+        "width": 571,
+        "height": 426
+      }
+    ]
+  },
+  "2941830434": {
+    "upstreamGameId": "2941830434",
+    "sourceUpstreamId": "2941830434",
+    "pickedBy": "ranking",
+    "r2Id": "2941830434",
+    "name": "松鼠大战2",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/29/12/2912b466db47c98012a647dfd896d389.jpg",
+        "src": "games/2941830434/shot-1.jpg",
+        "r2Key": "ranking/hot/2941830434/shots/1.jpg",
+        "bytes": 58935,
+        "sha256": "9a2e4b82b85eb03edeaad8219d838234e2b84e0b071e0267684868bd4737c04a",
+        "width": 568,
+        "height": 320
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/66/1c/661c7e034a3c88070f5fb9ca9c6796f5.jpg",
+        "src": "games/2941830434/shot-2.jpg",
+        "r2Key": "ranking/hot/2941830434/shots/2.jpg",
+        "bytes": 49868,
+        "sha256": "bb8ae5470229cc62499a9ebff5890043695094243788007d6527bad868edb376",
+        "width": 568,
+        "height": 320
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/dc/8a/dc8aa26122ecc00f900d340de937c488.jpg",
+        "src": "games/2941830434/shot-3.jpg",
+        "r2Key": "ranking/hot/2941830434/shots/3.jpg",
+        "bytes": 62565,
+        "sha256": "6c02e3130f5eb6632e4d784ede86823c37d146e1fad7e720d88108eefe3c887f",
+        "width": 568,
+        "height": 320
+      }
+    ]
+  },
+  "3057906787": {
+    "upstreamGameId": "3057906787",
+    "sourceUpstreamId": "3057906787",
+    "pickedBy": "ranking",
+    "r2Id": "3057906787",
+    "name": "冒险岛3",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/94/70/947028e93b55c120e466ffd156b07683.jpg",
+        "src": "games/3057906787/shot-1.jpg",
+        "r2Key": "ranking/hot/3057906787/shots/1.jpg",
+        "bytes": 49645,
+        "sha256": "787011c2949ee70faf44983e5e8368a6e237e63c938794f74ad2f9d8a0d1f4ea",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/5c/8e/5c8ed26072b577041c0e966090355825.jpg",
+        "src": "games/3057906787/shot-2.jpg",
+        "r2Key": "ranking/hot/3057906787/shots/2.jpg",
+        "bytes": 44407,
+        "sha256": "aea62a8fbcb55fe95a6dd3f17ff0a3e677517b13452cb74b57ed33f5010cb7a6",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/a7/01/a7017761771e5871e2e3cc533b807cd5.jpg",
+        "src": "games/3057906787/shot-3.jpg",
+        "r2Key": "ranking/hot/3057906787/shots/3.jpg",
+        "bytes": 51340,
+        "sha256": "07ccb982ec91a83e45b982d3bd629991536d5fbf36fa89b559be6ecc558e6e5e",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/8d/98/8d987215c931a59b4d11a68a319a29c4.jpg",
+        "src": "games/3057906787/shot-4.jpg",
+        "r2Key": "ranking/hot/3057906787/shots/4.jpg",
+        "bytes": 58736,
+        "sha256": "b433e0ac1ec6d28cdc5ea1b3011b7848581325da785811f05887c48ad9258d2a",
+        "width": 568,
+        "height": 320
+      }
+    ]
+  },
+  "3075033054": {
+    "upstreamGameId": "3075033054",
+    "sourceUpstreamId": "3075033054",
+    "pickedBy": "ranking",
+    "r2Id": "3075033054",
+    "name": "对决 奥特曼之激斗英雄 汉化版",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/07/71/0771521ea09587256cd4689081576fff.png",
+        "src": "games/3075033054/shot-1.png",
+        "r2Key": "ranking/hot/3075033054/shots/1.png",
+        "bytes": 580802,
+        "sha256": "1fba5a3870a5f036240f90d5f17425dceb26680e16fce64e25e370a16b7223d6",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/5b/76/5b7611352db5448abbd58a54978f5a8c.jpg",
+        "src": "games/3075033054/shot-2.jpg",
+        "r2Key": "ranking/hot/3075033054/shots/2.jpg",
+        "bytes": 53538,
+        "sha256": "338a0d378864153d62732584f6f915a112375e9b30e54fc5d4e0de1a2c526541",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/fc/49/fc49b25264ef9e6979faeff16b74b49e.jpg",
+        "src": "games/3075033054/shot-3.jpg",
+        "r2Key": "ranking/hot/3075033054/shots/3.jpg",
+        "bytes": 47147,
+        "sha256": "917b35e88ddfd6d16d461157defac9eba818d71a62917cf15c539ba24b3c7d77",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/a9/ab/a9abe5932cb2b8888a2cb5f71d9ae38d.jpg",
+        "src": "games/3075033054/shot-4.jpg",
+        "r2Key": "ranking/hot/3075033054/shots/4.jpg",
+        "bytes": 65440,
+        "sha256": "5846017dd3dcba4209a6b8c9597a75d46ba8aab43fb3f42527d0bbcb5bf742d5",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "3102935414": {
+    "upstreamGameId": "3102935414",
+    "sourceUpstreamId": "3102935414",
+    "pickedBy": "detail",
+    "r2Id": "3102935414",
+    "name": "赤影战士 日版",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/34/1f/341f857417c296bf80733f04cb646ab0.png",
+        "src": "games/3102935414/shot-1.png",
+        "r2Key": "ranking/hot/3102935414/shots/1.png",
+        "bytes": 78235,
+        "sha256": "e354780cdbf503314d982b488c2f916bd4616065f4ad87df257fc9da6027834a",
+        "width": 346,
+        "height": 311
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/07/e4/07e483cac7741185d4bceb537bd3031b.png",
+        "src": "games/3102935414/shot-2.png",
+        "r2Key": "ranking/hot/3102935414/shots/2.png",
+        "bytes": 79760,
+        "sha256": "2cbd92c322d7761dac54c4a90720aa1d9976960483221d9a3969fe7dc8fc742e",
+        "width": 345,
+        "height": 309
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/d9/fc/d9fcff4a33992be9d7b8cca6fdf6fc8a.png",
+        "src": "games/3102935414/shot-3.png",
+        "r2Key": "ranking/hot/3102935414/shots/3.png",
+        "bytes": 68496,
+        "sha256": "bcc5b7633991718b55c59a304adc7fa6647eebf7846128c8ab4ed60bf1f5c440",
+        "width": 348,
+        "height": 312
+      }
+    ]
+  },
+  "3186559554": {
+    "upstreamGameId": "3186559554",
+    "sourceUpstreamId": "3186559554",
+    "pickedBy": "ranking",
+    "r2Id": "3186559554",
+    "name": "铁钩船长",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/3a/b9/3ab97cbb6edacb6c31725bfbce183940.jpg",
+        "src": "games/3186559554/shot-1.jpg",
+        "r2Key": "ranking/hot/3186559554/shots/1.jpg",
+        "bytes": 46349,
+        "sha256": "91faa36ebaeac6ea5d86f1441c76a08901586d93d5798f0a98e642ec3993ab60",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/8d/e3/8de32b1802c26d87d6f836feb3f9600c.jpg",
+        "src": "games/3186559554/shot-2.jpg",
+        "r2Key": "ranking/hot/3186559554/shots/2.jpg",
+        "bytes": 56113,
+        "sha256": "e1321f1e269c3583eef0c18c445ac2ccc73f89696fb35486f0b66217a968406e",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/f2/f5/f2f5a391fc2921df2bb9bc7d3d67cdf7.jpg",
+        "src": "games/3186559554/shot-3.jpg",
+        "r2Key": "ranking/hot/3186559554/shots/3.jpg",
+        "bytes": 54138,
+        "sha256": "f1d947f988c511da9bc275aa280d9392a71cecd2a4387b002725df7f270cf939",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/f8/22/f822379b7493cbe30a33644a46f7bb09.jpg",
+        "src": "games/3186559554/shot-4.jpg",
+        "r2Key": "ranking/hot/3186559554/shots/4.jpg",
+        "bytes": 53847,
+        "sha256": "3db2dfeca1e3763d98efdda972a83076e69c7f0d8c5ac185654a713a567d83c0",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 5,
+        "source": "https://ctimg2018.myyx618.com/upload/images/2a/87/2a87f1f8c89fb970e0f61a6cb23b88f8.jpg",
+        "src": "games/3186559554/shot-5.jpg",
+        "r2Key": "ranking/hot/3186559554/shots/5.jpg",
+        "bytes": 49904,
+        "sha256": "3d8fd677a00dcdceb38b8cff948e79951e8eac1bc858762ddd0b6535c46337e4",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "3201329746": {
+    "upstreamGameId": "3201329746",
+    "sourceUpstreamId": "3201329746",
+    "pickedBy": "detail",
+    "r2Id": "3201329746",
+    "name": "火箭车（马路英雄）",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/93/49/9349c8b1277799c38d5c70012942cc1d.jpg",
+        "src": "games/3201329746/shot-1.jpg",
+        "r2Key": "ranking/hot/3201329746/shots/1.jpg",
+        "bytes": 16778,
+        "sha256": "0defaa6dcd68e04a40104a280cfb86a1c8abd0c4d4fc0d43eddd819f5611c85a",
+        "width": 256,
+        "height": 240
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/93/49/9349c8b1277799c38d5c70012942cc1d.jpg",
+        "src": "games/3201329746/shot-2.jpg",
+        "r2Key": "ranking/hot/3201329746/shots/2.jpg",
+        "bytes": 16778,
+        "sha256": "0defaa6dcd68e04a40104a280cfb86a1c8abd0c4d4fc0d43eddd819f5611c85a",
+        "width": 256,
+        "height": 240
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/55/a9/55a93ff64d98f089038b2b46d14486e9.jpg",
+        "src": "games/3201329746/shot-3.jpg",
+        "r2Key": "ranking/hot/3201329746/shots/3.jpg",
+        "bytes": 11292,
+        "sha256": "d291639ebdf2435f114a2ed4e80b75e4bda3bfe266262e83425442947ff0bff2",
+        "width": 400,
+        "height": 300
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/55/a9/55a93ff64d98f089038b2b46d14486e9.jpg",
+        "src": "games/3201329746/shot-4.jpg",
+        "r2Key": "ranking/hot/3201329746/shots/4.jpg",
+        "bytes": 11292,
+        "sha256": "d291639ebdf2435f114a2ed4e80b75e4bda3bfe266262e83425442947ff0bff2",
+        "width": 400,
+        "height": 300
+      },
+      {
+        "order": 5,
+        "source": "https://ctimg2018.myyx618.com/upload/images/75/2b/752bcae69839df401a34762ccf7f2e8b.jpg",
+        "src": "games/3201329746/shot-5.jpg",
+        "r2Key": "ranking/hot/3201329746/shots/5.jpg",
+        "bytes": 20763,
+        "sha256": "4b5eeb644efcb8093f45922483e84213ecde249561f7055c3d80dd9a560d875d",
+        "width": 256,
+        "height": 240
+      },
+      {
+        "order": 6,
+        "source": "https://ctimg2018.myyx618.com/upload/images/75/2b/752bcae69839df401a34762ccf7f2e8b.jpg",
+        "src": "games/3201329746/shot-6.jpg",
+        "r2Key": "ranking/hot/3201329746/shots/6.jpg",
+        "bytes": 20763,
+        "sha256": "4b5eeb644efcb8093f45922483e84213ecde249561f7055c3d80dd9a560d875d",
+        "width": 256,
+        "height": 240
+      }
+    ]
+  },
+  "3242509557": {
+    "upstreamGameId": "3242509557",
+    "sourceUpstreamId": "3242509557",
+    "pickedBy": "ranking",
+    "r2Id": "3242509557",
+    "name": "魂斗罗2",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/f2/c3/f2c34ff9fd897c64aa5e1f931670acae.jpg",
+        "src": "games/3242509557/shot-1.jpg",
+        "r2Key": "ranking/hot/3242509557/shots/1.jpg",
+        "bytes": 46414,
+        "sha256": "2cd20ce2a446a1bddbe52bf5b06d7480936e11bdefd3e1c0a9e688ae69e8d648",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/42/ac/42ac7d8588add4ab5a01cc60596ff4e0.jpg",
+        "src": "games/3242509557/shot-2.jpg",
+        "r2Key": "ranking/hot/3242509557/shots/2.jpg",
+        "bytes": 27663,
+        "sha256": "c3dde9da180e48266f5e1ebc775a4b0747f77efe070444d01744b3c6fc981c0c",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/28/d6/28d6d4aa778a20aab8fba380b39c58e5.jpg",
+        "src": "games/3242509557/shot-3.jpg",
+        "r2Key": "ranking/hot/3242509557/shots/3.jpg",
+        "bytes": 35246,
+        "sha256": "4444b5cfab0dd03db24008374c944a2b4a09e13207ef66cec023b787034ff5ad",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/5a/78/5a7801cef0d9fa6947e3fe06fa22e2f9.jpg",
+        "src": "games/3242509557/shot-4.jpg",
+        "r2Key": "ranking/hot/3242509557/shots/4.jpg",
+        "bytes": 48676,
+        "sha256": "be69dc502509835aa53a7102bcdd8d50dc12d7a1c338b7fe841218158ec7bdc2",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 5,
+        "source": "https://ctimg2018.myyx618.com/upload/images/39/e0/39e02c57dcde318d880d562aaae6765a.jpg",
+        "src": "games/3242509557/shot-5.jpg",
+        "r2Key": "ranking/hot/3242509557/shots/5.jpg",
+        "bytes": 27460,
+        "sha256": "eb1a27ed249e197c8a1b84d42310e95e39bc23582f5530eed4e39a3ffc34375c",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "3250411041": {
+    "upstreamGameId": "3250411041",
+    "sourceUpstreamId": "3250411041",
+    "pickedBy": "detail",
+    "r2Id": "3250411041",
+    "name": "超级玛丽 秘密通道",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/0e/e4/0ee496c356f57be2fa779eafc359c41f.jpg",
+        "src": "games/3250411041/shot-1.jpg",
+        "r2Key": "ranking/hot/3250411041/shots/1.jpg",
+        "bytes": 13529,
+        "sha256": "ea37b11468e1db81bc88f6fc9b21351732a7b9b48543d78cf431698b57d3bbfb",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/c5/22/c522498250bc698ecb843a8618db2abc.jpg",
+        "src": "games/3250411041/shot-2.jpg",
+        "r2Key": "ranking/hot/3250411041/shots/2.jpg",
+        "bytes": 48127,
+        "sha256": "573b8ceced28c86fed253f372072fdb98c8bd25f2b9afa1e199493db30a19722",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/46/e7/46e76d8cd27fc2330728ac7a1f7c9082.jpg",
+        "src": "games/3250411041/shot-3.jpg",
+        "r2Key": "ranking/hot/3250411041/shots/3.jpg",
+        "bytes": 58306,
+        "sha256": "7773d20ca2be2fdcc94b9ec96a9f6fc06d82f9e1b6c016eb2ea1a8b0c4196cb3",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "3281883942": {
+    "upstreamGameId": "3281883942",
+    "sourceUpstreamId": "3281883942",
+    "pickedBy": "ranking",
+    "r2Id": "3281883942",
+    "name": "恐龙快打 天王版 暴击显示",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/05/96/059674ac844dff4c15f724e8d889f85b.jpg",
+        "src": "games/3281883942/shot-1.jpg",
+        "r2Key": "ranking/hot/3281883942/shots/1.jpg",
+        "bytes": 77422,
+        "sha256": "42ea8f17d286f4e936607727404d499b4907452e696a9b7b0250f38f50a91d4e",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/df/bb/dfbb07010e0ffdb1a7348b37c74791c6.jpg",
+        "src": "games/3281883942/shot-2.jpg",
+        "r2Key": "ranking/hot/3281883942/shots/2.jpg",
+        "bytes": 86813,
+        "sha256": "728c69a2e0822314161e7ce780a8c857ed693d6e9657f0d9abbc548a1c096671",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/2c/f8/2cf8684176609512e249a10367f42a23.jpg",
+        "src": "games/3281883942/shot-3.jpg",
+        "r2Key": "ranking/hot/3281883942/shots/3.jpg",
+        "bytes": 73674,
+        "sha256": "d3307b4dd4db648b3ab8dfedbfa387a3c174d1f37742cc4d297818b1dc5da097",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/d9/ba/d9ba5d4fab0e6e64a4c611d1f23449e6.jpg",
+        "src": "games/3281883942/shot-4.jpg",
+        "r2Key": "ranking/hot/3281883942/shots/4.jpg",
+        "bytes": 67942,
+        "sha256": "c203fc27d6575ab2438eb845a4498d45851053cf485df20aff82230f7a0b4b56",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 5,
+        "source": "https://ctimg2018.myyx618.com/upload/images/62/e4/62e4491b6101d2dc1368d5d5dce57d32.jpg",
+        "src": "games/3281883942/shot-5.jpg",
+        "r2Key": "ranking/hot/3281883942/shots/5.jpg",
+        "bytes": 82631,
+        "sha256": "7ec697a1ad9ecd10d8f0faa013bace28bd1321aa0aac4078aff0d34c650a0a1b",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "3342769352": {
+    "upstreamGameId": "3342769352",
+    "sourceUpstreamId": "3342769352",
+    "pickedBy": "detail",
+    "r2Id": "3342769352",
+    "name": "三国战纪2 明月彩华集气快",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/b4/c9/b4c9a90749ff2ff6344f13c0a30ae2ce.jpg",
+        "src": "games/3342769352/shot-1.jpg",
+        "r2Key": "ranking/hot/3342769352/shots/1.jpg",
+        "bytes": 67950,
+        "sha256": "263fc368cb35d8a48f279a760c6a493bd8b28a01c939235b899c37f38a183fde",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/9d/0c/9d0cd2bf43ca2811160037c8c847bb77.jpg",
+        "src": "games/3342769352/shot-2.jpg",
+        "r2Key": "ranking/hot/3342769352/shots/2.jpg",
+        "bytes": 67062,
+        "sha256": "6c54ca36ddc73bda55a302900883842da405e831df0d2394ea6b9d2c43ad26c4",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/56/03/56034cd7b12d7835616da34576940bfa.jpg",
+        "src": "games/3342769352/shot-3.jpg",
+        "r2Key": "ranking/hot/3342769352/shots/3.jpg",
+        "bytes": 61714,
+        "sha256": "521a31f695ea9a2f9818ddbec40699a4c86eeb6363361dd2ab66a5b5553606f8",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "3371337950": {
+    "upstreamGameId": "3371337950",
+    "sourceUpstreamId": "3371337950",
+    "pickedBy": "ranking",
+    "r2Id": "3371337950",
+    "name": "热血格斗传说",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/5a/69/5a698deee1eea5f4ea5454afa45cd634.jpg",
+        "src": "games/3371337950/shot-1.jpg",
+        "r2Key": "ranking/hot/3371337950/shots/1.jpg",
+        "bytes": 51573,
+        "sha256": "8043b778c9e77a0890be1f0f1a532c9d709bc9a25e7ce1bad7aa7ea9c12a863c",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/37/56/37561d3ddf9dbf7bfc7904520e849a91.jpg",
+        "src": "games/3371337950/shot-2.jpg",
+        "r2Key": "ranking/hot/3371337950/shots/2.jpg",
+        "bytes": 42183,
+        "sha256": "82e327dfaa9e0c4ab1a2754513a3f416f3301ef0f48254c9ce3209a8cca4cf95",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/3b/74/3b740ffb5bf18254225f60980963ceb0.jpg",
+        "src": "games/3371337950/shot-3.jpg",
+        "r2Key": "ranking/hot/3371337950/shots/3.jpg",
+        "bytes": 50638,
+        "sha256": "343abf03fb2ac1335ddc6217f33d1fb36c9ae141a25c26274184d4baf0faca19",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/5c/69/5c69dc2f5c2254ea868aafd8e24d6044.jpg",
+        "src": "games/3371337950/shot-4.jpg",
+        "r2Key": "ranking/hot/3371337950/shots/4.jpg",
+        "bytes": 50580,
+        "sha256": "21e38879af794ac8c1c389a36512f358322c8d200cd0673814c70a94821670d3",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "3404217044": {
+    "upstreamGameId": "3404217044",
+    "sourceUpstreamId": "3404217044",
+    "pickedBy": "ranking",
+    "r2Id": "3404217044",
+    "name": "忍者棒球",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/bc/a1/bca17da0a9998be9fbae624e00be80a5.jpg",
+        "src": "games/3404217044/shot-1.jpg",
+        "r2Key": "ranking/hot/3404217044/shots/1.jpg",
+        "bytes": 43551,
+        "sha256": "0951299a3684310e1ef35f0d67cb5bd8edddd082185d1a2b0c00b607118cdc0e",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/eb/1f/eb1f5f0acc8b645db7e7790f6d58ef00.jpg",
+        "src": "games/3404217044/shot-2.jpg",
+        "r2Key": "ranking/hot/3404217044/shots/2.jpg",
+        "bytes": 47231,
+        "sha256": "6889caa698af6f19c06d453972e6f1eab6e669dea9484eb9a6a342f7df7d3e9c",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/64/83/6483ceb3cc1a82fa3b3f72a68b082475.jpg",
+        "src": "games/3404217044/shot-3.jpg",
+        "r2Key": "ranking/hot/3404217044/shots/3.jpg",
+        "bytes": 42161,
+        "sha256": "04ce342c201ac408a6ba6c1c5663415c8418109610fc4a96d2712536dc0a83cd",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/84/27/84276e73c72059dfccff1a73cb6e7b02.jpg",
+        "src": "games/3404217044/shot-4.jpg",
+        "r2Key": "ranking/hot/3404217044/shots/4.jpg",
+        "bytes": 52444,
+        "sha256": "9af0bff140f53e9a6fe9302f7f061157deecf721f0462785c817ad24435c219f",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 5,
+        "source": "https://ctimg2018.myyx618.com/upload/images/58/05/5805613c179ed800b265704cc880e472.jpg",
+        "src": "games/3404217044/shot-5.jpg",
+        "r2Key": "ranking/hot/3404217044/shots/5.jpg",
+        "bytes": 50063,
+        "sha256": "a0c1e3e99ef7310d062edf6af1b96f267367142e600010b8f5ac425af4e97391",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "3483323591": {
+    "upstreamGameId": "3483323591",
+    "sourceUpstreamId": "3483323591",
+    "pickedBy": "detail",
+    "r2Id": "3483323591",
+    "name": "魂斗罗 力量",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/a5/51/a551646d6c2a524804c0851fa9da9dbd.jpg",
+        "src": "games/3483323591/shot-1.jpg",
+        "r2Key": "ranking/hot/3483323591/shots/1.jpg",
+        "bytes": 50229,
+        "sha256": "838f32bba03843267f943989e5e8e88b460cd294a6ddf22e85e86bf5913bf2e6",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/78/1a/781ac23b4c385598e7e5cc47133e7716.jpg",
+        "src": "games/3483323591/shot-2.jpg",
+        "r2Key": "ranking/hot/3483323591/shots/2.jpg",
+        "bytes": 31224,
+        "sha256": "5e8c760479702130cb56f671748c2c34ac0b8db537509b9469e05b807540ac77",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/97/f3/97f39ece8ba4f17fb755807f0000c587.jpg",
+        "src": "games/3483323591/shot-3.jpg",
+        "r2Key": "ranking/hot/3483323591/shots/3.jpg",
+        "bytes": 47606,
+        "sha256": "443772bf1f93b1e9f7a0796883739e97ebc49eff26518118be6c62ad192a29f3",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/f9/80/f9807e97c77c24661f130295cd7516e3.jpg",
+        "src": "games/3483323591/shot-4.jpg",
+        "r2Key": "ranking/hot/3483323591/shots/4.jpg",
+        "bytes": 48736,
+        "sha256": "6a1317a3e793043583ca32af09f5e1fd90ed661c4e473d807923e6f91417400c",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "3521755551": {
+    "upstreamGameId": "3521755551",
+    "sourceUpstreamId": "3521755551",
+    "pickedBy": "ranking",
+    "r2Id": "3521755551",
+    "name": "雪人兄弟",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/27/62/276247968b0092cd5c117529502cea2c.jpg",
+        "src": "games/3521755551/shot-1.jpg",
+        "r2Key": "ranking/hot/3521755551/shots/1.jpg",
+        "bytes": 47069,
+        "sha256": "d239054431d57badcd3ddf9283150582117a9e4ba3595e7cc1cfcbd61db776f6",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/6c/99/6c992a7340e224787babd03f1901b880.jpg",
+        "src": "games/3521755551/shot-2.jpg",
+        "r2Key": "ranking/hot/3521755551/shots/2.jpg",
+        "bytes": 50406,
+        "sha256": "4abb945d79b73b426690e27c54e087bb130c3a39c020dbfb32dcc33173aa1abf",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/0c/54/0c54149f79931b3d0b6a56107d67f12b.jpg",
+        "src": "games/3521755551/shot-3.jpg",
+        "r2Key": "ranking/hot/3521755551/shots/3.jpg",
+        "bytes": 46336,
+        "sha256": "a780f946f5c7939698bd7418617607090f11d99f08101c6471e175fda5f44e2d",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/c1/88/c188b4f170888e6c40f605d7d4353727.jpg",
+        "src": "games/3521755551/shot-4.jpg",
+        "r2Key": "ranking/hot/3521755551/shots/4.jpg",
+        "bytes": 46924,
+        "sha256": "0b7fd78be7b70151a107db95efa801ab0441f41f24c0b40e64cbaa6f0119362c",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "3529667603": {
+    "upstreamGameId": "3529667603",
+    "sourceUpstreamId": "3529667603",
+    "pickedBy": "detail",
+    "r2Id": "3529667603",
+    "name": "三国战纪 战神传说",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/7d/80/7d80d8c74cccfad69aedfdf6956408d6.jpg",
+        "src": "games/3529667603/shot-1.jpg",
+        "r2Key": "ranking/hot/3529667603/shots/1.jpg",
+        "bytes": 49954,
+        "sha256": "54321711bbe5dea2312ba74091774583225f25c9b5ee650b1682a3823b67690e",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/6a/da/6adafdabf55b48478a9b4d1374ed6078.jpg",
+        "src": "games/3529667603/shot-2.jpg",
+        "r2Key": "ranking/hot/3529667603/shots/2.jpg",
+        "bytes": 42527,
+        "sha256": "27fd9f22c0aa164977a690d4766d1b01bc720258f8f67363e3872c13fa846cbe",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/89/a8/89a8419c57a131f6229702c2f9313bb4.jpg",
+        "src": "games/3529667603/shot-3.jpg",
+        "r2Key": "ranking/hot/3529667603/shots/3.jpg",
+        "bytes": 46304,
+        "sha256": "b74916a05c01cfa3a323e1fd7b62b5fc7e927e02ce2950531ac3f9385601d0da",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/42/84/42840921c602b5258f4a0b45f3cea1b8.jpg",
+        "src": "games/3529667603/shot-4.jpg",
+        "r2Key": "ranking/hot/3529667603/shots/4.jpg",
+        "bytes": 54763,
+        "sha256": "1c6c729aaee3a5cd5a509e45ec149c99d5d18dbacc3885c4c9e99a792a349906",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "3562875477": {
+    "upstreamGameId": "3562875477",
+    "sourceUpstreamId": "3562875477",
+    "pickedBy": "ranking",
+    "r2Id": "3562875477",
+    "name": "三国志2 无双加强版",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/90/66/9066c2caa03c62d473b21d7b5124a23e.jpg",
+        "src": "games/3562875477/shot-1.jpg",
+        "r2Key": "ranking/hot/3562875477/shots/1.jpg",
+        "bytes": 66768,
+        "sha256": "c885f21cc3e1db5af232beee0451cc1bf8b6af8f72a60592ff5356f9e8002788",
+        "width": 793,
+        "height": 466
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/ab/42/ab42a8027bd62a0a6437826208b29a44.jpg",
+        "src": "games/3562875477/shot-2.jpg",
+        "r2Key": "ranking/hot/3562875477/shots/2.jpg",
+        "bytes": 75838,
+        "sha256": "8660b94ae13139983e283fec1f639ae337cf55e7854785692baafb2066b4149a",
+        "width": 794,
+        "height": 465
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/e1/29/e129dfe5e0ec2290d9ba0fa5b1be8d31.jpg",
+        "src": "games/3562875477/shot-3.jpg",
+        "r2Key": "ranking/hot/3562875477/shots/3.jpg",
+        "bytes": 65867,
+        "sha256": "59f5d2d8be2d2b73f3d7addfaf6a01df242456752bf4283ab4b89f751f5a9cd5",
+        "width": 789,
+        "height": 460
+      }
+    ]
+  },
+  "3592176172": {
+    "upstreamGameId": "3592176172",
+    "sourceUpstreamId": "3592176172",
+    "pickedBy": "detail",
+    "r2Id": "3592176172",
+    "name": "恐龙快打 勇士版",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/34/9a/349a4a830382a84d76ce32629f0b8aab.jpg",
+        "src": "games/3592176172/shot-1.jpg",
+        "r2Key": "ranking/hot/3592176172/shots/1.jpg",
+        "bytes": 55873,
+        "sha256": "705a8390deed7ccfba25c423e8198a7b4c433887fcf1bfe9392af0a38bcc7f4a",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/1d/7d/1d7d5cc3b4411179453705c477dab0a2.jpg",
+        "src": "games/3592176172/shot-2.jpg",
+        "r2Key": "ranking/hot/3592176172/shots/2.jpg",
+        "bytes": 49512,
+        "sha256": "8b9e83be01b78c0494cfd0b7a2f868628e597970ec754ece65a1b937a655d3a3",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/17/4d/174d48ade7147df4f5b26fed26a4a146.jpg",
+        "src": "games/3592176172/shot-3.jpg",
+        "r2Key": "ranking/hot/3592176172/shots/3.jpg",
+        "bytes": 48532,
+        "sha256": "7f61d53fd6b26cd7c8c59e6ecc280181572f8d1e167fca0661713af8730a8f61",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/4a/b7/4ab73eb6668b33ad5985dd372ccf4982.jpg",
+        "src": "games/3592176172/shot-4.jpg",
+        "r2Key": "ranking/hot/3592176172/shots/4.jpg",
+        "bytes": 46036,
+        "sha256": "c894a4e465d9ccc57d43020030edb8247189ea57172d4719b5cd9ae1526ad491",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "3599007110": {
+    "upstreamGameId": "3599007110",
+    "sourceUpstreamId": "3599007110",
+    "pickedBy": "ranking",
+    "r2Id": "3599007110",
+    "name": "双截龙2",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/0e/d6/0ed667a730cb7881603c01601b3673af.jpg",
+        "src": "games/3599007110/shot-1.jpg",
+        "r2Key": "ranking/hot/3599007110/shots/1.jpg",
+        "bytes": 51845,
+        "sha256": "0fa298ceb04bc5406d3c5608b877bfe48dcd0db3c3dc007da518a5abdf691679",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/54/f6/54f6b8e536b95a192e72cedf5d52d5ce.jpg",
+        "src": "games/3599007110/shot-2.jpg",
+        "r2Key": "ranking/hot/3599007110/shots/2.jpg",
+        "bytes": 30023,
+        "sha256": "ace37fe87324d0bfdd804f71020728db0853a3185b2f5fa5feca52d2b887194e",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/08/56/08562a8bd3b10210c774c69fb398fe86.jpg",
+        "src": "games/3599007110/shot-3.jpg",
+        "r2Key": "ranking/hot/3599007110/shots/3.jpg",
+        "bytes": 45896,
+        "sha256": "91972bd48351a5d8c0dc1630a363be1e5b80ea7a77b0977b15e62c0d180da993",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/51/93/5193926aa01dbeab739dd79b8da909b9.jpg",
+        "src": "games/3599007110/shot-4.jpg",
+        "r2Key": "ranking/hot/3599007110/shots/4.jpg",
+        "bytes": 44886,
+        "sha256": "c7e832efa90d9f370bd76547b0aafafcaed0e2da4b8264c9dee5a060254c1ce0",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "3611889235": {
+    "upstreamGameId": "3611889235",
+    "sourceUpstreamId": "3611889235",
+    "pickedBy": "detail",
+    "r2Id": "3611889235",
+    "name": "摔角霸王",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/64/4e/644e95bc0e405edb34e361d7c68048c6.jpg",
+        "src": "games/3611889235/shot-1.jpg",
+        "r2Key": "ranking/hot/3611889235/shots/1.jpg",
+        "bytes": 19832,
+        "sha256": "8ba524f11c0d51a9f94c62b0aa94d110d9b22db77e97d3d61bc8506268f247ac",
+        "width": 312,
+        "height": 214
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/cb/57/cb5727029079d9163ba1f45c88d5efe6.png",
+        "src": "games/3611889235/shot-2.png",
+        "r2Key": "ranking/hot/3611889235/shots/2.png",
+        "bytes": 32331,
+        "sha256": "8d1522444c373e5c3ea0a6e1e6f3ce97b9f953d9085616eff1cf5a39c4297e5a",
+        "width": 384,
+        "height": 224
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/91/b3/91b37ab194720b4f5d7e7b36c05366ef.jpg",
+        "src": "games/3611889235/shot-3.jpg",
+        "r2Key": "ranking/hot/3611889235/shots/3.jpg",
+        "bytes": 76721,
+        "sha256": "a474e16a02ef5c5e21cc6f9e63a0e7ea47623aa549b3752a8052da7c09ff86cd",
+        "width": 520,
+        "height": 302
+      }
+    ]
+  },
+  "3695813938": {
+    "upstreamGameId": "3695813938",
+    "sourceUpstreamId": "3695813938",
+    "pickedBy": "ranking",
+    "r2Id": "3695813938",
+    "name": "口袋妖怪 西班牙火箭队3.05",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/56/6d/566daeee6d184b4a4d6e5fbf76fbcc3e.jpg",
+        "src": "games/3695813938/shot-1.jpg",
+        "r2Key": "ranking/hot/3695813938/shots/1.jpg",
+        "bytes": 120929,
+        "sha256": "36e46376209ab0e0a09c85208b3d60fed8b9510f17644f7c69dc3bd7fc7dbc35",
+        "width": 920,
+        "height": 550
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/63/2c/632cd49e07d75b2224b53bd01caeb1d6.jpg",
+        "src": "games/3695813938/shot-2.jpg",
+        "r2Key": "ranking/hot/3695813938/shots/2.jpg",
+        "bytes": 120491,
+        "sha256": "1c6d295b6b404e98e04e13ddb65b8a6fefcc44d27605e25ba06b3b1b3fe95008",
+        "width": 920,
+        "height": 550
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/a1/90/a190142456ac96f54233348292ea651a.jpg",
+        "src": "games/3695813938/shot-3.jpg",
+        "r2Key": "ranking/hot/3695813938/shots/3.jpg",
+        "bytes": 97191,
+        "sha256": "e736fcfb3fc272a7326674612b648a23370cb51763b80bc95b8272c4b0e0843b",
+        "width": 920,
+        "height": 550
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/6f/f6/6ff67ef42d8fb1036c22bcdebbf23185.jpg",
+        "src": "games/3695813938/shot-4.jpg",
+        "r2Key": "ranking/hot/3695813938/shots/4.jpg",
+        "bytes": 166078,
+        "sha256": "6c87f6a81db13ade9f64f433e108369083196906061aaf8c80c09842bdcd913e",
+        "width": 920,
+        "height": 550
+      },
+      {
+        "order": 5,
+        "source": "https://ctimg2018.myyx618.com/upload/images/a5/1a/a51a2a38fc52cd745434e2c8dfd04666.jpg",
+        "src": "games/3695813938/shot-5.jpg",
+        "r2Key": "ranking/hot/3695813938/shots/5.jpg",
+        "bytes": 80452,
+        "sha256": "599ea1fe4fe7e163d4487d7646ec5edd1698d79d482d0290ac61e7843605759f",
+        "width": 920,
+        "height": 550
+      }
+    ]
+  },
+  "3770464094": {
+    "upstreamGameId": "3770464094",
+    "sourceUpstreamId": "3770464094",
+    "pickedBy": "ranking",
+    "r2Id": "3770464094",
+    "name": "越野摩托车",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/f0/c9/f0c9519544fd8b27828bff96838ae306.png",
+        "src": "games/3770464094/shot-1.png",
+        "r2Key": "ranking/hot/3770464094/shots/1.png",
+        "bytes": 9379,
+        "sha256": "739237826857745387b93188ffc819099d1b7b60dde3f82ae66a1e3b006bcddf",
+        "width": 240,
+        "height": 225
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/61/fe/61fe4f06934945bb4ae0363f6e1de0cf.png",
+        "src": "games/3770464094/shot-2.png",
+        "r2Key": "ranking/hot/3770464094/shots/2.png",
+        "bytes": 8973,
+        "sha256": "3d6b6b00d3d7c2e0e5ec23808379da56475ef036f07762e813574d86e43e2e4b",
+        "width": 240,
+        "height": 225
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/e4/7f/e47f5cec42ed522a5fdbb1d4191040a0.png",
+        "src": "games/3770464094/shot-3.png",
+        "r2Key": "ranking/hot/3770464094/shots/3.png",
+        "bytes": 10240,
+        "sha256": "a97e6ecf509fcd93bd165eff8a3ada434c2b9c7d8e5508e5a234fb8cc9dcd9f7",
+        "width": 240,
+        "height": 225
+      }
+    ]
+  },
+  "3868826732": {
+    "upstreamGameId": "3868826732",
+    "sourceUpstreamId": "3868826732",
+    "pickedBy": "ranking",
+    "r2Id": "3868826732",
+    "name": "三国战纪2007",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/2c/db/2cdb2cf9063765847227f79c92f7e9dd.jpg",
+        "src": "games/3868826732/shot-1.jpg",
+        "r2Key": "ranking/hot/3868826732/shots/1.jpg",
+        "bytes": 80140,
+        "sha256": "c0233080ad035139e66227aa273dd27f6aa5e944b68b67110fe5bbf0b6d17529",
+        "width": 609,
+        "height": 435
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/6e/a0/6ea0eab2713fc260ddb16207515cbe0e.jpg",
+        "src": "games/3868826732/shot-2.jpg",
+        "r2Key": "ranking/hot/3868826732/shots/2.jpg",
+        "bytes": 38377,
+        "sha256": "f1b3985ee3389a60f90f41feca2609341f6a87ffbf6cff4080481f3621e0fc58",
+        "width": 448,
+        "height": 224
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/1f/d0/1fd0d92542476b7e3434f43b6b097bd0.jpg",
+        "src": "games/3868826732/shot-3.jpg",
+        "r2Key": "ranking/hot/3868826732/shots/3.jpg",
+        "bytes": 19460,
+        "sha256": "aa14978ce9053cdb8b800383e45366aab0ca32bc178cb0996dbda989652ddea5",
+        "width": 308,
+        "height": 220
+      }
+    ]
+  },
+  "3901410772": {
+    "upstreamGameId": "3901410772",
+    "sourceUpstreamId": "3901410772",
+    "pickedBy": "detail",
+    "r2Id": "3901410772",
+    "name": "雪人兄弟2",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/87/10/87109c79bacdb21ce03d6f0a653f4456.jpg",
+        "src": "games/3901410772/shot-1.jpg",
+        "r2Key": "ranking/hot/3901410772/shots/1.jpg",
+        "bytes": 83137,
+        "sha256": "61e5eed37e42fd3ec7878606aa0cea53ef1d20e0565f298a5c8a58a7e2e35f5e",
+        "width": 640,
+        "height": 360
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/91/46/9146dcc780ae5f9b63d4bc625b2e232d.jpg",
+        "src": "games/3901410772/shot-2.jpg",
+        "r2Key": "ranking/hot/3901410772/shots/2.jpg",
+        "bytes": 77795,
+        "sha256": "c8a102c45517adc3c20c21cc3b7d758d6b82d91d35d60a8221c89dff8b28e50b",
+        "width": 640,
+        "height": 360
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/cb/27/cb27213a904a2e6de8ccd035215ee55c.jpg",
+        "src": "games/3901410772/shot-3.jpg",
+        "r2Key": "ranking/hot/3901410772/shots/3.jpg",
+        "bytes": 80314,
+        "sha256": "5f7c2a1a11656cc8942c84cb3254e4f8f1d2029aaef54830da17839d155c9ccc",
+        "width": 640,
+        "height": 360
+      }
+    ]
+  },
+  "3913852899": {
+    "upstreamGameId": "3913852899",
+    "sourceUpstreamId": "3913852899",
+    "pickedBy": "detail",
+    "r2Id": "3913852899",
+    "name": "恐龙快打",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/1d/7d/1d7d5cc3b4411179453705c477dab0a2.jpg",
+        "src": "games/3913852899/shot-1.jpg",
+        "r2Key": "ranking/hot/3913852899/shots/1.jpg",
+        "bytes": 49512,
+        "sha256": "8b9e83be01b78c0494cfd0b7a2f868628e597970ec754ece65a1b937a655d3a3",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/34/9a/349a4a830382a84d76ce32629f0b8aab.jpg",
+        "src": "games/3913852899/shot-2.jpg",
+        "r2Key": "ranking/hot/3913852899/shots/2.jpg",
+        "bytes": 55873,
+        "sha256": "705a8390deed7ccfba25c423e8198a7b4c433887fcf1bfe9392af0a38bcc7f4a",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/17/4d/174d48ade7147df4f5b26fed26a4a146.jpg",
+        "src": "games/3913852899/shot-3.jpg",
+        "r2Key": "ranking/hot/3913852899/shots/3.jpg",
+        "bytes": 48532,
+        "sha256": "7f61d53fd6b26cd7c8c59e6ecc280181572f8d1e167fca0661713af8730a8f61",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/4a/b7/4ab73eb6668b33ad5985dd372ccf4982.jpg",
+        "src": "games/3913852899/shot-4.jpg",
+        "r2Key": "ranking/hot/3913852899/shots/4.jpg",
+        "bytes": 46036,
+        "sha256": "c894a4e465d9ccc57d43020030edb8247189ea57172d4719b5cd9ae1526ad491",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "4031903276": {
+    "upstreamGameId": "4031903276",
+    "sourceUpstreamId": "4031903276",
+    "pickedBy": "detail",
+    "r2Id": "4031903276",
+    "name": "假面骑士Black",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/63/ad/63adb1469b91db3c1076c77ad0cf64b8.jpg",
+        "src": "games/4031903276/shot-1.jpg",
+        "r2Key": "ranking/hot/4031903276/shots/1.jpg",
+        "bytes": 44369,
+        "sha256": "bab1251922a1378eb78c3bd80be2d0d4ed520e7b8b0b0bccfd8b8931ffa9d1e3",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/f0/a9/f0a928f47207d042ecfb6bb90176a427.jpg",
+        "src": "games/4031903276/shot-2.jpg",
+        "r2Key": "ranking/hot/4031903276/shots/2.jpg",
+        "bytes": 39926,
+        "sha256": "f0760feae2ed7094422b83da5de6a5a6451999c3c74f965ba3e0d5586202cf6c",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/94/f9/94f940c9aa6575fb085c6a2eb55f077b.jpg",
+        "src": "games/4031903276/shot-3.jpg",
+        "r2Key": "ranking/hot/4031903276/shots/3.jpg",
+        "bytes": 56804,
+        "sha256": "ad07453dcd346abf1664663cd82037b1915547fb6152020988b7f05d81a555b1",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "4032481919": {
+    "upstreamGameId": "4032481919",
+    "sourceUpstreamId": "4032481919",
+    "pickedBy": "ranking",
+    "r2Id": "4032481919",
+    "name": "口袋妖怪 特别篇赤15.4 最终汉化版",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/c9/ed/c9ed4e5b1c1385daa4b1aa1438189438.jpg",
+        "src": "games/4032481919/shot-1.jpg",
+        "r2Key": "ranking/hot/4032481919/shots/1.jpg",
+        "bytes": 47355,
+        "sha256": "a6c43b43debdca56b9349a27ef1bd91c5a1cb36cbb0940b74e28cea38d3ddd1d",
+        "width": 715,
+        "height": 475
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/51/cf/51cfd0752e7826733eb1b5ace421b878.jpg",
+        "src": "games/4032481919/shot-2.jpg",
+        "r2Key": "ranking/hot/4032481919/shots/2.jpg",
+        "bytes": 58693,
+        "sha256": "3a8d3c61ecd58fb89e9900d973f1afab35eb02971201e3c58b92d9beb2ee2f68",
+        "width": 716,
+        "height": 478
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/23/aa/23aabbced4b11764e4d7337c63b85818.jpg",
+        "src": "games/4032481919/shot-3.jpg",
+        "r2Key": "ranking/hot/4032481919/shots/3.jpg",
+        "bytes": 111935,
+        "sha256": "3d5b4922986db37f31c8c0a724a988f78d4d5c674e845f0ff3f750683a00787e",
+        "width": 580,
+        "height": 394
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/d4/e5/d4e529b1c4b77d30b87fe7dc653f5604.jpg",
+        "src": "games/4032481919/shot-4.jpg",
+        "r2Key": "ranking/hot/4032481919/shots/4.jpg",
+        "bytes": 34982,
+        "sha256": "00e63ac8d2c6cb53b88785870730625227956159486275b6eeff81be1581922a",
+        "width": 718,
+        "height": 479
+      },
+      {
+        "order": 5,
+        "source": "https://ctimg2018.myyx618.com/upload/images/50/34/50340aa16c46db6dd57c831183b005eb.jpg",
+        "src": "games/4032481919/shot-5.jpg",
+        "r2Key": "ranking/hot/4032481919/shots/5.jpg",
+        "bytes": 49582,
+        "sha256": "e804dc35cc238aba89013d52f6a88d05140fdf34fc6a4b333f3eaf12c423842d",
+        "width": 713,
+        "height": 469
+      },
+      {
+        "order": 6,
+        "source": "https://ctimg2018.myyx618.com/upload/images/37/9b/379b655a5e8ca62741a6c237cb635092.jpg",
+        "src": "games/4032481919/shot-6.jpg",
+        "r2Key": "ranking/hot/4032481919/shots/6.jpg",
+        "bytes": 41554,
+        "sha256": "2f225f4e5d75d59ff8048dc207fbc1424dce7fc669c5579942f40193483d64bb",
+        "width": 715,
+        "height": 476
+      }
+    ]
+  },
+  "4068708485": {
+    "upstreamGameId": "4068708485",
+    "sourceUpstreamId": "4068708485",
+    "pickedBy": "ranking",
+    "r2Id": "4068708485",
+    "name": "口袋妖怪 剑盾10.2",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/2c/71/2c7173ed258469ecc4fdc8af909d1a0c.jpg",
+        "src": "games/4068708485/shot-1.jpg",
+        "r2Key": "ranking/hot/4068708485/shots/1.jpg",
+        "bytes": 61093,
+        "sha256": "766f17cb6c7832630e5e3857f98cdbd02bda7e39d8ff88878773df5249eeb3cc",
+        "width": 718,
+        "height": 476
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/89/62/896268947f228711650df3b786e21f65.jpg",
+        "src": "games/4068708485/shot-2.jpg",
+        "r2Key": "ranking/hot/4068708485/shots/2.jpg",
+        "bytes": 64070,
+        "sha256": "3e5d071fcf0d73a158333dd27b9fa0c8700035777ad9a61f48e3f7eb9d33dd2f",
+        "width": 719,
+        "height": 477
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/a2/85/a2852d0bde0ab58b1d1cf2442bdad4d8.jpg",
+        "src": "games/4068708485/shot-3.jpg",
+        "r2Key": "ranking/hot/4068708485/shots/3.jpg",
+        "bytes": 59626,
+        "sha256": "1fdc9ef63d5a5e322bd67f25bbac0994b3a9b78d7390054f4c033a6d918036e4",
+        "width": 717,
+        "height": 477
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/ed/05/ed053db2eeacd655f9d5d41e977c9d6c.jpg",
+        "src": "games/4068708485/shot-4.jpg",
+        "r2Key": "ranking/hot/4068708485/shots/4.jpg",
+        "bytes": 69760,
+        "sha256": "13324e4c8d7cb5c5ac12c401c4cb1e1c120d21c5a36be71e84cf2cd874acf1cd",
+        "width": 718,
+        "height": 476
+      },
+      {
+        "order": 5,
+        "source": "https://ctimg2018.myyx618.com/upload/images/b7/e5/b7e5d8666f3355b9c261152d84ba9ec3.jpg",
+        "src": "games/4068708485/shot-5.jpg",
+        "r2Key": "ranking/hot/4068708485/shots/5.jpg",
+        "bytes": 67931,
+        "sha256": "374bc3c78f99fbbcf19d2908470e32e7939b66c20dede44026ab3f0a1581e109",
+        "width": 718,
+        "height": 476
+      },
+      {
+        "order": 6,
+        "source": "https://wftouxiang.wufan88.com/h5_cover/5EA7A8A3DD7B28AB8AFA947FB97F30F4.jpg",
+        "src": "games/4068708485/shot-6.jpg",
+        "r2Key": "ranking/hot/4068708485/shots/6.jpg",
+        "bytes": 263580,
+        "sha256": "c3303486094eb85cdb7a428994a0da764c1eb4e2a6063abb88246a5d397d1d2a",
+        "width": 960,
+        "height": 641
+      }
+    ]
+  },
+  "4137509635": {
+    "upstreamGameId": "4137509635",
+    "sourceUpstreamId": "4137509635",
+    "pickedBy": "ranking",
+    "r2Id": "4137509635",
+    "name": "口袋妖怪 漆黑的魅影5.0EX＋DP",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/4f/d8/4fd81ae66d00cec968b4eca275957fa2.jpg",
+        "src": "games/4137509635/shot-1.jpg",
+        "r2Key": "ranking/hot/4137509635/shots/1.jpg",
+        "bytes": 37440,
+        "sha256": "cbd94599c0bc215f73ea9de23ea43e46c722d40af3a90a931b1a02e3b68e49c8",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/98/a4/98a490a7ab15230c3361e02f42fc58f2.jpg",
+        "src": "games/4137509635/shot-2.jpg",
+        "r2Key": "ranking/hot/4137509635/shots/2.jpg",
+        "bytes": 38367,
+        "sha256": "9d39d2ea3493af4328413a5f24acd55d7716b2c0cd4fc255c7992086d3f009bb",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/d9/1a/d91a057566ec417a8595805afe58877a.jpg",
+        "src": "games/4137509635/shot-3.jpg",
+        "r2Key": "ranking/hot/4137509635/shots/3.jpg",
+        "bytes": 47709,
+        "sha256": "46683633d0be8b7648715b1f68d87f11f0dc8ec8a06ec66bff52b863345bd799",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/0c/a8/0ca800f01b7ced3cbf3d785555df7c47.jpg",
+        "src": "games/4137509635/shot-4.jpg",
+        "r2Key": "ranking/hot/4137509635/shots/4.jpg",
+        "bytes": 37581,
+        "sha256": "0e77875fda2617bf9bf480085cf79c504b5db10919d2cc33067cdedd06b0ce90",
+        "width": 720,
+        "height": 490
+      }
+    ]
+  },
+  "4148056763": {
+    "upstreamGameId": "4148056763",
+    "sourceUpstreamId": "4148056763",
+    "pickedBy": "ranking",
+    "r2Id": "4148056763",
+    "name": "打击者1945 加强版",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/93/29/9329634f1773b045ed0a368a4279e950.jpg",
+        "src": "games/4148056763/shot-1.jpg",
+        "r2Key": "ranking/hot/4148056763/shots/1.jpg",
+        "bytes": 54415,
+        "sha256": "229272012ffa5627f91f72ce9c04fee1d01ddfff7fcccc0547ee2b58d1eb9dc9",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/1d/df/1ddfd5b1c4340acf700a3c25f7856828.jpg",
+        "src": "games/4148056763/shot-2.jpg",
+        "r2Key": "ranking/hot/4148056763/shots/2.jpg",
+        "bytes": 64725,
+        "sha256": "961944e94885b0eb84f6eb0d96925ad88da0972d4f6bff1c7d2e7745d5e65ac4",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/66/bd/66bd6bc9e57fe4f4130647869411a447.jpg",
+        "src": "games/4148056763/shot-3.jpg",
+        "r2Key": "ranking/hot/4148056763/shots/3.jpg",
+        "bytes": 56161,
+        "sha256": "d6e51ba941c05c5872d048b912fb9126792b095f96505ff15ba55394ba6e36e8",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/fc/ec/fcec8fd702415d56ff0323ea2f039770.jpg",
+        "src": "games/4148056763/shot-4.jpg",
+        "r2Key": "ranking/hot/4148056763/shots/4.jpg",
+        "bytes": 45505,
+        "sha256": "8548a9efdaebc8ecee0f96f524e33be34397a3ef7fb61484fbd4a24222250bd3",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "4153024296": {
+    "upstreamGameId": "4153024296",
+    "sourceUpstreamId": "4153024296",
+    "pickedBy": "detail",
+    "r2Id": "4153024296",
+    "name": "古巴战士 人物无敌版",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/27/0b/270b9e59bff6e03aaeff2e7e653bbb24.png",
+        "src": "games/4153024296/shot-1.png",
+        "r2Key": "ranking/hot/4153024296/shots/1.png",
+        "bytes": 603609,
+        "sha256": "c2080b6d333412cb969bdd3805dbb3803ac4c79d3d1deef6b83a8d73c7823d93",
+        "width": 920,
+        "height": 550
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/1b/70/1b70f6a26f1daea0e84279148f8f5d0c.png",
+        "src": "games/4153024296/shot-2.png",
+        "r2Key": "ranking/hot/4153024296/shots/2.png",
+        "bytes": 633058,
+        "sha256": "9ab0ff957e9de1a0035d774a92d34ccd93add0f3b2bc86c19d165f5eed74dad5",
+        "width": 920,
+        "height": 550
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/bd/b8/bdb8306632a4721ce34acae7e619c81e.png",
+        "src": "games/4153024296/shot-3.png",
+        "r2Key": "ranking/hot/4153024296/shots/3.png",
+        "bytes": 713001,
+        "sha256": "bc86f31e1b3a20d8d46b7d1b376fc757181f9db8e081a021981fc3cf192953b0",
+        "width": 920,
+        "height": 550
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/8a/6a/8a6abbe47dc46d85d3939770802a2e37.png",
+        "src": "games/4153024296/shot-4.png",
+        "r2Key": "ranking/hot/4153024296/shots/4.png",
+        "bytes": 601716,
+        "sha256": "93f54ab2ec3f9abe94d54705f50e11af510550d35173fb91bb59623d1455dc43",
+        "width": 920,
+        "height": 550
+      },
+      {
+        "order": 5,
+        "source": "https://ctimg2018.myyx618.com/upload/images/d8/10/d810465087cbb3b96327b49c0c8351f7.png",
+        "src": "games/4153024296/shot-5.png",
+        "r2Key": "ranking/hot/4153024296/shots/5.png",
+        "bytes": 228497,
+        "sha256": "611ced45e6671438607f7174fd0df1a834c04bd724ed5e1c994c6894218e3408",
+        "width": 920,
+        "height": 550
+      }
+    ]
+  },
+  "4168643380": {
+    "upstreamGameId": "4168643380",
+    "sourceUpstreamId": "4168643380",
+    "pickedBy": "ranking",
+    "r2Id": "4168643380",
+    "name": "雷电",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/51/0c/510c0178fba4136d755049f5ba8241bc.jpg",
+        "src": "games/4168643380/shot-1.jpg",
+        "r2Key": "ranking/hot/4168643380/shots/1.jpg",
+        "bytes": 50725,
+        "sha256": "5833d8b849067edad5294f5381360e72db561a39890a054ef071c1138ddeed07",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/fa/f3/faf359c39d0fc8bd112662d98bb44d3e.jpg",
+        "src": "games/4168643380/shot-2.jpg",
+        "r2Key": "ranking/hot/4168643380/shots/2.jpg",
+        "bytes": 42452,
+        "sha256": "1f7730b1d051fd51a673b33ae94cde0c0b1e3ba7b810b738dd438d2849b77eef",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/fd/c1/fdc1bc2b1bec4effa590d6eea1098a9b.jpg",
+        "src": "games/4168643380/shot-3.jpg",
+        "r2Key": "ranking/hot/4168643380/shots/3.jpg",
+        "bytes": 44193,
+        "sha256": "6a1f0f35771ef117e6c090cae0e4c152d4325e13484111f99fa0047e826f3e29",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/42/16/42166c8dd4029abd511f6eb6d2bf4f0d.jpg",
+        "src": "games/4168643380/shot-4.jpg",
+        "r2Key": "ranking/hot/4168643380/shots/4.jpg",
+        "bytes": 61674,
+        "sha256": "9c888ace1059cc2f83dce44b1700f919461eb5a0c36b94dd5352313220624ee7",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 5,
+        "source": "https://ctimg2018.myyx618.com/upload/images/56/2d/562dcbaeadcb4ce6052cb9f7c84dd92e.jpg",
+        "src": "games/4168643380/shot-5.jpg",
+        "r2Key": "ranking/hot/4168643380/shots/5.jpg",
+        "bytes": 48215,
+        "sha256": "2bd286d672a97f22fce183e35eb897386991c4e4dfe1f77722c9285d2d65f82a",
+        "width": 720,
+        "height": 407
+      }
+    ]
+  },
+  "4266647288": {
+    "upstreamGameId": "4266647288",
+    "sourceUpstreamId": "4266647288",
+    "pickedBy": "detail",
+    "r2Id": "4266647288",
+    "name": "忍者神龟",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/c3/57/c3579d81c71cedb9ae4aa927c6ef4328.png",
+        "src": "games/4266647288/shot-1.png",
+        "r2Key": "ranking/hot/4266647288/shots/1.png",
+        "bytes": 74382,
+        "sha256": "81378f44ea3fe2898cac5e62aca894583c8c0f3cd4215f6ccc560083a5e6683a",
+        "width": 300,
+        "height": 225
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/df/b1/dfb147e51f18cf51e1552c994aa105c2.png",
+        "src": "games/4266647288/shot-2.png",
+        "r2Key": "ranking/hot/4266647288/shots/2.png",
+        "bytes": 91941,
+        "sha256": "5cde50acf6f73a9f53fb082e5d2ef7452ef456a343c1654fe3595b79d0dbab17",
+        "width": 300,
+        "height": 225
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/8f/93/8f93e953282d71a510799b4ff4b749d3.png",
+        "src": "games/4266647288/shot-3.png",
+        "r2Key": "ranking/hot/4266647288/shots/3.png",
+        "bytes": 74064,
+        "sha256": "1edff2b18e140cde08aef0a3229dfbe24aea0d3343e19c2364bffb582a720f7c",
+        "width": 300,
+        "height": 225
+      }
+    ]
+  },
+  "pokemon-dark-phantom": {
+    "upstreamGameId": "1713536658",
+    "sourceUpstreamId": "1713536658",
+    "pickedBy": "detail",
+    "r2Id": "1713536658",
+    "name": "口袋妖怪 漆黑的魅影5.0EX＋BW",
+    "images": [
+      {
+        "order": 1,
+        "source": "https://ctimg2018.myyx618.com/upload/images/98/a4/98a490a7ab15230c3361e02f42fc58f2.jpg",
+        "src": "games/pokemon-dark-phantom/shot-1.jpg",
+        "r2Key": "ranking/hot/1713536658/shots/1.jpg",
+        "bytes": 38367,
+        "sha256": "9d39d2ea3493af4328413a5f24acd55d7716b2c0cd4fc255c7992086d3f009bb",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 2,
+        "source": "https://ctimg2018.myyx618.com/upload/images/d9/1a/d91a057566ec417a8595805afe58877a.jpg",
+        "src": "games/pokemon-dark-phantom/shot-2.jpg",
+        "r2Key": "ranking/hot/1713536658/shots/2.jpg",
+        "bytes": 47709,
+        "sha256": "46683633d0be8b7648715b1f68d87f11f0dc8ec8a06ec66bff52b863345bd799",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 3,
+        "source": "https://ctimg2018.myyx618.com/upload/images/4f/d8/4fd81ae66d00cec968b4eca275957fa2.jpg",
+        "src": "games/pokemon-dark-phantom/shot-3.jpg",
+        "r2Key": "ranking/hot/1713536658/shots/3.jpg",
+        "bytes": 37440,
+        "sha256": "cbd94599c0bc215f73ea9de23ea43e46c722d40af3a90a931b1a02e3b68e49c8",
+        "width": 720,
+        "height": 407
+      },
+      {
+        "order": 4,
+        "source": "https://ctimg2018.myyx618.com/upload/images/0c/a8/0ca800f01b7ced3cbf3d785555df7c47.jpg",
+        "src": "games/pokemon-dark-phantom/shot-4.jpg",
+        "r2Key": "ranking/hot/1713536658/shots/4.jpg",
+        "bytes": 37581,
+        "sha256": "0e77875fda2617bf9bf480085cf79c504b5db10919d2cc33067cdedd06b0ce90",
+        "width": 720,
+        "height": 490
+      }
+    ]
+  }
+}

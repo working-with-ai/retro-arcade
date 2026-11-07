@@ -2094,6 +2094,15 @@ svg {
   background: #000;
 }
 
+.shot-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+}
+
 .shot-video-play {
   position: absolute;
   inset: 0;
