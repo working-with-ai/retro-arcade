@@ -10,6 +10,8 @@
 
 其他构建开关也使用同一位置的GitHub仓库变量：`PLATFORM_AUTH_ENABLED`、`PLATFORM_PAYMENTS_ENABLED`、`PLATFORM_RELAYS_ENABLED`，默认全部为 `false`；管理员白名单变量为 `PLATFORM_ADMIN_USER_IDS`。构建将它们映射为Worker运行时的 `AUTH_ENABLED` 等值。关闭的功能不声明其供应商必填Secrets，避免未接入服务阻塞整个站点发布。开关改动后必须重新部署；不要只在Worker后台修改这些派生开关。
 
+手动运行部署工作流时，也可勾选 `database_enabled` 为本次发布启用数据库，无需修改仓库变量。持续启用仍需将仓库变量设为 `true`，否则下一次main自动部署默认关闭数据库绑定；数据不会因此删除。
+
 在 Cloudflare Worker 的 Settings / Variables and Secrets 中配置下列供应商密钥，敏感值用 Secrets。运行时开关和管理员ID由上述GitHub仓库变量生成。不要把配置值发到代码、日志、Issue 或聊天中。正式开关在联调验收后开启。
 
 | 配置 | 说明 |

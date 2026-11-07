@@ -10,6 +10,10 @@ on:
         type: choice
         default: staging
         options: [staging, production]
+      database_enabled:
+        description: Provision and bind the platform D1 database
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -24,7 +28,7 @@ jobs:
     env:
       CF_SEND_TELEMETRY: 'false'
       DEPLOY_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.environment || 'production' }}
-      PLATFORM_DATABASE_ENABLED: ${{ vars.PLATFORM_DATABASE_ENABLED || 'false' }}
+      PLATFORM_DATABASE_ENABLED: ${{ github.event_name == 'workflow_dispatch' && inputs.database_enabled && 'true' || vars.PLATFORM_DATABASE_ENABLED || 'false' }}
       PLATFORM_AUTH_ENABLED: ${{ vars.PLATFORM_AUTH_ENABLED || 'false' }}
       PLATFORM_PAYMENTS_ENABLED: ${{ vars.PLATFORM_PAYMENTS_ENABLED || 'false' }}
       PLATFORM_RELAYS_ENABLED: ${{ vars.PLATFORM_RELAYS_ENABLED || 'false' }}
