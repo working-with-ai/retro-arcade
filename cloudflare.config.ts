@@ -13,7 +13,7 @@ return {
     env: {
       ASSETS: bindings.assets(),
       RESOURCES: bindings.r2({ name: staging ? 'retro-arcade-staging-resources' : 'pokemon-dark-phantom-resources' }),
-      DB: bindings.d1({ name: staging ? 'retro-arcade-platform-staging' : 'retro-arcade-platform' }),
+      ...(process.env.PLATFORM_DATABASE_ENABLED === 'true' ? { DB: bindings.d1({ name: staging ? 'retro-arcade-platform-staging' : 'retro-arcade-platform' }) } : {}),
       ...Object.fromEntries(['AUTH_ENABLED','PAYMENTS_ENABLED','RELAYS_ENABLED',...secrets].map(name => [name, bindings.secret()]))
     },
     triggers: [triggers.scheduled({ schedule: '* * * * *' })],

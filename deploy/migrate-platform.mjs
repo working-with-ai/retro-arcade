@@ -4,7 +4,7 @@ if(!account||!token)throw Error('Cloudflare account and deployment credentials a
 const name=process.env.DEPLOY_MODE==='staging'?'retro-arcade-platform-staging':'retro-arcade-platform';
 async function api(path,method='GET',body){
   const res=await fetch(`https://api.cloudflare.com/client/v4/accounts/${account}${path}`,{method,headers:{Authorization:`Bearer ${token}`,'Content-Type':'application/json'},...(body?{body:JSON.stringify(body)}:{})});
-  const data=await res.json();if(!res.ok||!data.success)throw Error(`D1 provisioning/migration failed (${res.status}); verify D1 Edit permission on the deployment token`);return data.result;
+  const data=await res.json();if(!res.ok||!data.success)throw Error(`D1 provisioning/migration failed (${res.status}, error codes ${(data.errors||[]).map(e=>e.code).join(',')}); verify D1 Edit permission and account access on the deployment token`);return data.result;
 }
 const list=await api('/d1/database?per_page=100');
 let database=list.find(x=>x.name===name);

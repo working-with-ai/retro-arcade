@@ -6,6 +6,8 @@
 
 `GET /api/capabilities` 返回 `auth`、`payments`、`relays`、`touchEditor`。开关要求对应值为字符串 `true`，且所依赖的配置全部存在；任一缺失时前端提示尚未开放。生产环境没有模拟验证码、模拟登录或模拟支付入口。
 
+数据库也采用显式开关：GitHub仓库 Settings / Secrets and variables / Actions / Variables 中的 `PLATFORM_DATABASE_ENABLED` 默认为 `false`。只有部署令牌已具备该账号D1编辑权限时，才将其设为 `true` 并重新运行部署；此时CI先执行迁移，再绑定数据库并发布。关闭时可独立发布触屏编辑和页面，账号相关服务保持关闭。首次尝试D1配置时API返回HTTP 401，因此不能将数据库视为已创建或迁移完成。
+
 在 Cloudflare Worker 的 Settings / Variables and Secrets 中配置下列项目，敏感值用 Secrets。不要把配置值发到代码、日志、Issue 或聊天中。正式开关在联调验收后开启。
 
 | 配置 | 说明 |
@@ -45,7 +47,7 @@
 
 现有生产Worker、R2桶不改名；新增D1 `retro-arcade-platform`。测试环境使用独立Worker `retro-arcade-staging`、D1 `retro-arcade-platform-staging`、R2 `retro-arcade-staging-resources`。
 
-CI在发布Worker前运行 `deploy/migrate-platform.mjs`：查询/创建数据库、执行尚未记录的增量迁移。部署凭证需要本账号的D1编辑权限，以及已有Worker/R2权限。迁移失败会停止发布。新增已发布迁移应使用新编号，不修改已应用文件。回退优先关闭服务开关和回退Worker版本，不删除数据库、用户存档或已支付订单。
+启用数据库开关后，CI在发布Worker前运行 `deploy/migrate-platform.mjs`：查询/创建数据库、执行尚未记录的增量迁移。部署凭证需要本账号的D1编辑权限，以及已有Worker/R2权限。迁移失败会停止发布。新增已发布迁移应使用新编号，不修改已应用文件。回退优先关闭服务开关和回退Worker版本，不删除数据库、用户存档或已支付订单。
 
 推送main触发生产部署。手动运行同一GitHub Actions工作流可选择staging（默认）或production。staging不执行向生产桶上传资源的步骤，且Secrets需要分别配置。
 
