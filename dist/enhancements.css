@@ -42,15 +42,16 @@
 
 .platform-page { padding-bottom:calc(24px + env(safe-area-inset-bottom)); }
 .platform-main { padding:16px; }
-.platform-card { display:block; margin:0 0 16px; padding:18px; border:1px solid #e7e7ee; border-radius:14px; background:#fff; }
-.platform-card h2 { margin:0 0 12px; font-size:19px; }
-.platform-card p { color:#555; }
-.platform-card small { overflow-wrap:anywhere; color:#666; }
-.platform-card label { display:block; margin:14px 0; font-size:14px; }
-.platform-card input { display:block; width:100%; min-width:0; min-height:44px; margin-top:6px; padding:8px 10px; border:1px solid #bfc1ca; border-radius:8px; }
-.platform-card button,.platform-actions a { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:8px 12px; border-radius:8px; background:#f0f2f7; }
-.platform-card button:disabled { opacity:.5; cursor:not-allowed; }
-.platform-card .platform-primary,.platform-primary { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:10px 18px; background:#333056; color:white; border-radius:9px; }
+.platform-page .platform-card { display:block; height:auto; margin:0 0 16px; padding:18px; border:1px solid #e7e7ee; border-radius:14px; background:#fff; font-size:14px; font-weight:400; letter-spacing:0; transition:none; }
+.platform-page .platform-card:active { transform:none; }
+.platform-page .platform-card h2 { margin:0 0 12px; font-size:19px; }
+.platform-page .platform-card p { margin:12px 0; color:#555; line-height:1.6; }
+.platform-page .platform-card small { overflow-wrap:anywhere; color:#666; }
+.platform-page .platform-card label { display:block; margin:14px 0; font-size:14px; }
+.platform-page .platform-card input { display:block; width:100%; min-width:0; min-height:44px; margin-top:6px; padding:8px 10px; border:1px solid #bfc1ca; border-radius:8px; }
+.platform-page .platform-card button,.platform-actions a { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:8px 12px; border-radius:8px; background:#f0f2f7; }
+.platform-page .platform-card button:disabled { opacity:.5; cursor:not-allowed; }
+.platform-page .platform-card .platform-primary,.platform-primary { display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:10px 18px; background:#333056; color:white; border-radius:9px; }
 .platform-inline { display:flex; align-items:center; gap:8px; }
 .platform-inline input { flex:1; }
 .platform-inline button { flex:none; }
@@ -61,7 +62,7 @@
 .account-save a { color:#2045a0; min-height:44px; display:inline-flex; align-items:center; }
 .account-entry-links { display:flex; gap:12px; margin:16px 17px; }
 .account-entry-links a { padding:12px; background:#f0f1f7; border-radius:9px; }
-.membership-hero { background:linear-gradient(135deg,#fff8ed,#f4f1ff); }
+.platform-page .membership-hero { background:linear-gradient(135deg,#fff8ed,#f4f1ff); }
 .membership-table { width:100%; border-collapse:collapse; font-size:12px; }
 .membership-table th,.membership-table td { padding:10px 4px; border-bottom:1px solid #dedde5; text-align:left; }
 .product-list { display:flex; gap:12px; }
