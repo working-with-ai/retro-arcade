@@ -1982,7 +1982,7 @@ svg {
 
 .shot-slide {
   position: relative;
-  flex: 0 0 calc(100% - 35px);
+  flex: 0 0 100%;
   margin: 0;
   aspect-ratio: 380 / 205;
   overflow: hidden;

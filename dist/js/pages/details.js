@@ -14,17 +14,6 @@ function screenshotArt(game, shot, index) {
   </div>`;
 }
 
-function mediaChrome() {
-  return `<span class="shot-center">${icon('play')}</span>
-    <span class="shot-controls">
-      <span class="shot-progress"><i></i></span>
-      <span class="shot-control-row">
-        <span class="shot-time">00:00 <em>/ 00:00</em></span>
-        <span class="shot-icons">${icon('volume')}${icon('fullscreen')}</span>
-      </span>
-    </span>`;
-}
-
 // 实机录像：直接播放 R2 上的视频，Range 请求由 worker 处理，可拖拽进度
 function videoMarkup(game, video) {
   const poster = game.cover ? escapeHtml(game.cover) : '';
@@ -116,11 +105,7 @@ export function render({ data, query }) {
   const game = data.gamesById.get(query.get('id'));
   if (!game) return notFound();
   document.title = `${game.shortName || game.name} · 一局童年`;
-  const shots = (game.screenshots && game.screenshots.length ? game.screenshots : [
-    { label: '游戏画面', tone: 'forest' },
-    { label: '经典关卡', tone: 'city' },
-    { label: '挑战时刻', tone: 'dungeon' }
-  ]).slice(0, 3);
+  const shot = game.screenshots?.[0] || { label: '游戏画面', tone: 'forest' };
   const available = Boolean(game.playable && game.core);
   const local = getSaveSlots(game.id);
 
@@ -144,11 +129,11 @@ export function render({ data, query }) {
       </div>
     </section>
     <div class="shots-scroll" aria-label="游戏画面与截图">
-      ${shots.map((shot, index) => `<figure class="shot-slide" data-shot-index="${index}"${index === 0 ? ' data-shot-primary' : ''}>
-        ${screenshotArt(game, shot, index)}
-        <button class="shot-hit" type="button" data-launch="${escapeHtml(game.id)}" aria-label="${available ? '启动游戏' : '游戏即将上线'}"></button>
-        ${mediaChrome()}
-      </figure>`).join('')}
+      <figure class="shot-slide" data-shot-primary>
+        ${screenshotArt(game, shot, 0)}
+        <button class="shot-hit" type="button" data-launch="${escapeHtml(game.id)}" aria-label="${available ? `启动${escapeHtml(game.shortName || game.name)}` : '游戏即将上线'}"></button>
+        <span class="shot-badge">${available ? '暂无实机录像' : '即将上线'}</span>
+      </figure>
     </div>
     <section class="detail-copy">
       <div class="desc-wrap">
@@ -194,14 +179,24 @@ export function render({ data, query }) {
       // 首屏「游戏画面」：R2 上有实机录像就换成真播放器，没有就保留插画占位
       const primaryShot = el.querySelector('.shot-slide[data-shot-primary]');
       if (primaryShot && available) {
+        const showStatic = status => {
+          primaryShot.classList.remove('has-video', 'is-playing');
+          primaryShot.innerHTML = `${screenshotArt(game, shot, 0)}
+            <button class="shot-hit" type="button" data-launch="${escapeHtml(game.id)}" aria-label="启动${escapeHtml(game.shortName || game.name)}"></button>
+            <span class="shot-badge">${escapeHtml(status)}</span>`;
+        };
         (async () => {
           const video = await getGameVideo(game.id, { signal: videoController.signal });
-          if (destroyed || !video || !primaryShot.isConnected) return;
+          if (destroyed || !primaryShot.isConnected) return;
+          if (!video) return;
           primaryShot.innerHTML = videoMarkup(game, video);
           primaryShot.classList.add('has-video');
           const media = primaryShot.querySelector('.shot-video');
           const playButton = primaryShot.querySelector('.shot-video-play');
-          if (!media || !playButton) return;
+          if (!media || !playButton) {
+            showStatic('实机录像加载失败');
+            return;
+          }
           // 时长以视频自身元数据为准：CLI 批量上传的素材没有附带时长也能显示
           const refreshDuration = () => {
             if (!Number.isFinite(media.duration) || media.duration <= 0) return;
@@ -217,10 +212,17 @@ export function render({ data, query }) {
           };
           media.addEventListener('loadedmetadata', refreshDuration);
           if (media.readyState >= 1) refreshDuration();
+          media.addEventListener('error', () => {
+            if (destroyed || !primaryShot.isConnected) return;
+            showStatic('实机录像加载失败');
+          });
           playButton.addEventListener('click', event => {
             event.preventDefault();
             event.stopPropagation();
-            media.play().catch(() => toast('当前浏览器无法播放这段视频'));
+            media.play().catch(() => {
+              toast('当前浏览器无法播放这段视频');
+              showStatic('实机录像无法播放');
+            });
           });
           media.addEventListener('playing', () => primaryShot.classList.add('is-playing'));
           media.addEventListener('pause', () => primaryShot.classList.remove('is-playing'));

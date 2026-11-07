@@ -25,6 +25,7 @@ const dryRun = args.includes('--dry-run');
 const limitIndex = args.indexOf('--limit');
 const limit = limitIndex >= 0 ? Number(args[limitIndex + 1]) || Infinity : Infinity;
 
+const knownIds = new Set(catalog.games.map(game => game.id));
 const byName = new Map(catalog.games.map(game => [game.name, game.id]));
 const manifest = JSON.parse(await readFile(manifestPath, 'utf8'));
 
@@ -50,7 +51,7 @@ for (const [name, entry] of Object.entries(manifest)) {
     report.skipped.push({ name, reason: 'no-video-url' });
     continue;
   }
-  const gameId = entry.gameId || byName.get(name);
+  const gameId = [entry.localId, byName.get(name), entry.gameId].find(id => knownIds.has(id));
   if (!gameId) {
     report.skipped.push({ name, reason: 'no-game-id' });
     continue;
