@@ -1,6 +1,6 @@
 import { getListCount, routeKey, saveListCount } from '../router.js';
 import { formatDate, rankGames } from '../store.js';
-import { bannerMarkup, escapeHtml, gameCard, icon, listRow, miniCard, mountInfiniteList, platformIcon, rankRow } from '../ui.js';
+import { escapeHtml, gameCard, icon, listRow, miniCard, mountInfiniteList, platformIcon, rankRow } from '../ui.js';
 
 const TAB_NAMES = ['推荐', '上新', '榜单'];
 const RANK_TABS = [
@@ -22,9 +22,14 @@ function homeNav(tabsIdx) {
   </header>`;
 }
 
-function bannerCarousel(data) {
-  const slides = data.banners.map(banner => `<div class="banner-slide">${bannerMarkup(banner)}</div>`).join('');
-  const dots = data.banners.map((banner, index) => `<button type="button" class="banner-dot ${index === 0 ? 'is-active' : ''}" data-slide="${index}" aria-label="切换到第 ${index + 1} 张推荐"></button>`).join('');
+function bannerCarousel() {
+  const banners = [
+    { title: '口袋妖怪 究极绿宝石', image: 'pokemon-emerald.jpg', gameId: '1241117653' },
+    { title: '超级玛丽', image: 'super-mario.jpg', gameId: '1663697867' },
+    { title: '魂斗罗', image: 'contra.jpg', gameId: '452377455' }
+  ];
+  const slides = banners.map((banner, index) => `<div class="banner-slide"><a class="banner-static" href="#/details?id=${banner.gameId}"><img class="banner-poster" src="assets/banners/${banner.image}" alt="${banner.title}" width="660" height="309" loading="${index === 0 ? 'eager' : 'lazy'}"></a></div>`).join('');
+  const dots = banners.map((banner, index) => `<button type="button" class="banner-dot ${index === 0 ? 'is-active' : ''}" data-slide="${index}" aria-label="切换到第 ${index + 1} 张推荐"></button>`).join('');
   return `<section class="banner" aria-label="精选推荐">
     <div class="banner-track">${slides}</div>
     <div class="banner-dots">${dots}</div>
@@ -65,7 +70,7 @@ function recommendPage(data) {
     .map(id => data.gamesById.get(id))
     .filter(Boolean);
   return `<main class="home-main">
-    ${bannerCarousel(data)}
+    ${bannerCarousel()}
     ${platformRow(data)}
     ${gridSection('大家都在玩', popular)}
     ${data.sections.map(section => miniSection(section, data)).join('')}

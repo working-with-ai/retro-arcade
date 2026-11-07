@@ -335,6 +335,15 @@ svg {
   display: block;
 }
 
+.banner-poster {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 660 / 309;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
 .banner-inner {
   position: relative;
   isolation: isolate;
